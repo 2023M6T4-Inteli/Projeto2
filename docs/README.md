@@ -123,6 +123,25 @@ A Persona é a representação fictícia do cliente ideal para o projeto, com o 
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Persona%20-%20Renata.png">
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Persona%20-%20Thiago.png">
 
+### 📄 User Stories
+
+A User Stories são representações simples e clara dos requisitos e funcionalidades de um software, escritas do ponto de vista do usuário final. Essas histórias ajudam a manter o foco nas necessidades dos usuários e a priorizar as funcionalidades mais importantes para o projeto. Portanto, a seguir, existem duas User Story por persona (Marketing, Produto e Automações)
+
+![image](https://user-images.githubusercontent.com/99209230/235374746-f4fcbf5d-c13b-491c-a069-743cc575f91c.png)
+<br>
+![image](https://user-images.githubusercontent.com/99209230/235374769-140f5bc8-12ba-470f-a625-c0979539f583.png)
+<br>
+![image](https://user-images.githubusercontent.com/99209230/235374825-d97405fd-d990-4eaa-8755-552ff7552542.png)
+<br>
+![image](https://user-images.githubusercontent.com/99209230/235374856-03169cd6-0cf1-469a-a458-776be352b7d7.png)
+<br>
+![image](https://user-images.githubusercontent.com/99209230/235374896-b24aa25c-29b0-4b3b-aa57-20777dd3d50f.png)
+<br>
+![image](https://user-images.githubusercontent.com/99209230/235374917-cb1c8680-9119-4e06-8d2d-769b34971709.png)
+
+
+
+
 ## (Sprint 2) Modelo de Bag of Words (IPYNB)
 
 Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
