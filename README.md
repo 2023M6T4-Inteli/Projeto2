@@ -6,31 +6,30 @@
 
 # IA para Marketing: Monitoramento de campanhas utilizando processamento de linguagem natural (PLN)
 
-## Empresa
+## Banco BTG - Pactual
 
 <p align="center">
 <a href= "https://www.btgpactual.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Btg-logo-blue.svg" alt="BTG" border="0" width="200"></a>
 </p>
   
-## Nome do Grupo
+## CHAT-BTG
 
 <p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/47/TBD-W.svg" alt="Logo do Grupo" border="0" width="150">
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/CHAT-BTG.png" alt="Logo CHAT-BTG" border="0" width="150">
 </p>
 
 ## Integrantes
-- <a href="https://www.linkedin.com/in/vthayashi/">Naruto</a>
-- <a href="https://www.linkedin.com/in/vthayashi/">Saitama</a>
-- <a href="https://www.linkedin.com/in/vthayashi/">Goku</a>
-- <a href="https://www.linkedin.com/in/vthayashi/">Charmander</a>
-- <a href="https://www.linkedin.com/in/vthayashi/">Squirtle</a>
-- <a href="https://www.linkedin.com/in/vthayashi/">Bulbasaur</a>
+- <a href="https://www.linkedin.com/in/jo%C3%A3o-tourinho-marques-1b64b2232/">João Tourinho Marques</a>
+- <a href="https://www.linkedin.com/in/henri-harari-717930242/">Henri Harari</a>
+- <a href="https://www.linkedin.com/in/kathlyn-diwan-0a0189232/">Kathlyn Diwan</a>
+- <a href="https://www.linkedin.com/in/lucas-conti-pereira-3410b1233/">Lucas Pereira</a>
+- <a href="https://www.linkedin.com/in/rodrigo-moraes-martins-/">Rodrigo Moraes Martins</a>
+- <a href="https://www.linkedin.com/in/thainadedeus/">Thainá Lima</a>
+- <a href="https://www.linkedin.com/in/vinicius-oliveira-fernandes/">Vinicius Oliveira Fernandes</a>
 
 ## 📜 Descrição
 
-Descrição curta sobre o que seu projeto faz.
-
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+Modelo de processamento de linguagem natural, com código-fonte em formato de Notebook Python. Em termos gerais, o modelo realiza a análise de sentimento + identificação de palavras chaves que registrarão possíveis tendências e insights para áreas específicas do Banco BTG Pactual.
 
 ## 📹 Demonstração do Projeto
 
@@ -83,8 +82,8 @@ A cada atualização os detalhes devem ser lançados aqui (segue exemplo abaixo)
 * 0.1.0 - 10/01/2022
     * O primeiro lançamento adequado
     * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.0.1 - 30/04/2023
+    * Primeira entrega - Análise de negócios, entendimento da experiência do usuário e estruturação de documentos
 
 ## 📋 Licença/License
 
