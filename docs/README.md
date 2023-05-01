@@ -33,7 +33,7 @@ Ressalta-se que a visualização dos dados também será pensada afim de facilit
 **Criar → Custo do Setup**
 
 Com a visão de ampliar, agregar e integrar diversas ferramentas, pode-se citar alguns fatores determinantes na análise financeira para o escopo do projeto. Neste sentido, é importante ressaltar que o projeto “Chat-BTG” ainda é limitado ao escopo mínimo de requisitos de uma rede social específica, dentro de dados levantados a partir de uma base de dados pré-definida, sem atualização em tempo real. Consequentemente, a níveis de complexidade baixos, possuímos um custo muito interessante com base no benchmark do mercado. Sendo uma solução nativa, o custo de setup da solução é muito baixo, e outros custos de “web services” são mitigados com o processo interno realizado.
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Matriz%20Oceno%20Azul.png">
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Matriz_Oceano_Azul_CHATBTG.png">
 
 ### ⚠️ Matriz de riscos
 
