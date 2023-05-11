@@ -148,11 +148,26 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 2) Documentação do Modelo de Bag of Words
 
+O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Na segunda etapa, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados. 
+A primeira etapa tokeniza o array de textos com CountVectorizer e transforma em um vocábulo de palavras chave (com a função fit()).
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/8ceb23f7-b8fa-42a0-aeda-6c855399cc49)
+
+Esta etapa codifica o vetor com a função "transform()" em 0 se a palavra não está presente e 1, caso contrário.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/43b59066-6a5c-4e9a-83cd-d58bdb3d5f80)
+
 O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim de calcular a relevância de cada termo nos documentos. Diferente do CountVectorizer, este algoritmo calcula 'word frequencies'. Isso impede que, por exemplo, artigos ou palavras não muito significantes acabem sendo reconhecidos como muito relevantes apenas pelo grande número de ocorrências na base de dados, uma vez que essa frequência inversa leva mais em conta o contexto das palavras empregadas em cada frase.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/b0558bfd-a488-452f-9561-abf360d8876c)
 
 O output trouxe nomes, palavras em inglês e algumas palavras inexistentes, o que é possívelmente um problema.
 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/e2a70080-2e1d-4ce0-b8ee-0abdb5ed0c88)
+
 Na finalização do Tfid, um vocábulo é criado e cada palavra é transformada em um output numérico de 0 a 1. Como usa o inverso das frequências, quanto menor o valor, mais frequentemente a palavra foi encontrada.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/18d486a2-bb8c-4163-ab78-e23ac67ac087)
 
 ## (Sprint 3) Modelo utilizando Word2Vec (IPYNB)
 
