@@ -148,7 +148,11 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 2) Documentação do Modelo de Bag of Words
 
-Preencher conforme a descrição do artefato na Adalove.
+O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim de calcular a relevância de cada termo nos documentos. Diferente do CountVectorizer, este algoritmo calcula 'word frequencies'. Isso impede que, por exemplo, artigos ou palavras não muito significantes acabem sendo reconhecidos como muito relevantes apenas pelo grande número de ocorrências na base de dados, uma vez que essa frequência inversa leva mais em conta o contexto das palavras empregadas em cada frase.
+
+O output trouxe nomes, palavras em inglês e algumas palavras inexistentes, o que é possívelmente um problema.
+
+Na finalização do Tfid, um vocábulo é criado e cada palavra é transformada em um output numérico de 0 a 1. Como usa o inverso das frequências, quanto menor o valor, mais frequentemente a palavra foi encontrada.
 
 ## (Sprint 3) Modelo utilizando Word2Vec (IPYNB)
 
