@@ -145,7 +145,13 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 2) Documentação do Modelo de Bag of Words
 
+
 O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados. 
+
+```
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+```
 
 A primeira etapa tokeniza o array de textos com CountVectorizer e transforma em um vocábulo de palavras chave (com a função fit()).
 
@@ -164,6 +170,8 @@ vector = vectorizer.transform(dados_filtradas)
 print(vector.shape)
 print(vector.toarray())
 ```
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0cae7c4b-5c5b-43cf-a164-3917b19e4779)
+
 
 O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim de calcular a relevância de cada termo nos documentos. Diferente do CountVectorizer, este algoritmo calcula 'word frequencies'. Isso impede que, por exemplo, artigos ou palavras não muito significantes acabem sendo reconhecidos como muito relevantes apenas pelo grande número de ocorrências na base de dados, uma vez que essa frequência inversa leva mais em conta o contexto das palavras empregadas em cada frase.
 
@@ -172,8 +180,6 @@ vectorizer = TfidfVectorizer()
 vectorizer.fit(dados_filtradas)
 print(sorted(vectorizer.vocabulary_))
 vector = vectorizer.transform([dados_filtradas[0]])
-```
-```
 print(vectorizer.idf_)
 ```
 
@@ -184,6 +190,8 @@ Na finalização do Tfid, um vocábulo é criado e cada palavra é transformada 
 print(vector.shape)
 print(vector.toarray())
 ```
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
+
 
 ## (Sprint 3) Modelo utilizando Word2Vec (IPYNB)
 
