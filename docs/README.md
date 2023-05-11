@@ -173,9 +173,6 @@ vectorizer.fit(dados_filtradas)
 print(sorted(vectorizer.vocabulary_))
 vector = vectorizer.transform([dados_filtradas[0]])
 ```
-
-O output trouxe nomes, palavras em inglês e algumas palavras inexistentes, o que é possívelmente um problema.
-
 ```
 print(vectorizer.idf_)
 ```
