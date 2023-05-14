@@ -213,7 +213,17 @@ print(vector.toarray())
 ```
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
 
-Gráfico Word Cloud O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
+O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
+
+## Resultados 
+
+## Gráfico Word Cloud
+
+O Gráfico de Nuvem de Palavras, conhecido também como como Word Cloud, é uma ferramenta de representação visual que trabalha com a *plotagem* das palavras mais frequentes em um conjunto de textos. Nesse contexto, foi desenvolvido com o intuito de mostrar as palavras mais recorrentes e utilizadas pelos usuários nos comentários das postagens. 
+
+** adicionar imagem do word cloud!! 
+
+
 
 
 
