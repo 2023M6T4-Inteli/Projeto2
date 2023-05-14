@@ -143,7 +143,205 @@ A User Stories são representações simples e clara dos requisitos e funcionali
 
 Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
+# (Sprint 2) Pré-processamento do Dataset(IPYNB)
+###  Importação das bibliotecas:
+No Pandas, as importações de bibliotecas são usadas para trazer funcionalidades específicas de bibliotecas externas para o seu código. O Pandas é uma biblioteca popular para análise de dados em Python, mas para aproveitar ainda mais recursos, pode ser necessário importar outras bibliotecas. As importações no Pandas geralmente são feitas no início do código e são usadas para importar módulos adicionais que fornecem funcionalidades extras.
+
+Em primeira instância utilizamos as seguintes bibliiotecas:
+
+pip install emoji: Este comando utiliza o gerenciador de pacotes pip para instalar a biblioteca emoji. A biblioteca emoji é uma biblioteca Python que fornece funcionalidades para trabalhar com emojis, como a exibição, codificação e manipulação de emojis em texto. Ao executar esse comando, você estará instalando a biblioteca emoji em seu ambiente Python.
+
+pip install pyspellchecker: Este comando utiliza o gerenciador de pacotes pip para instalar a biblioteca pyspellchecker. A biblioteca pyspellchecker é uma biblioteca Python que fornece correção ortográfica em texto. Ela pode ser usada para verificar e corrigir erros ortográficos em palavras. Ao executar esse comando, você estará instalando a biblioteca pyspellchecker em seu ambiente Python.
+
+Segue abaixo os códigos:
+- ```!pip install emoji```
+- ```!pip install pyspellchecker```
+## Testando etapas do Pré-processamento
+### Estruturação do Pré-processamento
+##### Função: Retirando valores nulos
+Descrição: Essa função remove linhas do DataFrame dados que possuem valores nulos nas colunas 'autor' e 'texto'. O resultado é armazenado na variável df_textoAutor.
+``` df_textoAutor = dados[['autor', 'texto']].dropna() ```
+
+##### Função: Retirando posts do btg
+Descrição: Essa função remove do DataFrame dados todas as linhas em que o valor da coluna 'autor' é igual a 'btgpactual'. O resultado é armazenado na variável 
+```df_textoAutor = dados.drop(dados[dados['autor'] == 'btgpactual'].index) ```
+
+
+##### Função: Shape
+Descrição: Essa função retorna a dimensão do DataFrame df_textoAutor, ou seja, o número de linhas e colunas. O resultado será uma tupla com dois elementos, em que o primeiro elemento representa o número de linhas e o segundo elemento representa o número de colunas.
+```df_textoAutor.shape```
+
+#### Função: Transformando uma frase em minúsculas
+Descrição: Essa função extrai a frase localizada na linha 100 da coluna 'texto' do DataFrame dados. Em seguida, a função lower() é aplicada para converter todos os caracteres da frase em minúsculas. O resultado é armazenado na variável sentence_teste. Essa transformação é comumente utilizada para normalizar o texto, tornando-o uniforme e facilitando comparações e análises, independentemente das diferenças de capitalização.
+```sentence_teste = dados['texto'].iloc[100].lower()```
+
+## Tokenização
+A tokenização é uma etapa importante no pré-processamento de texto que envolve a divisão de uma sequência de texto em unidades menores chamadas de tokens. Esses tokens podem ser palavras individuais, frases, símbolos ou outros elementos, dependendo do objetivo do processamento.
+No contexto do pré-processamento de texto no Pandas, a tokenização geralmente é realizada em um DataFrame que contém uma coluna de texto. Cada valor nessa coluna, que representa uma sentença ou um documento, é dividido em tokens individuais. Isso é útil para várias tarefas de processamento de texto, como contagem de palavras, análise de sentimentos, classificação de texto e muito mais.
+Existem diferentes abordagens de tokenização disponíveis, como tokenização com base em espaços em branco, tokenização com base em pontuação, tokenização com base em expressões regulares e tokenização com base em modelos de linguagem pré-treinados. A escolha da técnica de tokenização depende da natureza dos dados e do objetivo específico do processamento de texto que está sendo realizado.
+
+#### Funções utilizadas
+A função lower().split() é utilizada para realizar a tokenização de uma frase ou sequência de texto em Python.
+
+O método lower() é aplicado à variável sentence_teste e converte todos os caracteres da sequência de texto em letras minúsculas. Isso é útil para normalizar o texto e garantir consistência ao realizar a tokenização.
+
+Em seguida, o método split() é chamado para dividir a sequência de texto em tokens individuais. Esse método divide a sequência em espaços em branco, resultando em uma lista de tokens.
+
+A lista de tokens é atribuída à variável tokens, que pode ser usada posteriormente para análise de texto, processamento de linguagem natural ou outras tarefas relacionadas ao processamento de texto.
+
+Essa função é simples e eficaz para realizar a tokenização básica de uma frase em Python, dividindo-a em palavras individuais com base nos espaços em branco. No entanto, é importante observar que essa função não trata outros tipos de pontuações ou casos mais complexos de tokenização, que podem exigir o uso de bibliotecas ou técnicas mais avançadas.
+Segue o código abaixo:
+```tokens = sentence_teste.lower().split() ```
+
+## Stop-Words
+Stop words são palavras comuns que geralmente são removidas durante o pré-processamento de texto, pois são consideradas pouco informativas para a análise de texto. Essas palavras incluem artigos, conjunções, preposições e outros termos frequentemente encontrados na linguagem, como "a", "o", "em", "de", "e", entre outros.
+
+A remoção de stop words é uma etapa comum no pré-processamento de texto, pois ajuda a reduzir o ruído e o tamanho do vocabulário utilizado na análise. Ao remover essas palavras, é possível focar em termos mais relevantes e significativos para a tarefa em questão, como análise de sentimentos, classificação de texto ou mineração de tópicos.
+
+No contexto do pandas, a remoção de stop words geralmente envolve o uso de bibliotecas de processamento de linguagem natural, como NLTK (Natural Language Toolkit) ou spaCy. Essas bibliotecas possuem listas predefinidas de stop words em diferentes idiomas, que podem ser aplicadas aos dados textuais para remover essas palavras desnecessárias antes de prosseguir com a análise ou modelagem de texto.
+
+### Funções utilizadas
+A função translate() é utilizada para remover pontuações de uma string. Nesse caso específico, a função str.maketrans('', '', string.punctuation) cria uma tabela de tradução que mapeia os caracteres de pontuação para um valor vazio (''). Em seguida, a função translate() aplica essa tabela de tradução à string sentence_teste, removendo todas as pontuações.
+
+Já a função strip() é utilizada para remover espaços em branco (espaços, tabulações, quebras de linha) no início e no final de uma string. Ela retorna a versão da string sem os espaços em branco.
+
+Essas duas funções em sequência têm o objetivo de remover pontuações e espaços em branco extras da string sentence_teste, deixando-a limpa e pronta para ser processada ou analisada posteriormente.
+Segue o código abaixo:
+- ```sentence_teste = sentence_teste.translate(str.maketrans('', '', string.punctuation)) ```
+- ```sentence_teste = sentence_teste.strip()```
+
+Também encontra-se nesse código, a variável stop_words é inicializada com um conjunto de palavras de parada (stop words) em português, obtidas a partir do módulo nltk.corpus.stopwords. Essas palavras são geralmente consideradas irrelevantes para a análise de texto, como artigos, preposições e pronomes.
+
+Em seguida, uma lista adicional chamada stop_words_add é criada, contendo palavras adicionais que serão incluídas nas stop words. Essas palavras podem ser personalizadas de acordo com as necessidades do projeto.
+
+O método update é usado para adicionar as palavras da lista stop_words_add ao conjunto de stop words existente.
+
+Em seguida, é criada uma lista vazia chamada new_words. Em um loop, cada palavra em sentence_teste é verificada se está presente no conjunto de stop words. Se a palavra não for uma stop word, ela é adicionada à lista new_words.
+
+Por fim, a variável sentence_teste é atualizada, substituindo seu valor original pela concatenação das palavras contidas em new_words, formando assim uma nova versão da sentença sem as stop words.
+
+Segue o código abaixo: 
+```top_words = set(nltk.corpus.stopwords.words('portuguese'))`` 
+stop_words_add = ['ola', 'olá', 'pra', 'para', 'bemvindo','benvindo', 'bem-vindo', 'bemvindos', 'aqui', 'vai', 'btgpactual']
+stop_words.update(stop_words_add)
+new_words = []
+for word in sentence_teste:
+    if word not in stop_words:
+        new_words.append(word)
+        sentence_teste = ''.join(new_words) ``` 
+        
+### Testando corretor de palavras
+Nesse código, a biblioteca spellchecker é importada, e em seguida, uma frase incorreta é atribuída à variável frase_errada. A frase é dividida em palavras individuais usando o método split() e armazenada na lista words.
+
+A classe SpellChecker é inicializada com o parâmetro language='pt', indicando que o corretor ortográfico será utilizado para o idioma português.
+
+Por fim, um objeto spell do tipo SpellChecker é criado e está pronto para ser usado para correção ortográfica das palavras contidas na frase incorreta.
+
+Segue o código abaixo:
+```from spellchecker import SpellChecker```
+```frase_errada = 'As veses estol gostandu di vose```
+```words = frase_errada.split()```
+```spell = SpellChecker(language='pt')``` 
+
+### Testando corretor de abreviações e deletar emojis
+
+Nesse código, a biblioteca enelvo é importada e em seguida a classe Normaliser é utilizada.
+
+O objetivo desse código é realizar a normalização de texto, que consiste em aplicar transformações específicas para padronizar ou corrigir palavras em um texto.
+
+Na primeira linha, a classe Normaliser é importada da biblioteca enelvo.
+
+Em seguida, uma mensagem é atribuída à variável msg, que contém o texto a ser corrigido ou normalizado.
+
+Por fim, um objeto norm do tipo Normaliser é criado, e é utilizado o parâmetro tokenizer='readable', indicando que o texto será tokenizado de forma legível, ou seja, separando-o em palavras individuais considerando a estrutura gramatical.
+
+O objeto norm está pronto para ser utilizado para realizar as correções ou normalizações no texto contido na variável msg.
+Segue o código abaixo:
+```from enelvo.normaliser import Normaliser```
+```msg = 'hj vou usar meu cartão do banco btg, pq gosto mt dele👊'```
+```norm = Normaliser(tokenizer='readable')```
+
+### Stemming
+Em pré-processamento de texto, stemming é uma técnica utilizada para reduzir palavras à sua forma básica ou raiz, removendo sufixos e prefixos. O objetivo é simplificar a análise de texto, tratando diferentes variações da mesma palavra como uma única forma, o que pode facilitar a comparação e agrupamento de palavras semelhantes.
+
+Na prática, já no código, a biblioteca nltk é importada e a classe SnowballStemmer é utilizada.
+
+O objetivo desse código é realizar a técnica de stemming, que consiste em reduzir palavras à sua forma básica (ou raiz) removendo sufixos e prefixos, para facilitar a análise de texto.
+
+Na primeira linha, a classe SnowballStemmer é importada da biblioteca nltk e é especificado o idioma 'portuguese' como parâmetro para o construtor do stemmer, indicando que o stemming será realizado para palavras em português.
+
+Em seguida, um loop for é utilizado para iterar sobre cada palavra presente no texto sentence_teste, que provavelmente contém várias palavras tokenizadas.
+
+Dentro do loop, a função stem() do objeto stemmer é chamada para cada palavra, retornando a raiz ou forma básica da palavra.
+
+A raiz de cada palavra é impressa na saída utilizando a função print(), representando o resultado do stemming para cada palavra no texto.
+
+Assim, o código realiza o processo de stemming para cada palavra no texto sentence_teste, retornando suas formas básicas ou raízes.
+Segue o código abaixo:
+```from nltk.stem.snowball import SnowballStemmer```
+```stemmer = SnowballStemmer('portuguese')```
+```for word in sentence_teste.split():```
+    ```print(stemmer.stem(word))```
+    
+### Bag Of Words
+
+O modelo Bag-of-Words é uma abordagem comum no pré-processamento de texto usada para representar documentos de texto como vetores numéricos. É uma técnica simples e amplamente utilizada em tarefas de processamento de linguagem natural.
+
+No contexto do Google Colab, o pré-processamento com o modelo Bag-of-Words envolve as seguintes etapas:
+
+Tokenização: O texto é dividido em unidades menores chamadas "tokens". Geralmente, os tokens são palavras individuais, mas também podem ser caracteres, n-grams (sequências de n tokens consecutivos) ou outras unidades, dependendo do caso de uso.
+
+Construção do vocabulário: O vocabulário é criado coletando todos os tokens únicos presentes nos documentos de texto. Cada token único é atribuído a um índice único no vocabulário.
+
+Codificação dos documentos: Cada documento de texto é codificado como um vetor numérico de acordo com o vocabulário construído. O tamanho do vetor é igual ao tamanho do vocabulário. Cada posição no vetor representa uma palavra do vocabulário, e o valor naquela posição indica a frequência ou outra medida de importância do termo no documento.
+
+Matriz de documentos-termos: Todos os documentos são representados em uma matriz, em que cada linha corresponde a um documento e cada coluna corresponde a um termo do vocabulário. Os valores da matriz são geralmente contagens de frequência, mas também podem ser pesos TF-IDF (term frequency-inverse document frequency) ou outros esquemas de ponderação.
+
+Essa representação baseada no modelo Bag-of-Words permite que os algoritmos de aprendizado de máquina trabalhem com dados de texto, que normalmente requerem entrada numérica. No Google Colab, você pode implementar essas etapas usando bibliotecas de processamento de texto, como NLTK (Natural Language Toolkit), e aplicá-las aos seus dados de texto para prepará-los para tarefas de classificação, agrupamento ou outras análises.
+
+#### Funções utilizadas:
+O código fornecido realiza a vetorização de texto usando o CountVectorizer da biblioteca scikit-learn. Vejamos o que cada linha faz:
+
+- Importação das bibliotecas:
+-Essas linhas importam as classes CountVectorizer e TfidfVectorizer da biblioteca sklearn.feature_extraction.text, necessárias para realizar a vetorização de texto.
+```from sklearn.feature_extraction.text import CountVectorizer```
+```from sklearn.feature_extraction.text import TfidfVectorizer```
+
+- Instanciação do vetorizador:
+-Aqui, um objeto CountVectorizer é criado e atribuído à variável vectorizer. O CountVectorizer é usado para converter o texto em uma matriz de contagens de palavras.
+```vectorizer.fit(frases_pre)```
+
+- Ajuste do vetorizador aos dados de entrada:
+-Essa linha ajusta o vetorizador aos dados de entrada frases_pre. Ele analisa o texto fornecido, constrói o vocabulário e atribui um índice numérico único a cada palavra encontrada nas frases.
+ ``` vectorizer.fit(frases_pre)```
+
+- Exibição do vocabulário ordenado:
+-Essa linha imprime o vocabulário ordenado alfabeticamente. O vocabulário é um dicionário que mapeia as palavras encontradas nas frases para seus respectivos índices numéricos.
+```print(sorted(vectorizer.vocabulary_)) ```
+- Transformação dos dados em uma representação vetorial:
+-Aqui, o método transform é chamado para converter as frases pré-processadas frases_pre em uma matriz vetorial. Cada linha da matriz representa uma frase, e cada coluna representa uma palavra do vocabulário. O valor em cada posição da matriz representa a contagem de ocorrências da palavra correspondente na frase.
+```vector = vectorizer.transform(frases_pre)```
+
+- Sumarização dos resultados:
+-Essas linhas exibem a forma (shape) da matriz resultante, que indica o número de frases e o tamanho do vocabulário. Em seguida, é impressa a representação em formato de array da matriz vetorizada, mostrando as contagens de palavras para cada frase.
+```print(vector.shape)```
+```print(vector.toarray())```
+
+### TFID
+ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim de calcular a relevância de cada termo nos documentos. Diferente do CountVectorizer, este algoritmo calcula 'word frequencies'. Isso impede que, por exemplo, artigos ou palavras não muito significantes acabem sendo reconhecidos como muito relevantes apenas pelo grande número de ocorrências na base de dados, uma vez que essa frequência inversa leva mais em conta o contexto das palavras empregadas em cada frase.
+ Segue o código abaixo:
+``` vectorizer = TfidfVectorizer()```
+``` vectorizer.fit(frases_pre)```
+```print(sorted(vectorizer.vocabulary_))```
+```vector = vectorizer.transform([frases_pre[0]])```
+
+
+
+
+
 ## (Sprint 2) Documentação do Modelo de Bag of Words
+
+
 
 # Compreensão dos Dados 
 Foi implementado o método de carregamento do Dataframe utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
