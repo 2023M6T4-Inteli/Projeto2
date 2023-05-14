@@ -145,7 +145,29 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 2) Documentação do Modelo de Bag of Words
 
+#Compreensão dos Dados 
+Foi implementado o método de carregamento do Dataframe utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
+Reorganizamos dessa forma, e renomeamos algumas colunas com o intuito de facilitar o processo de análise. 
 
+## Análise Descritiva 
+
+A análise descritiva é uma etapa fundamental no acompanhamento e análise de dados. É uma técnica que aplicada no contexto do nosso proejto em parceria com o BTG-Pactual, envolve a interpretação, comprreensão e organização dos dados de forma a obterpadrões e tendências. Em nosso projeto, essa análise será feita com o intuito de realizar uma análise de sentimentos dos usuários em relação às campanhas do BTG, além de facilitar o banco no processo de desenvolver futuras estrtaégias e ompreender melhor como eles podem gerenciar um bom relacionamento com os clientes. Utilizaremos a análise descritiva para: 
+
+* Encontrar as palavras mais frequentes utilizadas pelos usuários, Achar os autores com as maiores quantidades de comentários, identfiicar a distribuição de sentimentos (positivo, neutro e negativo), e encontarr o número de dados coletados. 
+
+
+## Pré-Processamento
+O pré processamento é uma etapa crucial na análise de dados. Esse processo consiste no conjunto de tecnicas aplicados nos dados quando em desenvolvimento de modelos de aprendizado de máquina. No contexto do Processamento de Linguagem Natural (PLN), o pré-processamento refere-se no na técnica de transformar e preparar os dados em uma forma mais adequada para a realização de análise de textos. 
+
+Este processo é crucial no momento de construção de uma análise de dados, e nos modelos de machine learning e geralmente seguem as seguintes etapas: 
+* Tokenização: Processo de dividir um texto em pequenas unidades de texto chamadas de "token". 
+* Remoção de pontuações: Eliminação de caracteres de pontuação: vírculas, pontos, aspas, entre outros. 
+* Conversão para minúscula: Padronizar as palavras. 
+* Remoção de stopwords: Remoção das palavrad comuns e que não costumam contribuir significativamente para o texto. 
+* Stemming e Lematização: Técnica de reduzir as palavras em seus radicais, ou formas mais básicas. 
+
+
+## Modelo de Bag of Words
 O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
 
 ```
@@ -190,6 +212,10 @@ print(vector.shape)
 print(vector.toarray())
 ```
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
+
+Gráfico Word Cloud O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
+
+
 
 
 ## (Sprint 3) Modelo utilizando Word2Vec (IPYNB)
