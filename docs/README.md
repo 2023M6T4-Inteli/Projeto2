@@ -145,7 +145,7 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 2) Documentação do Modelo de Bag of Words
 
-#Compreensão dos Dados 
+# Compreensão dos Dados 
 Foi implementado o método de carregamento do Dataframe utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
 Reorganizamos dessa forma, e renomeamos algumas colunas com o intuito de facilitar o processo de análise. 
 
@@ -168,7 +168,7 @@ Este processo é crucial no momento de construção de uma análise de dados, e 
 
 
 ## Modelo de Bag of Words
-O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
+O modelo de Bag of Words é uma das várias representação simplificadas de um texto em Processamento de Linguagem Natural (PLN). Se trata de uma entrada  para os modelos de aprendizado de máquina, visto como uma  técnicas de análise de texto,e análise de sentimentos. Dessa forma, o modelo, foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
 
 ```
 from sklearn.feature_extraction.text import CountVectorizer
