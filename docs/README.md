@@ -162,19 +162,19 @@ Segue abaixo os códigos:
 
 Afim de correlacionar e afunilar a análise, desenvolve-se hipóteses. A partir das mesmas, buscamos o entendimento maior da base de dados e obter insights a respeito do pré-processamento.
 
-- Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel)
+- Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel):
     Dado que cada tipo de mídia possui um objetivo diferente, entende-se que, conforme as suas diferenciações, as palavras mais comentadas podem ser diferentes e podem agregar para o usuário.
 
-- Palavras que mais aparecem nos comentários
+- Palavras que mais aparecem nos comentários:
     Com a finalidade de entender quais palavras mais se repetem em todos os comentários no perfil do BTG Pactual, desenvolve-se a análise descritiva tendo a *wordcloud*, além dos gráficos de barra e dispersão, como representações visuais.
 
-- Conjunto de palavras com maior frequência (n-grams = 3)
+- Conjunto de palavras com maior frequência (n-grams = 3):
     Visualizar a frequência de possíveis frases para identificar padrões em textos que podem ser associados a determinados sentimentos.
 
--  Relação determinística entre as colunas Anomalia e Comentário
+-  Relação determinística entre as colunas Anomalia e Comentário:
     Verificar e a partir das hipóteses estruturadas, atribuir possibilidades de atuação na coluna "anomalia"
 
-- Emojis na Base de Dados
+- Emojis na Base de Dados:
     Entendimento de qual seria o melhor tratamento para os emojis, para que a análise de sentimento seja mais precisa, com base nas aparições no dataset.
 
 ## Testando etapas do Pré-processamento
