@@ -139,12 +139,12 @@ A User Stories são representações simples e clara dos requisitos e funcionali
 <br>
 ![image](https://user-images.githubusercontent.com/99209230/235374917-cb1c8680-9119-4e06-8d2d-769b34971709.png)
 
-## (Sprint 2) Modelo de Bag of Words (IPYNB)
 
-Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
+## (Sprint 2) Modelo Bag Of Words (IPYNB)
 
-# (Sprint 2) Pré-processamento do Dataset(IPYNB)
+
 ###  Importação das bibliotecas:
+
 No Pandas, as importações de bibliotecas são usadas para trazer funcionalidades específicas de bibliotecas externas para o seu código. O Pandas é uma biblioteca popular para análise de dados em Python, mas para aproveitar ainda mais recursos, pode ser necessário importar outras bibliotecas. As importações no Pandas geralmente são feitas no início do código e são usadas para importar módulos adicionais que fornecem funcionalidades extras.
 
 Em primeira instância utilizamos as seguintes bibliiotecas:
@@ -157,10 +157,13 @@ Segue abaixo os códigos:
 - ```!pip install emoji```
 - ```!pip install pyspellchecker```
 
+### Compreensão dos Dados 
+Foi implementado o método de carregamento do Dataframe utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
+Reorganizamos dessa forma, e renomeamos algumas colunas com o intuito de facilitar o processo de análise.
 
-## Análise Descritiva
+### Análise Descritiva
 
-Afim de correlacionar e afunilar a análise, desenvolve-se hipóteses. A partir das mesmas, buscamos o entendimento maior da base de dados e obter insights a respeito do pré-processamento.
+A análise descritiva é uma etapa fundamental no acompanhamento e análise de dados. É uma técnica que aplicada no contexto do nosso proejto em parceria com o BTG-Pactual, envolve a interpretação, comprreensão e organização dos dados de forma a obterpadrões e tendências. Em nosso projeto, essa análise será feita com o intuito de realizar uma análise de sentimentos dos usuários em relação às campanhas do BTG, além de facilitar o banco no processo de desenvolver futuras estrtaégias e ompreender melhor como eles podem gerenciar um bom relacionamento com os clientes. Utilizaremos a análise descritiva para identificar:
 
 - Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel):
     Dado que cada tipo de mídia possui um objetivo diferente, entende-se que, conforme as suas diferenciações, as palavras mais comentadas podem ser diferentes e podem agregar para o usuário.
@@ -176,9 +179,21 @@ Afim de correlacionar e afunilar a análise, desenvolve-se hipóteses. A partir 
 
 - Emojis na Base de Dados:
     Entendimento de qual seria o melhor tratamento para os emojis, para que a análise de sentimento seja mais precisa, com base nas aparições no dataset.
+    
+   
+   ### Pré-Processamento
 
-## Testando etapas do Pré-processamento
-### Estruturação do Pré-processamento
+O pré processamento é uma etapa crucial na análise de dados. Esse processo consiste no conjunto de tecnicas aplicados nos dados quando em desenvolvimento de modelos de aprendizado de máquina. No contexto do Processamento de Linguagem Natural (PLN), o pré-processamento refere-se no na técnica de transformar e preparar os dados em uma forma mais adequada para a realização de análise de textos. 
+
+Este processo é crucial no momento de construção de uma análise de dados, e nos modelos de machine learning e geralmente seguem as seguintes etapas: 
+* Tokenização: Processo de dividir um texto em pequenas unidades de texto chamadas de "token". 
+* Remoção de pontuações: Eliminação de caracteres de pontuação: vírculas, pontos, aspas, entre outros. 
+* Conversão para minúscula: Padronizar as palavras. 
+* Remoção de stopwords: Remoção das palavrad comuns e que não costumam contribuir significativamente para o texto. 
+* Stemming e Lematização: Técnica de reduzir as palavras em seus radicais, ou formas mais básicas. 
+
+### Testando etapas do Pré-processamento
+#### Estruturação do Pré-processamento
 ##### Função: Retirando valores nulos
 Descrição: Essa função remove linhas do DataFrame dados que possuem valores nulos nas colunas 'autor' e 'texto'. O resultado é armazenado na variável df_textoAutor.
 ``` df_textoAutor = dados[['autor', 'texto']].dropna() ```
@@ -186,7 +201,6 @@ Descrição: Essa função remove linhas do DataFrame dados que possuem valores 
 ##### Função: Retirando posts do btg
 Descrição: Essa função remove do DataFrame dados todas as linhas em que o valor da coluna 'autor' é igual a 'btgpactual'. O resultado é armazenado na variável 
 ```df_textoAutor = dados.drop(dados[dados['autor'] == 'btgpactual'].index) ```
-
 
 ##### Função: Shape
 Descrição: Essa função retorna a dimensão do DataFrame df_textoAutor, ou seja, o número de linhas e colunas. O resultado será uma tupla com dois elementos, em que o primeiro elemento representa o número de linhas e o segundo elemento representa o número de colunas.
@@ -196,7 +210,7 @@ Descrição: Essa função retorna a dimensão do DataFrame df_textoAutor, ou se
 Descrição: Essa função extrai a frase localizada na linha 100 da coluna 'texto' do DataFrame dados. Em seguida, a função lower() é aplicada para converter todos os caracteres da frase em minúsculas. O resultado é armazenado na variável sentence_teste. Essa transformação é comumente utilizada para normalizar o texto, tornando-o uniforme e facilitando comparações e análises, independentemente das diferenças de capitalização.
 ```sentence_teste = dados['texto'].iloc[100].lower()```
 
-## Tokenização
+### Tokenização
 A tokenização é uma etapa importante no pré-processamento de texto que envolve a divisão de uma sequência de texto em unidades menores chamadas de tokens. Esses tokens podem ser palavras individuais, frases, símbolos ou outros elementos, dependendo do objetivo do processamento.
 No contexto do pré-processamento de texto no Pandas, a tokenização geralmente é realizada em um DataFrame que contém uma coluna de texto. Cada valor nessa coluna, que representa uma sentença ou um documento, é dividido em tokens individuais. Isso é útil para várias tarefas de processamento de texto, como contagem de palavras, análise de sentimentos, classificação de texto e muito mais.
 Existem diferentes abordagens de tokenização disponíveis, como tokenização com base em espaços em branco, tokenização com base em pontuação, tokenização com base em expressões regulares e tokenização com base em modelos de linguagem pré-treinados. A escolha da técnica de tokenização depende da natureza dos dados e do objetivo específico do processamento de texto que está sendo realizado.
@@ -214,14 +228,14 @@ Essa função é simples e eficaz para realizar a tokenização básica de uma f
 Segue o código abaixo:
 ```tokens = sentence_teste.lower().split() ```
 
-## Stop-Words
+### Stop-Words
 Stop words são palavras comuns que geralmente são removidas durante o pré-processamento de texto, pois são consideradas pouco informativas para a análise de texto. Essas palavras incluem artigos, conjunções, preposições e outros termos frequentemente encontrados na linguagem, como "a", "o", "em", "de", "e", entre outros.
 
 A remoção de stop words é uma etapa comum no pré-processamento de texto, pois ajuda a reduzir o ruído e o tamanho do vocabulário utilizado na análise. Ao remover essas palavras, é possível focar em termos mais relevantes e significativos para a tarefa em questão, como análise de sentimentos, classificação de texto ou mineração de tópicos.
 
 No contexto do pandas, a remoção de stop words geralmente envolve o uso de bibliotecas de processamento de linguagem natural, como NLTK (Natural Language Toolkit) ou spaCy. Essas bibliotecas possuem listas predefinidas de stop words em diferentes idiomas, que podem ser aplicadas aos dados textuais para remover essas palavras desnecessárias antes de prosseguir com a análise ou modelagem de texto.
 
-### Funções utilizadas
+#### Funções utilizadas
 A função translate() é utilizada para remover pontuações de uma string. Nesse caso específico, a função str.maketrans('', '', string.punctuation) cria uma tabela de tradução que mapeia os caracteres de pontuação para um valor vazio (''). Em seguida, a função translate() aplica essa tabela de tradução à string sentence_teste, removendo todas as pontuações.
 
 Já a função strip() é utilizada para remover espaços em branco (espaços, tabulações, quebras de linha) no início e no final de uma string. Ela retorna a versão da string sem os espaços em branco.
@@ -348,7 +362,9 @@ O código fornecido realiza a vetorização de texto usando o CountVectorizer da
 ```print(vector.shape)```
 ```print(vector.toarray())```
 
-### TFID
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0cae7c4b-5c5b-43cf-a164-3917b19e4779)
+
+## TFID
  O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim de calcular a relevância de cada termo nos documentos. Diferente do CountVectorizer, este algoritmo calcula 'word frequencies'. Isso impede que, por exemplo, artigos ou palavras não muito significantes acabem sendo reconhecidos como muito relevantes apenas pelo grande número de ocorrências na base de dados, uma vez que essa frequência inversa leva mais em conta o contexto das palavras empregadas em cada frase.
  Segue o código abaixo:
 ``` vectorizer = TfidfVectorizer()```
@@ -356,96 +372,15 @@ O código fornecido realiza a vetorização de texto usando o CountVectorizer da
 ```print(sorted(vectorizer.vocabulary_))```
 ```vector = vectorizer.transform([frases_pre[0]])```
 
-
-
-
-
-## (Sprint 2) Documentação do Modelo de Bag of Words
-
-
-
-# Compreensão dos Dados 
-Foi implementado o método de carregamento do Dataframe utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
-Reorganizamos dessa forma, e renomeamos algumas colunas com o intuito de facilitar o processo de análise. 
-
-## Análise Descritiva 
-
-A análise descritiva é uma etapa fundamental no acompanhamento e análise de dados. É uma técnica que aplicada no contexto do nosso proejto em parceria com o BTG-Pactual, envolve a interpretação, comprreensão e organização dos dados de forma a obterpadrões e tendências. Em nosso projeto, essa análise será feita com o intuito de realizar uma análise de sentimentos dos usuários em relação às campanhas do BTG, além de facilitar o banco no processo de desenvolver futuras estrtaégias e ompreender melhor como eles podem gerenciar um bom relacionamento com os clientes. Utilizaremos a análise descritiva para: 
-
-* Encontrar as palavras mais frequentes utilizadas pelos usuários, Achar os autores com as maiores quantidades de comentários, identfiicar a distribuição de sentimentos (positivo, neutro e negativo), e encontarr o número de dados coletados. 
-
-
-## Pré-Processamento
-O pré processamento é uma etapa crucial na análise de dados. Esse processo consiste no conjunto de tecnicas aplicados nos dados quando em desenvolvimento de modelos de aprendizado de máquina. No contexto do Processamento de Linguagem Natural (PLN), o pré-processamento refere-se no na técnica de transformar e preparar os dados em uma forma mais adequada para a realização de análise de textos. 
-
-Este processo é crucial no momento de construção de uma análise de dados, e nos modelos de machine learning e geralmente seguem as seguintes etapas: 
-* Tokenização: Processo de dividir um texto em pequenas unidades de texto chamadas de "token". 
-* Remoção de pontuações: Eliminação de caracteres de pontuação: vírculas, pontos, aspas, entre outros. 
-* Conversão para minúscula: Padronizar as palavras. 
-* Remoção de stopwords: Remoção das palavrad comuns e que não costumam contribuir significativamente para o texto. 
-* Stemming e Lematização: Técnica de reduzir as palavras em seus radicais, ou formas mais básicas. 
-
-
-## Modelo de Bag of Words
-O modelo de Bag of Words é uma das várias representação simplificadas de um texto em Processamento de Linguagem Natural (PLN). Se trata de uma entrada  para os modelos de aprendizado de máquina, visto como uma  técnicas de análise de texto,e análise de sentimentos. Dessa forma, o modelo, foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
-
-```
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfVectorizer
-```
-
-A primeira etapa tokeniza o array de textos com CountVectorizer e transforma em um vocábulo de palavras chave (com a função fit()).
-
-```
-vectorizer = CountVectorizer()
-vectorizer.fit(dados_filtradas)
-
-print(sorted(vectorizer.vocabulary_))
-```
-
-Na etapa abaixo, codifica-se o vetor com a função "transform()" em 0 se a palavra não está presente e 1, caso contrário.
-
-```
-vector = vectorizer.transform(dados_filtradas)
-# Sumariza
-print(vector.shape)
-print(vector.toarray())
-```
-![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0cae7c4b-5c5b-43cf-a164-3917b19e4779)
-
-O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim de calcular a relevância de cada termo nos documentos. Diferente do CountVectorizer, este algoritmo calcula 'word frequencies'. Isso impede que, por exemplo, artigos ou palavras não muito significantes acabem sendo reconhecidos como muito relevantes apenas pelo grande número de ocorrências na base de dados, uma vez que essa frequência inversa leva mais em conta o contexto das palavras empregadas em cada frase.
-
-```
-vectorizer = TfidfVectorizer()
-vectorizer.fit(dados_filtradas)
-print(sorted(vectorizer.vocabulary_))
-vector = vectorizer.transform([dados_filtradas[0]])
-print(vectorizer.idf_)
-```
-
-Na finalização do Tfid, um vocábulo é criado e cada palavra é transformada em um output numérico de 0 a 1. Como usa o inverso das frequências, quanto menor o valor, mais frequentemente a palavra foi encontrada.
-
-```
-#  Sumariza
-print(vector.shape)
-print(vector.toarray())
-```
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
 
-O modelo de Bag of Words foi construído utilizando primeiramente o CountVectorizer. Após isso, utiliza-se o TfidVectorizer, a fim de comparar os dois resultados e definir um deles para se utilizar na solução. 
+### Resultados 
 
-## Resultados 
-
-## Gráfico Word Cloud
+###  Gráfico Word Cloud
 
 O Gráfico de Nuvem de Palavras, conhecido também como como Word Cloud, é uma ferramenta de representação visual que trabalha com a *plotagem* das palavras mais frequentes em um conjunto de textos. Nesse contexto, foi desenvolvido com o intuito de mostrar as palavras mais recorrentes e utilizadas pelos usuários nos comentários das postagens. 
 
-** adicionar imagem do word cloud!! 
-
-
-
-
-
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/wordcloud.png)
 
 ## (Sprint 3) Modelo utilizando Word2Vec (IPYNB)
 
