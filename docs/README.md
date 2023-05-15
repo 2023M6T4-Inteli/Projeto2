@@ -144,6 +144,10 @@ A User Stories são representações simples e clara dos requisitos e funcionali
 
 Link do Modelo Bag of Words: <a href="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/1_BagOfWords.ipynb">Jupyter Notebook do Modelo Bag of Word</a>
 
+### Preparação dos dados 
+
+A fase de preparação de dados começou com a obtenção da base de dados com os comentários de posts do Instagram do parceiro de projeto (@btgpactual). Depois que os dados foram coletados, foi feita a preparação do ambiente de desenvolvimento (Colab Notebook), na qual foi feita uma análise exploratória dos dados, que inclui a verificação da qualidade dos dados, identificação de valores ausentes, duplicados, outliers, inferências e formulação de hipóteses, entre outros, e posteriormente as etapas de pré-processamento.
+
 ###  Importação das bibliotecas:
 
 No Pandas, as importações de bibliotecas são usadas para trazer funcionalidades específicas de bibliotecas externas para o seu código. O Pandas é uma biblioteca popular para análise de dados em Python, mas para aproveitar ainda mais recursos, pode ser necessário importar outras bibliotecas. As importações no Pandas geralmente são feitas no início do código e são usadas para importar módulos adicionais que fornecem funcionalidades extras.
@@ -164,39 +168,38 @@ Reorganizamos dessa forma, e renomeamos algumas colunas com o intuito de facilit
 
 Nesta Etapa será explicado as colunas da base de dados, “BASE-DEPRECATED”, fornecida pela empresa BTG Pactual durante a Sprint 2. A base de dados possui 4549 linhas e foram utilizadas apenas 11 colunas para a realização das análises. Tais colunas serão descritas abaixo:
   
-- Coluna 'id' apresenta os índices das linhas da tabela. Tipo = integer64
-- Coluna 'autor' mostra a conta do autor do comentário. Tipo = object
-- Coluna 'texto' o comentário escrito pelo autor. Tipo = object
-- Coluna 'tipoInteracao' classificação de como foi feito o texto do comentário(resposta, comentário ou marcação). Tipo = object
-- Coluna 'tipoMidia' categoria do tipo de post(reels, feed, image, carousel). Tipo = object
-- Coluna 'anomalia'  indica se o comentário pode ser golpe ou spam. Tipo = float64
-- Coluna 'probabilidadeAnomalia' porcentagem de quanto o comentário pode ser um golpe ou spam. Tipo = object
-- Coluna 'processado' indica se já houve uma análise de sentimento daquele comentário. Tipo = object
-- Coluna 'contemHyperlink' mostra se o comentário tem algum link. Tipo  = float64
-- Coluna 'dataPublicada' retorna quando o comentário foi publicado. Tipo = object
-- Coluna 'URL' direciona ao link em que está inserido o comentário na rede social. Tipo = object
+- **Coluna 'id':** apresenta os índices das linhas da tabela. | Tipo = *integer64*
+- **Coluna 'autor':** mostra a conta do autor do comentário. | Tipo = *object*
+- **Coluna 'texto':** o comentário escrito pelo autor. | Tipo = *object*
+- **Coluna 'tipoInteracao':** classificação de como foi feito o texto do comentário(resposta, comentário ou marcação). | Tipo = *object*
+- **Coluna 'tipoMidia':** categoria do tipo de post(reels, feed, image, carousel). | Tipo = *object*
+- **Coluna 'anomalia':**  indica se o comentário pode ser golpe ou spam. | Tipo = *float64*
+- **Coluna 'probabilidadeAnomalia':** porcentagem de quanto o comentário pode ser um golpe ou spam. | Tipo = *object*
+- **Coluna 'processado':** indica se já houve uma análise de sentimento daquele comentário. | Tipo = *object*
+- **Coluna 'contemHyperlink':** mostra se o comentário tem algum link. | Tipo  = *float64*
+- **Coluna 'dataPublicada':** retorna quando o comentário foi publicado. | Tipo = *object*
+- **Coluna 'URL':** direciona ao link em que está inserido o comentário na rede social. | Tipo = *object*
 
 ### Análise Descritiva
 
 A análise descritiva é uma etapa fundamental no acompanhamento e análise de dados. É uma técnica que aplicada no contexto do nosso proejto em parceria com o BTG-Pactual, envolve a interpretação, comprreensão e organização dos dados de forma a obterpadrões e tendências. Em nosso projeto, essa análise será feita com o intuito de realizar uma análise de sentimentos dos usuários em relação às campanhas do BTG, além de facilitar o banco no processo de desenvolver futuras estrtaégias e ompreender melhor como eles podem gerenciar um bom relacionamento com os clientes. Utilizaremos a análise descritiva para identificar:
 
-- Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel):
+- **Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel):**
     Dado que cada tipo de mídia possui um objetivo diferente, entende-se que, conforme as suas diferenciações, as palavras mais comentadas podem ser diferentes e podem agregar para o usuário.
 
-- Palavras que mais aparecem nos comentários:
+- **Palavras que mais aparecem nos comentários:**
     Com a finalidade de entender quais palavras mais se repetem em todos os comentários no perfil do BTG Pactual, desenvolve-se a análise descritiva tendo a *wordcloud*, além dos gráficos de barra e dispersão, como representações visuais.
 
-- Conjunto de palavras com maior frequência (n-grams = 3):
+- **Conjunto de palavras com maior frequência (n-grams = 3):**
     Visualizar a frequência de possíveis frases para identificar padrões em textos que podem ser associados a determinados sentimentos.
 
--  Relação determinística entre as colunas Anomalia e Comentário:
+-  **Relação determinística entre as colunas Anomalia e Comentário:**
     Verificar e a partir das hipóteses estruturadas, atribuir possibilidades de atuação na coluna "anomalia"
 
-- Emojis na Base de Dados:
+- **Emojis na Base de Dados:**
     Entendimento de qual seria o melhor tratamento para os emojis, para que a análise de sentimento seja mais precisa, com base nas aparições no dataset.
-    
    
-   ### Pré-Processamento
+### Pré-Processamento
 
 O pré processamento é uma etapa crucial na análise de dados. Esse processo consiste no conjunto de tecnicas aplicados nos dados quando em desenvolvimento de modelos de aprendizado de máquina. No contexto do Processamento de Linguagem Natural (PLN), o pré-processamento refere-se no na técnica de transformar e preparar os dados em uma forma mais adequada para a realização de análise de textos. 
 
@@ -251,9 +254,9 @@ A remoção de stop words é uma etapa comum no pré-processamento de texto, poi
 No contexto do pandas, a remoção de stop words geralmente envolve o uso de bibliotecas de processamento de linguagem natural, como NLTK (Natural Language Toolkit) ou spaCy. Essas bibliotecas possuem listas predefinidas de stop words em diferentes idiomas, que podem ser aplicadas aos dados textuais para remover essas palavras desnecessárias antes de prosseguir com a análise ou modelagem de texto.
 
 #### Funções utilizadas
-A função translate() é utilizada para remover pontuações de uma string. Nesse caso específico, a função str.maketrans('', '', string.punctuation) cria uma tabela de tradução que mapeia os caracteres de pontuação para um valor vazio (''). Em seguida, a função translate() aplica essa tabela de tradução à string sentence_teste, removendo todas as pontuações.
+A função translate() é utilizada para remover pontuações de uma string. Nesse caso específico, a função ```str.maketrans('', '', string.punctuation)``` cria uma tabela de tradução que mapeia os caracteres de pontuação para um valor vazio (''). Em seguida, a função translate() aplica essa tabela de tradução à string sentence_teste, removendo todas as pontuações.
 
-Já a função strip() é utilizada para remover espaços em branco (espaços, tabulações, quebras de linha) no início e no final de uma string. Ela retorna a versão da string sem os espaços em branco.
+Já a função ```strip()``` é utilizada para remover espaços em branco (espaços, tabulações, quebras de linha) no início e no final de uma string. Ela retorna a versão da string sem os espaços em branco.
 
 Essas duas funções em sequência têm o objetivo de remover pontuações e espaços em branco extras da string sentence_teste, deixando-a limpa e pronta para ser processada ou analisada posteriormente.
 Segue o código abaixo:
@@ -271,14 +274,17 @@ Em seguida, é criada uma lista vazia chamada new_words. Em um loop, cada palavr
 Por fim, a variável sentence_teste é atualizada, substituindo seu valor original pela concatenação das palavras contidas em new_words, formando assim uma nova versão da sentença sem as stop words.
 
 Segue o código abaixo: 
-```top_words = set(nltk.corpus.stopwords.words('portuguese'))`` 
+```top_words = set(nltk.corpus.stopwords.words('portuguese'))```
+
+```
 stop_words_add = ['ola', 'olá', 'pra', 'para', 'bemvindo','benvindo', 'bem-vindo', 'bemvindos', 'aqui', 'vai', 'btgpactual']
 stop_words.update(stop_words_add)
 new_words = []
 for word in sentence_teste:
     if word not in stop_words:
         new_words.append(word)
-        sentence_teste = ''.join(new_words) ``` 
+        sentence_teste = ''.join(new_words) 
+```
         
 ### Testando corretor de palavras
 Nesse código, a biblioteca spellchecker é importada, e em seguida, uma frase incorreta é atribuída à variável frase_errada. A frase é dividida em palavras individuais usando o método split() e armazenada na lista words.
