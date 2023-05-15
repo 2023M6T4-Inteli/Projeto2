@@ -142,6 +142,7 @@ A User Stories são representações simples e clara dos requisitos e funcionali
 
 ## (Sprint 2) Modelo Bag Of Words (IPYNB)
 
+Link do Modelo Bag of Words: <a href="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/1_BagOfWords.ipynb">Jupyter Notebook do Modelo Bag of Word</a>
 
 ###  Importação das bibliotecas:
 
