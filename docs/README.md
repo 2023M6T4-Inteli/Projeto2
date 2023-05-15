@@ -161,6 +161,20 @@ Segue abaixo os códigos:
 Foi implementado o método de carregamento do Dataframe utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
 Reorganizamos dessa forma, e renomeamos algumas colunas com o intuito de facilitar o processo de análise.
 
+Nesta Etapa será explicado as colunas da base de dados, “BASE-DEPRECATED”, fornecida pela empresa BTG Pactual durante a Sprint 2. A base de dados possui 4549 linhas e foram utilizadas apenas 11 colunas para a realização das análises. Tais colunas serão descritas abaixo:
+  
+- Coluna 'id' apresenta os índices das linhas da tabela. Tipo = integer64
+- Coluna 'autor' mostra a conta do autor do comentário. Tipo = object
+- Coluna 'texto' o comentário escrito pelo autor. Tipo = object
+- Coluna 'tipoInteracao' classificação de como foi feito o texto do comentário(resposta, comentário ou marcação). Tipo = object
+- Coluna 'tipoMidia' categoria do tipo de post(reels, feed, image, carousel). Tipo = object
+- Coluna 'anomalia'  indica se o comentário pode ser golpe ou spam. Tipo = float64
+- Coluna 'probabilidadeAnomalia' porcentagem de quanto o comentário pode ser um golpe ou spam. Tipo = object
+- Coluna 'processado' indica se já houve uma análise de sentimento daquele comentário. Tipo = object
+- Coluna 'contemHyperlink' mostra se o comentário tem algum link. Tipo  = float64
+- Coluna 'dataPublicada' retorna quando o comentário foi publicado. Tipo = object
+- Coluna 'URL' direciona ao link em que está inserido o comentário na rede social. Tipo = object
+
 ### Análise Descritiva
 
 A análise descritiva é uma etapa fundamental no acompanhamento e análise de dados. É uma técnica que aplicada no contexto do nosso proejto em parceria com o BTG-Pactual, envolve a interpretação, comprreensão e organização dos dados de forma a obterpadrões e tendências. Em nosso projeto, essa análise será feita com o intuito de realizar uma análise de sentimentos dos usuários em relação às campanhas do BTG, além de facilitar o banco no processo de desenvolver futuras estrtaégias e ompreender melhor como eles podem gerenciar um bom relacionamento com os clientes. Utilizaremos a análise descritiva para identificar:
