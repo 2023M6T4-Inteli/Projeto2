@@ -402,7 +402,64 @@ O código fornecido realiza a vetorização de texto usando o CountVectorizer da
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
 
-### Resultados 
+### Resultados Obtidos
+
+Na Análise Descritiva dos dados, trabalhamos com a criação de tabelas para oganizarmos técnicas de visualização, para identificar informações importantes e relevantes das campanhas, e podermos obter insights valiosos dos dados analisados. 
+
+- **** Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel): O código apresentado abaixo foi feito com o intuito de identificar as palavras mais comentadas pelos usuários conforme o tipo de post. Foi identificado a grande quantidade de comentários feitos pelo próprio BTG-Pactual, dessa forma optamos por remover os comentários feitos pelo BTG para termos uma análise apenas dos autores externos. 
+
+O código abaixo foi feito para retirarmos os comentários feitos pelo BTG: 
+```df_repete = df_repete.drop(df_repete[df_repete['autor'] == 'btgpactual'].index)```
+```df_repete```
+
+- **** Palavras que mais aparecem nos comentários (sem stemming): Nessa etapa, passamos pelo processo de pré-processamento e fizemos a junção de textos em uma string para então calcular a frequ6encia de cada palavra como mostra o código a seguir: 
+
+```freq_dist = FreqDist(palavras)```
+```print(freq_dist.most_common(100))```
+
+Após esse processo o código abaixo foi criado, com o intuito de exibir em formato Word Cloud os resultados obtidos
+
+```wordcloud = WordCloud(width=2000, height=1200, background_color='white').generate(' '.join(frases_pre)))```
+```plt.imshow(wordcloud, interpolation='bilinear'))```
+```plt.axis('off'))```
+```plt.show())```
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/wordcloudpalavras.png)
+
+Além disso, criamos a partir do código abaixo uma visualização gráfica da frequência e dispersão das palavras
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/freqpalavras.png)
+
+
+- **** Conjunto de três palavras com maior frequência: Nessa etapa, a fim de ter maior arcabouço de palavras frequentes nos comentários, opta-se pela seleção dos conjuntos de três palavras. O código abaixo foi realizado e nos trouxe resultados para entendermos melhor quais os conjuntos de plaavras que aparecem com a maior frequência. 
+
+```for frase in frases_pre:```
+    ```words = frase.split()```
+    ```trigrams += list(ngrams(words, 3))```
+
+```freq_tri = nltk.FreqDist(trigrams)```
+
+```top = freq_tri.most_common(100)```
+```top```
+
+Depois disso, criamos uma tabela para represnetarmos qual a frequência dos conjuntos. 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/freqtigramas.png)
+
+
+- **** Uso de emoji na base de Dados: o objetivo desta hipótese foi entender quais são emojis que mais aparecem no dataset e qual seria o melhor tratamento para os mesmos, com o intuito de que a análise de sentimento seja mais precisa, com base nas aparições no dataset. Dessa forma, utilizamos o código abaixo para calcular a porcentagem de aparição dos emojis nos comentários
+
+```emoji_dict = dict(Counter(c for c in texto if emoji.is_emoji(c)))```
+
+```most_common_emojis = Counter(emoji_dict).most_common(15) ```
+
+```total_emojis = sum(emoji_dict.values()) ```
+```emoji_percentages = {k: v / total_emojis for k, v in most_common_emojis}```
+
+```df = pd.DataFrame({'emoji': list(emoji_percentages.keys()), 'percentage': list(emoji_percentages.values())})```
+```df = df.sort_values(by='percentage', ascending=False)```
+```print(df)```
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/emojidataframe.png)
+
 
 ###  Gráfico Word Cloud
 
