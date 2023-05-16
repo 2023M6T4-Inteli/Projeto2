@@ -212,6 +212,7 @@ Este processo é crucial no momento de construção de uma análise de dados, e 
 
 ### Testando etapas do Pré-processamento
 #### Estruturação do Pré-processamento
+
 ##### Função: Retirando valores nulos
 Descrição: Essa função remove linhas do DataFrame dados que possuem valores nulos nas colunas 'autor' e 'texto'. O resultado é armazenado na variável df_textoAutor.
 ``` df_textoAutor = dados[['autor', 'texto']].dropna() ```
@@ -338,6 +339,12 @@ Segue o código abaixo:
 ```stemmer = SnowballStemmer('portuguese')```
 ```for word in sentence_teste.split():```
     ```print(stemmer.stem(word))```
+    
+    
+##### Pipeline 
+Utiliza-se o pipeline com a finalidade de evidenciar as etapas utilizadas nesse processo, demonstando que os outputs de um procedimento torna-se input da sequente.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/pipeline.jpeg)
     
 ### Bag Of Words
 
