@@ -481,6 +481,8 @@ O Gráfico de Nuvem de Palavras, conhecido também como como Word Cloud, é uma 
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/cd243004-d587-4c77-8be5-4e53b45b750f)
 
+Esta é uma pequena amostra dos resultados do processo de tokenização. A partir dele conseguimos ter alguns insights de para novos tratamentos de dados e futuras estapas de pré-processamento. A partir desse tokenização é que foi possível progredir com os outros métodos do pré-processamento.
+
 ### Stop Words:
 
 Remoção de caracteres especiais
@@ -490,6 +492,8 @@ Remoção de caracteres especiais
 Remoção de stop words
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/b5c7e5c3-1f48-41eb-8245-f3edd3946fdf)
+
+Esse foi uns dos resultados que obtivemos ao aplicar o método de remoção de stop words, consistindo em retirar das frases palavras descessárias que não contribuém para a análise de sentimentos.
 
 ### Stemming:
 
