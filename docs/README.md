@@ -497,15 +497,25 @@ Esse foi uns dos resultados que obtivemos ao aplicar o método de remoção de s
 
 ### Stemming:
 
+Stemming é uma técnica utilizada para reduzir palavras à sua forma básica ou raiz, removendo sufixos e prefixos.
+ 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/ccd9595b-7f7c-44bb-8692-03c7fb5aeba8)
+
+O output retorna o texto sem caracteres especiais e sem espaços. 
 
 ### Bag of Words:
 
+O modelo Bag-of-Words é uma abordagem comum no pré-processamento de texto usada para representar documentos de texto como vetores numéricos. É uma técnica simples e amplamente utilizada em tarefas de processamento de linguagem natural.
+
 Count Vectorizer
+
+O CountVectorizer tokeniza uma coleção de textos e cria um vocábulo com as palavras encontradas. 
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0cae7c4b-5c5b-43cf-a164-3917b19e4779)
 
 TFID Vectorizer
+
+O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim de calcular a relevância de cada termo nos documentos. 
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
 
