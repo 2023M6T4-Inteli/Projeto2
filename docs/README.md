@@ -525,7 +525,18 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 3) Documentação do Modelo utilizando Word2Vec
 
-Preencher conforme a descrição do artefato na Adalove.
+1) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação do modelo:
+
+- Modelo Word2Vec utilizando Embedding Layer
+O modelo Word2Vec, é um mecanismo de machine learning ou aprendizado de máquina, que visa representar palavras como vetores numéricos. Este processo consiste em capturar relações entre as palavras com base nos seus conetxtos, e então construir uma representação vetorial das palavras. 
+
+- Modelo Word2Vec utilizando CBOW
+O modelo CBOW (Continuos Bag-Of-Wordscocnsiste na rede neural que recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos são treinados para maximizar a probabilidade de previsão correta das palavras.
+
+Uma vez treinado, o modelo Word2Vec gera vetores de palavras que capturam informações semânticas e sintáticas. Palavras semanticamente semelhantes são mapeadas para vetores próximos no espaço vetorial, permitindo operações como cálculo de similaridade de palavras ou encontrar palavras relacionadas por meio de operações vetoriais, como soma ou subtração.
+
+- Comparação entre o modelo BOW da sprint anterior
+
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
