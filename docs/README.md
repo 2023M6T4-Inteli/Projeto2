@@ -536,6 +536,7 @@ O modelo CBOW (Continuos Bag-Of-Wordscocnsiste na rede neural que recebe as pala
 Uma vez treinado, o modelo Word2Vec gera vetores de palavras que capturam informações semânticas e sintáticas. Palavras semanticamente semelhantes são mapeadas para vetores próximos no espaço vetorial, permitindo operações como cálculo de similaridade de palavras ou encontrar palavras relacionadas por meio de operações vetoriais, como soma ou subtração.
 
 - Comparação entre o modelo BOW da sprint anterior
+Enquanto o BOW analisa uma variedade de palavras e vê a que está faltando, sendo assim simples e ocupando pouco espaço, o Word2Vec analisa a relação entre cada palavra e define o grau de similaridade para cada duas palavras analisadas, exigindo maior espaço e tendo maior complexidade que o BOW, além de exigir um maior número de dados.
 
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
