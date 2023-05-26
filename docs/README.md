@@ -528,14 +528,35 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 1) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação do modelo:
 
 - Modelo Word2Vec utilizando Embedding Layer
+
 O modelo Word2Vec, é um mecanismo de machine learning ou aprendizado de máquina, que visa representar palavras como vetores numéricos. Este processo consiste em capturar relações entre as palavras com base nos seus conetxtos, e então construir uma representação vetorial das palavras. 
 
 - Modelo Word2Vec utilizando CBOW
+
 O modelo CBOW (Continuos Bag-Of-Wordscocnsiste na rede neural que recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos são treinados para maximizar a probabilidade de previsão correta das palavras.
 
 Uma vez treinado, o modelo Word2Vec gera vetores de palavras que capturam informações semânticas e sintáticas. Palavras semanticamente semelhantes são mapeadas para vetores próximos no espaço vetorial, permitindo operações como cálculo de similaridade de palavras ou encontrar palavras relacionadas por meio de operações vetoriais, como soma ou subtração.
 
+Resultados:
+
+- Sem Catboost:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/2858ee49-47b2-4a80-aa4c-19ab348ef506)
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/27f6dd26-3243-4a51-a9e3-31b614bdf577)
+
+
+- Catboost:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/3952b8c2-fca2-4af5-8ea1-027dd886e15c)
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/86c8da56-7164-44b6-ba7c-2613cdf7d996)
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4bbca284-8b45-4c13-94aa-d7e32abcbae5)
+
+
 - Comparação entre o modelo BOW da sprint anterior
+
 Enquanto o BOW analisa uma variedade de palavras e vê a que está faltando, sendo assim simples e ocupando pouco espaço, o Word2Vec analisa a relação entre cada palavra e define o grau de similaridade para cada duas palavras analisadas, exigindo maior espaço e tendo maior complexidade que o BOW, além de exigir um maior número de dados.
 
 
