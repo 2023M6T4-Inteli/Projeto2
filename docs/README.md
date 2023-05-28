@@ -521,25 +521,63 @@ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim 
 
 ## (Sprint 3) Modelo utilizando Word2Vec (IPYNB)
 
-Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
+Colocar o link do artefato (deve estar na pasta src do repositório do projeto). (Link do arquivo Word2Vec do Rodrigo)
 
 ## (Sprint 3) Documentação do Modelo utilizando Word2Vec
 
 1) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação do modelo:
 
-- Modelo Word2Vec utilizando Embedding Layer
+- Sobre o Modelo Word2Vec 
 
-O modelo Word2Vec, é um mecanismo de machine learning ou aprendizado de máquina, que visa representar palavras como vetores numéricos. Este processo consiste em capturar relações entre as palavras com base nos seus conetxtos, e então construir uma representação vetorial das palavras. 
+O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palvras disponibilizas para o treinamento.
 
-- Modelo Word2Vec utilizando CBOW
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/exemplo_word2vec.png" alt="representação word2vec" width="300" height="auto">
 
-O modelo CBOW (Continuos Bag-Of-Wordscocnsiste na rede neural que recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos são treinados para maximizar a probabilidade de previsão correta das palavras.
+<em> Representação visual do modelo Word2Vec </em>
+<br>
+<br>
 
-Uma vez treinado, o modelo Word2Vec gera vetores de palavras que capturam informações semânticas e sintáticas. Palavras semanticamente semelhantes são mapeadas para vetores próximos no espaço vetorial, permitindo operações como cálculo de similaridade de palavras ou encontrar palavras relacionadas por meio de operações vetoriais, como soma ou subtração.
+- Vantagens do Modelo Word2Vec 
 
-Resultados:
+Em comparação ao modelo anterior do Bag of Words, o modelo Word2Vec possui várias vantagens, a principal delas é conseguir capturar o contexto e semântica das palavras. Além disso, o Word2Vec também gera uma representação vetorial com uma dimensionalidade muito mais reduzida, ele consegue trabalhar de forma mais efetiva com palavras desconhecidas e é capaz de fazer esses cálculos semânticos entre similaridade entre palavras.
 
-- Sem Catboost:
+- Arquitetura do Modelo Word2Vec: CBOW
+
+O modelo Word2Vec possui duas arquiteturas principais: CBOW (Continuos Bag-Of-Words) e Skip-Gram. Nossa equipe optou por utilizar o modelo CBOW pois computacionalmente ele é mais eficiente. Esse tipo de arquitetura recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos (CBOW e Skip-Gram) são treinados para maximizar a probabilidade de previsão correta das palavras.
+
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_cbow.png" alt="modelo CBOW" width="300" height="auto">
+
+- Construção do Modelo Word2Vec
+
+Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-processamento de dados, só que agora, na segunda base disponibilizada:
+
+  -Substituição de Emojis: nas frases, substituimos os emojis por palavras. Esse processo melhora e abrange a base de dados trabalhada
+   
+   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/emojis_funcao.png" alt="emoji" width="700" height="auto">
+   <br>
+
+  -Substituição de Abreviações: substituímos abreviações por suas formas originais
+    
+   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/func_abreviacoes.png" alt="abreviaçao" width="300" height="auto">
+   <br>
+
+  -Lematização: é o processo de transformação de palavras para sua forma base (derivação inversa). Para esse método de pré-processamento utilizamos a bibliotecas spaCy
+  
+   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/resultado_pipilina_lematizacao.png" alt="lematizacao" width="900" height="auto">
+   <em>Tabela pós pré-processamento</em>
+   <br>
+  
+  Processos anteriores como remoção de stop words e tokenização permaneceram da mesma forma do modelo anterior
+  
+  <br>
+  <br>
+  -O Modelo Wor2Vec
+  
+  <br>
+  
+Resultados dos Algorítimos de Apredizado Supervisionados:
+
+- Naive Bayes:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/2858ee49-47b2-4a80-aa4c-19ab348ef506)
 
@@ -554,10 +592,6 @@ Resultados:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4bbca284-8b45-4c13-94aa-d7e32abcbae5)
 
-
-- Comparação entre o modelo BOW da sprint anterior
-
-Enquanto o BOW analisa uma variedade de palavras e vê a que está faltando, sendo assim simples e ocupando pouco espaço, o Word2Vec analisa a relação entre cada palavra e define o grau de similaridade para cada duas palavras analisadas, exigindo maior espaço e tendo maior complexidade que o BOW, além de exigir um maior número de dados.
 
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
