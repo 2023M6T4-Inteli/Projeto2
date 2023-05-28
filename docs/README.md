@@ -519,7 +519,8 @@ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim 
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
 
-## (Sprint 3) Modelo utilizando Word2Vec (IPYNB)
+## (
+) Modelo utilizando Word2Vec (IPYNB)
 
 Colocar o link do artefato (deve estar na pasta src do repositório do projeto). (Link do arquivo Word2Vec do Rodrigo)
 
@@ -644,7 +645,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4bbca284-8b45-4c13-94aa-d7e32abcbae5)
 
-<em>Os resultados conferidos pleo CatBoost foram bem satisfatórios. Com 95% de acurácia de treinamento e 72% de acurácia total. Também foi obtido resultados satisfatórios na matriz de confusão </em>
+<em>Os resultados conferidos pleo CatBoost foram satisfatórios. Entretanto, apresenta um overfitting, já que existe 95% de acurácia de treinamento e 72% de acurácia total, tendo uma diferença grande entre as duas separações, portanto, sendo necessário entender o motivo. Também foi obtido resultados satisfatórios na matriz de confusão </em>
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
