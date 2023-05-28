@@ -527,7 +527,7 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 1) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação do modelo:
 
-- Sobre o Modelo Word2Vec 
+-Sobre o Modelo Word2Vec 
 
 O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palvras disponibilizas para o treinamento.
 
@@ -537,45 +537,95 @@ O modelo Word2Vec é uma técnica de PLN que permite representar palavras como v
 <br>
 <br>
 
-- Vantagens do Modelo Word2Vec 
+-Vantagens do Modelo Word2Vec 
 
 Em comparação ao modelo anterior do Bag of Words, o modelo Word2Vec possui várias vantagens, a principal delas é conseguir capturar o contexto e semântica das palavras. Além disso, o Word2Vec também gera uma representação vetorial com uma dimensionalidade muito mais reduzida, ele consegue trabalhar de forma mais efetiva com palavras desconhecidas e é capaz de fazer esses cálculos semânticos entre similaridade entre palavras.
 
-- Arquitetura do Modelo Word2Vec: CBOW
+-Arquitetura do Modelo Word2Vec: CBOW
 
 O modelo Word2Vec possui duas arquiteturas principais: CBOW (Continuos Bag-Of-Words) e Skip-Gram. Nossa equipe optou por utilizar o modelo CBOW pois computacionalmente ele é mais eficiente. Esse tipo de arquitetura recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos (CBOW e Skip-Gram) são treinados para maximizar a probabilidade de previsão correta das palavras.
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_cbow.png" alt="modelo CBOW" width="300" height="auto">
 
-- Construção do Modelo Word2Vec
+-Construção do Modelo Word2Vec
 
 Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-processamento de dados, só que agora, na segunda base disponibilizada:
 
-  -Substituição de Emojis: nas frases, substituimos os emojis por palavras. Esse processo melhora e abrange a base de dados trabalhada
+  - Substituição de Emojis: nas frases, substituimos os emojis por palavras. Esse processo melhora e abrange a base de dados trabalhada
    
    <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/emojis_funcao.png" alt="emoji" width="700" height="auto">
    <br>
 
-  -Substituição de Abreviações: substituímos abreviações por suas formas originais
+  - Substituição de Abreviações: substituímos abreviações por suas formas originais
     
    <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/func_abreviacoes.png" alt="abreviaçao" width="300" height="auto">
    <br>
 
-  -Lematização: é o processo de transformação de palavras para sua forma base (derivação inversa). Para esse método de pré-processamento utilizamos a bibliotecas spaCy
+  - Lematização: é o processo de transformação de palavras para sua forma base (derivação inversa). Para esse método de pré-processamento utilizamos a bibliotecas spaCy
   
    <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/resultado_pipilina_lematizacao.png" alt="lematizacao" width="900" height="auto">
    <em>Tabela pós pré-processamento</em>
    <br>
-  
-  Processos anteriores como remoção de stop words e tokenização permaneceram da mesma forma do modelo anterior
-  
-  <br>
-  <br>
-  -O Modelo Wor2Vec
+   <br>
+   
+  <em>Processos anteriores do último modelo, como remoção de stop words e tokenização, permanecem. O único processo retirado foi o de stemming, pois a lematização o substitui.</em>
   
   <br>
+  <br>
   
-Resultados dos Algorítimos de Apredizado Supervisionados:
+  - Modelo word2Vec e Características: já na construção do Modelo Word2Vec em si, configuramos seus parâmetros da seguinte forma: 150 vetores de dimensioanalidade, 5 janelas de contexto, contagem mínima de palavras para 1 e 4 threads para treinamento paralelo
+  
+  <br> 
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_word2vec_persi.png" alt="wor2vec" width="900" height="auto">  
+<em>Definições e contrução do modelo Wor2Vec</em>
+  <br>
+  <br>
+  
+  
+  - Vetorização para Word2Vec: a vetorização consiste em transformar dados textuais em representações numéricas. É um processo crucial para a contrução do modelo Wor2Vec, só assim será possível organizar a distribuição das palavras em um plano. Todos o tokens são vetorizados e suas somas em uma frase também são contabilizados.
+
+  <br> 
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/funcao_vetorizacao.png" alt="vetorizacao" width="900" height="auto">  
+<em>Função para o processo de Vetorização</em>
+  <br>
+  <br>
+  
+  - Output e tabela pós Word2Vec: ao final do processo de Word2Vec, configuramos a tabela que será utilizada para algorítimos de aprendizado. Um dos passos é tranformação da coluna de sentimentos para valores numéricos. O segundo passo é exatamente a atribuição dos tokens às 150 colunas definidas 
+
+  <br> 
+  <br> 
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/map_sentimentos.png" alt="map_sentimentos" width="800" height="auto">  
+<em>Mapeamento da Coluna Sentimentos</em>
+  <br> 
+  <br> 
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/alocacao_150vetores.png" alt="150vetores" width="1000" height="auto">  
+<em>função para distribuição dos tokens nos vetores</em>
+  <br> 
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/tabel_final_word2Vec.png" alt="tabela w2v" width="900" height="auto">  
+<em>Tabela final pós Word2Vec</em>
+  <br> 
+
+  <br>
+  <br>
+  
+-Algorítimos de Aprendizado: O objetivo no nosso projeto é exatamente fazer a classificação de frases com o objetivo de conferir o desempenho de campanhas de marketing, assim, apenas o modelo Word2Vec não é o suficente, pois mesmo organizando a similaridade de palavras, ele não consegue fazer a classificação de sentimentos. A solução é utilizar algorítimos de aprendizado supervizionado para fazer esse tipo de classificação.
+
+
+
+- Naive Bayes: Naive Bayes foi o primeiro algorítimo testado pelo grupo, ele se baseia em uma teoria matemática de probabilidades condicionais (teorema de Bayes). O algorítimo se detaca por sua eficiência e simplicidade. A biblioteca utilizada para esse método foi o sklearn (GaussianNB)
+
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_naive_bayes.png" alt="naive bayes" width="900" height="auto">  
+<em>Construção do modelo Naive Bayes aplicado</em>
+<br>
+<br>
+- CatBoost: o catboots é outro algorítimo de classificação, se destacando principalemnte com dados com características categóricas e dados desbalanceados. Esse algorítimo se baseia em conhecimentos matemáticos de gradiente (gradient boosting)
+
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_catboost.png" alt="modelo catboost" width="900" height="auto">  
+<em>Construção do modelo CatBoost aplicado</em>
+<br>
+<br>
+
+-Resultados dos Algorítimos de Apredizado Supervisionado:
 
 - Naive Bayes:
 
@@ -583,8 +633,10 @@ Resultados dos Algorítimos de Apredizado Supervisionados:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/27f6dd26-3243-4a51-a9e3-31b614bdf577)
 
+<em>Os resultados conferidos pleo Naive Bayes foram satisfatórios mas não ideais. Com 54% de acurárica de treinamento e 55% de acurácia total</em>
 
-- Catboost:
+
+- CatBoost:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/3952b8c2-fca2-4af5-8ea1-027dd886e15c)
 
@@ -592,7 +644,7 @@ Resultados dos Algorítimos de Apredizado Supervisionados:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4bbca284-8b45-4c13-94aa-d7e32abcbae5)
 
-
+<em>Os resultados conferidos pleo CatBoost foram bem satisfatórios. Com 95% de acurácia de treinamento e 72% de acurácia total. Também foi obtido resultados satisfatórios na matriz de confusão </em>
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
