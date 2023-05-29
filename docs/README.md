@@ -519,8 +519,7 @@ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim 
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/7161d030-b594-4156-82ea-95336c3f50b7)
 
-## (
-) Modelo utilizando Word2Vec (IPYNB)
+## Modelo utilizando Word2Vec (IPYNB)
 
 Colocar o link do artefato (deve estar na pasta src do repositório do projeto). (Link do arquivo Word2Vec do Rodrigo)
 
@@ -528,8 +527,9 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ### Objetivo da Sprint
  
+Pré-processamento para utilização de Word2Vec (carregando vetores para cada palavras num modelo já treinado) e entrega do modelo word2vec em algortimos classificatórios.
 
-- Sobre o Modelo Word2Vec 
+### Sobre o Modelo Word2Vec 
 
  O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palvras disponibilizas para o treinamento. 
  
@@ -544,17 +544,17 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 <br>
 <br>
 
-- Vantagens do Modelo Word2Vec 
+### Vantagens do Modelo Word2Vec 
 
 Em comparação ao modelo anterior do Bag of Words, o modelo Word2Vec possui várias vantagens, a principal delas é conseguir capturar o contexto e semântica das palavras. Além disso, o Word2Vec também gera uma representação vetorial com uma dimensionalidade muito mais reduzida, ele consegue trabalhar de forma mais efetiva com palavras desconhecidas e é capaz de fazer esses cálculos semânticos entre similaridade entre palavras.
 
-- Arquitetura do Modelo Word2Vec: CBOW
+### Arquitetura do Modelo Word2Vec: CBOW
 
 O modelo Word2Vec possui duas arquiteturas principais: CBOW (Continuos Bag-Of-Words) e Skip-Gram. Nossa equipe optou por utilizar o modelo CBOW pois computacionalmente ele é mais eficiente. Esse tipo de arquitetura recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos (CBOW e Skip-Gram) são treinados para maximizar a probabilidade de previsão correta das palavras.
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_cbow.png" alt="modelo CBOW" width="300" height="auto">
 
-- Construção do Modelo Word2Vec
+### Construção do Modelo Word2Vec
 
 Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-processamento de dados, só que agora, na segunda base disponibilizada:
 
@@ -620,7 +620,8 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
  O objetivo no nosso projeto é exatamente fazer a classificação de frases com o intuito de conferir o desempenho de campanhas de marketing, assim, apenas o modelo Word2Vec não é o suficente, pois mesmo organizando a similaridade de palavras, ele não consegue fazer a classificação de sentimentos. A solução é utilizar algorítimos de aprendizado supervizionado para fazer esse tipo de classificação. Neste sentido, nesta Sprint, testamos alguns algoritmos, mas optamos pela utilização do Naive Bayes e do Catboost.
 
 
-- Naive Bayes
+#### Naive Bayes
+
  O Naive Bayes foi o primeiro algorítimo testado pelo grupo, ele se baseia em uma teoria matemática de probabilidades condicionais (teorema de Bayes). O algorítimo se detaca por sua eficiência e simplicidade. A biblioteca utilizada para esse método foi o sklearn (GaussianNB). A principal intenção do grupo, era de usar o algoritmo para realizar o cálculo da probabilidade condicional de cada palavra ou "n-grama" ocorrer em cada classe, com o intuito de estimar a probabilidade do texto pertencer a uma classificação de sentimento específico.
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_naive_bayes.png" alt="naive bayes" width="900" height="auto">  
@@ -628,7 +629,8 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 <br>
 <br>
 
-- CatBoost
+#### CatBoost
+
  O catboots é outro algorítimo de classificação, se destacando principalemnte com dados com características categóricas e dados desbalanceados. Esse algorítimo se baseia em conhecimentos matemáticos de gradiente (gradient boosting). É importante ressaltar que o Catboost é muito usado na definição de características categóricas como palavras ou frases, sem a necessidade de codificá-las numericamente, o que pode reduzir a complexidade e o tempo de processamento. Com base nestes fatores, e mediante o uso prévio de alguns membros de nosso grupo, decidimos optar pela sua utilização nesta Sprint.
 
 
