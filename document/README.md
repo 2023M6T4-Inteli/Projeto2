@@ -739,14 +739,15 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 - Uso de emojis na base de dados: é possível identificar o uso de emojis nos comentários e analisar quais são os emojis mais frequentes. Isso pode ajudar a entender aemoção e o sentimento dos usuários em relação às postagens. Sendo realizado uma substituição por palavras de seus respectivos significados.
 
 3. Pré-processamento do Dataset
+
 No pré-processamento do dataset, são realizadas etapas de limpeza e preparação dos dados antes de serem usados em análises ou modelos de machine learning. Isso envolve a aplicação de técnicas e bibliotecas para transformar os dados brutos em um formato adequado para análise.
 
 Neste caso específico, foram utilizadas as seguintes bibliotecas adicionais para realizar o pré-processamento:
 
--  Normaliser:
+- Normaliser:
 A biblioteca "Normaliser" é uma ferramenta utilizada para normalizar e padronizar textos. Ela oferece recursos para lidar com a normalização de caracteres, remoção de caracteres especiais, conversão de letras maiúsculas para minúsculas, entre outros. Essa biblioteca pode ser útil para garantir que os textos do dataset estejam em um formato consistente e pronto para serem processados.
 
--  SpaCy: 
+- SpaCy: 
 A biblioteca "SpaCy" é uma biblioteca de processamento de linguagem natural (NLP) em Python. Ela fornece uma variedade de recursos para realizar tarefas de processamento de texto, como tokenização, lematização, reconhecimento de entidades nomeadas, análise de dependência, entre outros. O SpaCy é amplamente utilizado em tarefas de NLP e pode ser aplicado no pré-processamento de dados para extrair informações relevantes e realizar análises mais avançadas.
 
 Para utilizar essas bibliotecas, é necessário instalá-las previamente no ambiente Python em que o código está sendo executado. Você pode instalar as bibliotecas usando os seguintes comandos:
@@ -755,7 +756,7 @@ Para utilizar essas bibliotecas, é necessário instalá-las previamente no ambi
 ```!pip install spacy```
 Esses comandos utilizam o gerenciador de pacotes pip para instalar as bibliotecas "Normaliser" e "SpaCy" em seu ambiente Python. Após a instalação, você pode importar essas bibliotecas em seu código e utilizar suas funcionalidades para realizar as etapas necessárias de pré-processamento do dataset.
 
-#### Pipeline
+3. Pipeline
 No pré-processamento do dataset, são realizadas etapas de limpeza e preparação dos dados antes de serem usados em análises ou modelos de machine learning. Isso envolve a aplicação de técnicas e bibliotecas para transformar os dados brutos em um formato adequado para análise.
 
 Neste caso, o pré-processamento do dataset foi realizado utilizando um pipeline que incluiu as seguintes etapas:
