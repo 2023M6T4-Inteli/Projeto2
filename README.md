@@ -54,7 +54,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>src</b>: Nesta pasta irá um README com todos os links dos vídeos de demonstração do projeto.
 
-<b>src</b>: Nesta pasta irá todo o código fonte do projeto, pronto para para ser baixado e modificado.<br>
+<b>README.md</b>: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora)..<br>
 
 
 ## 🛠 Instalação
@@ -69,12 +69,11 @@ Insira aqui as instruções para desenvolvimento (modificação) do projeto.
 
 A cada atualização os detalhes devem ser lançados aqui (segue exemplo abaixo).
 
-* 0.2.1 - 25/01/2022
+* 0.5.0 - XX/XX/2023
     * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.3.1 - 28/05/2023
+* 0.4.0 - XX/XX/2023
+    
+* 0.3.0 - 28/05/2023
     * Inserção da lematização e Modelo Word2Vec
 * 0.2.0 - 12/05/2023
     * Segunda entrega: Pipeline do Pré-processamento de dados e Modleo Bag Of Words
@@ -83,7 +82,7 @@ A cada atualização os detalhes devem ser lançados aqui (segue exemplo abaixo)
 
 ## 📋 Licença/License
 
-Licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2023M6T4-Inteli/Projeto2">Chat-BTG  <a> by </a> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2023M6T4-Inteli/Projeto2#readme">Inteli, <a href="https://www.linkedin.com/in/jo%C3%A3o-tourinho-marques-1b64b2232/">João Tourinho Marques</a>, <a href="https://www.linkedin.com/in/henri-harari-717930242/">Henri Harari</a>, <a href="https://www.linkedin.com/in/kathlyn-diwan-0a0189232/">Kathlyn Diwan</a>, <a href="https://www.linkedin.com/in/lucas-conti-pereira-3410b1233/">Lucas Pereira</a>, <a href="https://www.linkedin.com/in/rodrigo-moraes-martins-/">Rodrigo Moraes Martins</a>,<a href="https://www.linkedin.com/in/thainadedeus/">Thainá Lima</a>, <a href="https://www.linkedin.com/in/vinicius-oliveira-fernandes/">Vinicius Oliveira Fernandes</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.
 
 ## 🎓 Referências
 
