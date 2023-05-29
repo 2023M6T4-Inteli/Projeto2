@@ -529,69 +529,6 @@ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim 
  
 Pré-processamento para utilização de Word2Vec (carregando vetores para cada palavras num modelo já treinado) e entrega do modelo word2vec em algortimos classificatórios.
 
-# Pré-processamento do Dataset
-No pré-processamento do dataset, são realizadas etapas de limpeza e preparação dos dados antes de serem usados em análises ou modelos de machine learning. Isso envolve a aplicação de técnicas e bibliotecas para transformar os dados brutos em um formato adequado para análise.
-
-Neste caso específico, foram utilizadas as seguintes bibliotecas adicionais para realizar o pré-processamento:
-
-### Normaliser:
-A biblioteca "Normaliser" é uma ferramenta utilizada para normalizar e padronizar textos. Ela oferece recursos para lidar com a normalização de caracteres, remoção de caracteres especiais, conversão de letras maiúsculas para minúsculas, entre outros. Essa biblioteca pode ser útil para garantir que os textos do dataset estejam em um formato consistente e pronto para serem processados.
-
-### SpaCy: 
-A biblioteca "SpaCy" é uma biblioteca de processamento de linguagem natural (NLP) em Python. Ela fornece uma variedade de recursos para realizar tarefas de processamento de texto, como tokenização, lematização, reconhecimento de entidades nomeadas, análise de dependência, entre outros. O SpaCy é amplamente utilizado em tarefas de NLP e pode ser aplicado no pré-processamento de dados para extrair informações relevantes e realizar análises mais avançadas.
-
-Para utilizar essas bibliotecas, é necessário instalá-las previamente no ambiente Python em que o código está sendo executado. Você pode instalar as bibliotecas usando os seguintes comandos:
-
-```!pip install Normaliser```
-```!pip install spacy```
-Esses comandos utilizam o gerenciador de pacotes pip para instalar as bibliotecas "Normaliser" e "SpaCy" em seu ambiente Python. Após a instalação, você pode importar essas bibliotecas em seu código e utilizar suas funcionalidades para realizar as etapas necessárias de pré-processamento do dataset.
-
-## Pipeline
-No pré-processamento do dataset, são realizadas etapas de limpeza e preparação dos dados antes de serem usados em análises ou modelos de machine learning. Isso envolve a aplicação de técnicas e bibliotecas para transformar os dados brutos em um formato adequado para análise.
-
-Neste caso, o pré-processamento do dataset foi realizado utilizando um pipeline que incluiu as seguintes etapas:
-
-Tokenização: A tokenização é o processo de dividir o texto em unidades menores, chamadas de tokens. Os tokens podem ser palavras individuais, pontuações, números, ou outras unidades significativas. A biblioteca "SpaCy" foi utilizada para realizar a tokenização dos textos, dividindo-os em tokens que podem ser processados individualmente.
-
-Retirada de stop words: Stop words são palavras comuns que geralmente não contribuem muito para o significado do texto, como "a", "o", "para", etc. A remoção de stop words é uma etapa comum no pré-processamento de textos para reduzir o ruído e melhorar a eficiência da análise. A biblioteca "SpaCy" foi utilizada para remover as stop words dos textos do dataset.
-
-Corretor de palavras: Um corretor de palavras é utilizado para identificar e corrigir erros ortográficos em palavras. A biblioteca "pyspellchecker" foi utilizada como corretor de palavras, verificando e corrigindo erros ortográficos nas palavras do texto.
-
-Transcrição de emojis: Emojis são símbolos usados para expressar emoções, sentimentos ou ideias em mensagens de texto. A biblioteca "emoji" foi utilizada para realizar a transcrição dos emojis presentes nos textos, convertendo-os em uma representação textual adequada.
-
-Correção de abreviações: Abreviações e formas reduzidas de palavras são comuns em mensagens de texto, mas podem dificultar a compreensão e análise dos textos. Foi utilizado um método para corrigir abreviações, substituindo-as por suas formas completas para facilitar a interpretação dos textos.
-
-Stemming: O stemming é um processo de redução de palavras à sua forma base ou radical. Ele remove os sufixos das palavras, mantendo apenas o núcleo significativo. O stemming pode ajudar a reduzir a dimensionalidade dos dados e agrupar palavras relacionadas. No pré-processamento, foi aplicado o stemming nas palavras do texto.
-
-Lematização: A lematização é um processo semelhante ao stemming, mas em vez de simplesmente remover sufixos, ele retorna a forma base da palavra com base em seu significado léxico. A lematização considera a parte gramatical da palavra e busca o "lemma" correspondente. O objetivo é obter uma representação mais precisa das palavras no texto. A biblioteca "SpaCy" foi utilizada para realizar a lematização das palavras.
-
-Após a aplicação dessas etapas de pré-processamento, o texto tratado estará pronto para análises posteriores, como modelagem de tópicos, classificação de sentimentos, entre outros.
-
-### Modelos de vetorização:
-
-Após as etapas de pré-processamento mencionadas anteriormente, foram utilizados dois modelos de vetorização para representar os textos de forma numérica. Esses modelos são:
-
-Bag of Words (Saco de Palavras): O modelo Bag of Words é uma abordagem comum na vetorização de textos. Ele cria uma representação numérica dos textos, considerando a frequência de ocorrência de cada palavra em um documento ou em todo o corpus. Cada documento é representado por um vetor em que cada elemento corresponde a uma palavra e seu valor é a contagem de ocorrências dessa palavra no documento. Essa representação é adequada para muitas tarefas de processamento de texto, como classificação de documentos e análise de sentimentos.
-
-Word2Vec: O Word2Vec é um modelo de vetorização baseado em redes neurais que captura as relações semânticas entre as palavras. Ele mapeia palavras para vetores densos de valores reais, de modo que palavras semanticamente similares fiquem próximas no espaço vetorial. Essa técnica permite representar palavras como vetores contínuos e capturar relações de significado entre elas, como analogias e similaridades. O modelo Word2Vec é amplamente utilizado para tarefas de processamento de linguagem natural, como análise de sentimento, recomendação de palavras e tradução automática.
-
-Após a aplicação desses modelos de vetorização, o texto tratado é representado em forma numérica, pronta para ser utilizada como entrada para algoritmos de aprendizado de máquina ou análises estatísticas. O output dessas etapas de vetorização será uma matriz numérica em que cada documento é representado por um vetor de características correspondentes às palavras ou conceitos relevantes extraídos do texto.
-
-#### Bibliotecas para os modelos de vetorização
-Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para realizar o pré-processamento do texto:
-
-NLTK (Natural Language Toolkit): O NLTK é uma biblioteca popular em Python para processamento de linguagem natural. Ele oferece uma ampla gama de recursos e ferramentas para tarefas como tokenização, lematização, stemming, análise sintática, entre outros. A biblioteca NLTK foi utilizada para realizar algumas etapas de pré-processamento, como tokenização e stemming.
-
-Gensim: O Gensim é uma biblioteca de processamento de linguagem natural em Python que oferece ferramentas para modelagem de tópicos, indexação e similaridade de documentos. Neste contexto, o Gensim foi utilizado para aplicar o modelo Word2Vec mencionado anteriormente, que permite a vetorização baseada em palavras.
-
-CountVectorizer: O CountVectorizer é uma classe da biblioteca scikit-learn em Python que permite a vetorização de textos usando a abordagem Bag of Words. Ele transforma o texto em uma matriz numérica em que cada documento é representado por um vetor que contém a contagem de ocorrência de cada palavra. O CountVectorizer foi utilizado como um modelo de vetorização baseado em frequência de palavras.
-
-TfidfVectorizer: O TfidfVectorizer também é uma classe da biblioteca scikit-learn em Python que realiza a vetorização de textos usando a abordagem TF-IDF (Term Frequency-Inverse Document Frequency). Essa abordagem leva em consideração a frequência de uma palavra em um documento específico e sua frequência inversa em todo o corpus. Isso permite atribuir maior importância a palavras menos frequentes e reduzir a importância de palavras muito comuns. O TfidfVectorizer foi utilizado como um modelo de vetorização baseado no esquema TF-IDF.
-
-Após a aplicação dessas técnicas e bibliotecas de pré-processamento, o texto tratado é transformado em uma representação numérica adequada para análise posterior, como classificação de documentos, agrupamento de tópicos ou outros modelos de aprendizado de máquina. O output dessas etapas de vetorização será uma matriz numérica em que cada documento é representado por um vetor de características correspondentes às palavras relevantes extraídas do texto.
-
-
-
 ### Sobre o Modelo Word2Vec 
 
  O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palvras disponibilizas para o treinamento. 
@@ -794,6 +731,67 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 - Relação determinística entre as colunas Anomalia e Comentário: Análise se há alguma relação determinística entre a presença de anomalias em uma postagem e a natureza dos comentários feitos pelos usuários.
 
 - Uso de emojis na base de dados: é possível identificar o uso de emojis nos comentários e analisar quais são os emojis mais frequentes. Isso pode ajudar a entender aemoção e o sentimento dos usuários em relação às postagens. Sendo realizado uma substituição por palavras de seus respectivos significados.
+
+3. Pré-processamento do Dataset
+No pré-processamento do dataset, são realizadas etapas de limpeza e preparação dos dados antes de serem usados em análises ou modelos de machine learning. Isso envolve a aplicação de técnicas e bibliotecas para transformar os dados brutos em um formato adequado para análise.
+
+Neste caso específico, foram utilizadas as seguintes bibliotecas adicionais para realizar o pré-processamento:
+
+-  Normaliser:
+A biblioteca "Normaliser" é uma ferramenta utilizada para normalizar e padronizar textos. Ela oferece recursos para lidar com a normalização de caracteres, remoção de caracteres especiais, conversão de letras maiúsculas para minúsculas, entre outros. Essa biblioteca pode ser útil para garantir que os textos do dataset estejam em um formato consistente e pronto para serem processados.
+
+-  SpaCy: 
+A biblioteca "SpaCy" é uma biblioteca de processamento de linguagem natural (NLP) em Python. Ela fornece uma variedade de recursos para realizar tarefas de processamento de texto, como tokenização, lematização, reconhecimento de entidades nomeadas, análise de dependência, entre outros. O SpaCy é amplamente utilizado em tarefas de NLP e pode ser aplicado no pré-processamento de dados para extrair informações relevantes e realizar análises mais avançadas.
+
+Para utilizar essas bibliotecas, é necessário instalá-las previamente no ambiente Python em que o código está sendo executado. Você pode instalar as bibliotecas usando os seguintes comandos:
+
+```!pip install Normaliser```
+```!pip install spacy```
+Esses comandos utilizam o gerenciador de pacotes pip para instalar as bibliotecas "Normaliser" e "SpaCy" em seu ambiente Python. Após a instalação, você pode importar essas bibliotecas em seu código e utilizar suas funcionalidades para realizar as etapas necessárias de pré-processamento do dataset.
+
+#### Pipeline
+No pré-processamento do dataset, são realizadas etapas de limpeza e preparação dos dados antes de serem usados em análises ou modelos de machine learning. Isso envolve a aplicação de técnicas e bibliotecas para transformar os dados brutos em um formato adequado para análise.
+
+Neste caso, o pré-processamento do dataset foi realizado utilizando um pipeline que incluiu as seguintes etapas:
+
+- Tokenização: A tokenização é o processo de dividir o texto em unidades menores, chamadas de tokens. Os tokens podem ser palavras individuais, pontuações, números, ou outras unidades significativas. A biblioteca "SpaCy" foi utilizada para realizar a tokenização dos textos, dividindo-os em tokens que podem ser processados individualmente.
+
+- Retirada de stop words: Stop words são palavras comuns que geralmente não contribuem muito para o significado do texto, como "a", "o", "para", etc. A remoção de stop words é uma etapa comum no pré-processamento de textos para reduzir o ruído e melhorar a eficiência da análise. A biblioteca "SpaCy" foi utilizada para remover as stop words dos textos do dataset.
+
+- Corretor de palavras: Um corretor de palavras é utilizado para identificar e corrigir erros ortográficos em palavras. A biblioteca "pyspellchecker" foi utilizada como corretor de palavras, verificando e corrigindo erros ortográficos nas palavras do texto.
+
+- Transcrição de emojis: Emojis são símbolos usados para expressar emoções, sentimentos ou ideias em mensagens de texto. A biblioteca "emoji" foi utilizada para realizar a transcrição dos emojis presentes nos textos, convertendo-os em uma representação textual adequada.
+
+- Correção de abreviações: Abreviações e formas reduzidas de palavras são comuns em mensagens de texto, mas podem dificultar a compreensão e análise dos textos. Foi utilizado um método para corrigir abreviações, substituindo-as por suas formas completas para facilitar a interpretação dos textos.
+
+- Stemming: O stemming é um processo de redução de palavras à sua forma base ou radical. Ele remove os sufixos das palavras, mantendo apenas o núcleo significativo. O stemming pode ajudar a reduzir a dimensionalidade dos dados e agrupar palavras relacionadas. No pré-processamento, foi aplicado o stemming nas palavras do texto.
+
+- Lematização: A lematização é um processo semelhante ao stemming, mas em vez de simplesmente remover sufixos, ele retorna a forma base da palavra com base em seu significado léxico. A lematização considera a parte gramatical da palavra e busca o "lemma" correspondente. O objetivo é obter uma representação mais precisa das palavras no texto. A biblioteca "SpaCy" foi utilizada para realizar a lematização das palavras.
+
+Após a aplicação dessas etapas de pré-processamento, o texto tratado estará pronto para análises posteriores, como modelagem de tópicos, classificação de sentimentos, entre outros.
+
+#### Modelos de vetorização:
+
+Após as etapas de pré-processamento mencionadas anteriormente, foram utilizados dois modelos de vetorização para representar os textos de forma numérica. Esses modelos são:
+
+- Bag of Words (Saco de Palavras): O modelo Bag of Words é uma abordagem comum na vetorização de textos. Ele cria uma representação numérica dos textos, considerando a frequência de ocorrência de cada - palavra em um documento ou em todo o corpus. Cada documento é representado por um vetor em que cada elemento corresponde a uma palavra e seu valor é a contagem de ocorrências dessa palavra no documento. Essa representação é adequada para muitas tarefas de processamento de texto, como classificação de documentos e análise de sentimentos.
+
+- Word2Vec: O Word2Vec é um modelo de vetorização baseado em redes neurais que captura as relações semânticas entre as palavras. Ele mapeia palavras para vetores densos de valores reais, de modo que palavras semanticamente similares fiquem próximas no espaço vetorial. Essa técnica permite representar palavras como vetores contínuos e capturar relações de significado entre elas, como analogias e similaridades. O modelo Word2Vec é amplamente utilizado para tarefas de processamento de linguagem natural, como análise de sentimento, recomendação de palavras e tradução automática.
+
+- Após a aplicação desses modelos de vetorização, o texto tratado é representado em forma numérica, pronta para ser utilizada como entrada para algoritmos de aprendizado de máquina ou análises estatísticas. O output dessas etapas de vetorização será uma matriz numérica em que cada documento é representado por um vetor de características correspondentes às palavras ou conceitos relevantes extraídos do texto.
+
+#### Bibliotecas para os modelos de vetorização
+Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para realizar o pré-processamento do texto:
+
+- NLTK (Natural Language Toolkit): O NLTK é uma biblioteca popular em Python para processamento de linguagem natural. Ele oferece uma ampla gama de recursos e ferramentas para tarefas como tokenização, lematização, stemming, análise sintática, entre outros. A biblioteca NLTK foi utilizada para realizar algumas etapas de pré-processamento, como tokenização e stemming.
+
+- Gensim: O Gensim é uma biblioteca de processamento de linguagem natural em Python que oferece ferramentas para modelagem de tópicos, indexação e similaridade de documentos. Neste contexto, o Gensim foi utilizado para aplicar o modelo Word2Vec mencionado anteriormente, que permite a vetorização baseada em palavras.
+
+- CountVectorizer: O CountVectorizer é uma classe da biblioteca scikit-learn em Python que permite a vetorização de textos usando a abordagem Bag of Words. Ele transforma o texto em uma matriz numérica em que cada documento é representado por um vetor que contém a contagem de ocorrência de cada palavra. O CountVectorizer foi utilizado como um modelo de vetorização baseado em frequência de palavras.
+
+- TfidfVectorizer: O TfidfVectorizer também é uma classe da biblioteca scikit-learn em Python que realiza a vetorização de textos usando a abordagem TF-IDF (Term Frequency-Inverse Document Frequency). Essa abordagem leva em consideração a frequência de uma palavra em um documento específico e sua frequência inversa em todo o corpus. Isso permite atribuir maior importância a palavras menos frequentes e reduzir a importância de palavras muito comuns. O TfidfVectorizer foi utilizado como um modelo de vetorização baseado no esquema TF-IDF.
+
+- Após a aplicação dessas técnicas e bibliotecas de pré-processamento, o texto tratado é transformado em uma representação numérica adequada para análise posterior, como classificação de documentos, agrupamento de tópicos ou outros modelos de aprendizado de máquina. O output dessas etapas de vetorização será uma matriz numérica em que cada documento é representado por um vetor de características correspondentes às palavras relevantes extraídas do texto.
 
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
