@@ -521,7 +521,7 @@ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim 
 
 ## Modelo utilizando Word2Vec (IPYNB)
 
-<a href="https://https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/2_Word2Vec.ipynb">Jupyter Notebook do Modelo Word2Vec</a>
+<a href="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/2_Word2Vec.ipynb">Jupyter Notebook do Modelo Word2Vec</a>
 
 ## (Sprint 3) Documentação do Modelo utilizando Word2Vec
 
