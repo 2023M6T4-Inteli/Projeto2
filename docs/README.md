@@ -647,6 +647,40 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
 <em>Os resultados conferidos pleo CatBoost foram satisfatórios. Entretanto, apresenta um overfitting, já que existe 95% de acurácia de treinamento e 72% de acurácia total, tendo uma diferença grande entre as duas separações, portanto, sendo necessário entender o motivo. Também foi obtido resultados satisfatórios na matriz de confusão </em>
 
+### Arquitetura da Solução
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/af8e1382-532c-4a83-b72d-965123f0d87f)
+
+1. Extração dos dados:
+- Utilizando a API da rede social Instagram, é possível extrair dados de comentários em postagens públicas. Esses dados são retornados em formato JSON, que é uma forma de representação de dados estruturados que facilita a análise e manipulação.
+
+- Depois de extrair os dados da API do Instagram, eles são processados e estruturados em uma fileira de dados, que pode ser um arquivo CSV, por exemplo. Isso facilita a manipulação e análise dos dados em etapas posteriores.
+
+- Em seguida, os dados são enviados para um sistema de mensageria, que pode ser um serviço de mensagens instantâneas(RabbitMQ), por exemplo. Isso permite que os dados sejam acessados por usuários autorizados em tempo real.
+
+- Depois de serem recebidos pelo sistema de mensageria, os dados passam por um processo de processamento, no qual podem ser manipulados e transformados em uma estrutura mais adequada para análise.
+
+- Por fim, os dados são pré-estruturados, o que significa que são organizados em uma estrutura que facilita a consulta e análise. Isso pode incluir a organização dosdados em tabelas ou a atribuição de tags ou categorias específicas para cada dado. Com a pré-estruturação, é possível realizar consultas mais eficientes e respostas mais rápidas a perguntas específicas sobre os dados.
+
+2. Análise descritiva:
+
+- Tipos de dados: identificação de quais são os tipos de dados presentes no dataset. Por exemplo, os dados podem incluir informações sobre o autor do comentário, a data e hora em que o comentário foi feito, o tipo de post (Reels, Foto, Vídeo, Carrossel) e o próprio comentário. Cada um desses tipos de dados pode ser tratado de forma diferente na análise.
+
+- Colunas no dataset: listar todas as colunas no dataset e entender o que cada uma delas representa.
+
+- Dados estatísticos do dataset: é possível calcular estatísticas básicas dos dados, como média, mediana, desvio padrão e intervalos de confiança. Usado para a entender a distribuição dos dados e identificar possíveis outliers.
+
+- Comentários por tipo de post: analise da distribuição dos comentários por tipo depost (Reels, Foto, Vídeo, Carrossel). Usado para entender qual tipo de postagem gera mais engajamento e interação com os usuários.
+
+- Palavras que mais aparecem nos comentários: é possível identificar as palavras mais frequentes nos comentários. Isso pode ajudar a entender os principais temas e assuntos abordados pelos usuários e possíveis stop-words. Essa análise pode ser feita utilizando técnicas de processamento de linguagem natural, como a tokenização e a contagem de frequência de palavras.
+
+- Conjunto de três palavras com maior frequência (trigramas): além das palavras individuais, é possível identificar os conjuntos de três palavras mais frequentes nos comentários. Isso pode ajudar a entender quais as expressões mais comuns utilizadas pelos usuários.
+
+- Relação determinística entre as colunas Anomalia e Comentário: Análise se há alguma relação determinística entre a presença de anomalias em uma postagem e a natureza dos comentários feitos pelos usuários.
+
+- Uso de emojis na base de dados: é possível identificar o uso de emojis nos comentários e analisar quais são os emojis mais frequentes. Isso pode ajudar a entender aemoção e o sentimento dos usuários em relação às postagens. Sendo realizado uma substituição por palavras de seus respectivos significados.
+
+
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
 Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
