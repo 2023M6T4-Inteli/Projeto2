@@ -759,7 +759,7 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 
 ### Arquitetura da Solução
 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Arquitetura%20de%20solu%C3%A7%C3%A3o.png" alt="Arquitetura de solução" width="9000">
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Arquitetura%20de%20solu%C3%A7%C3%A3o.png" alt="Arquitetura de solução" width="5000">
 
 1. Extração dos dados:
 - Utilizando a API da rede social Instagram, é possível extrair dados de comentários em postagens públicas. Esses dados são retornados em formato JSON, que é uma forma de representação de dados estruturados que facilita a análise e manipulação.
