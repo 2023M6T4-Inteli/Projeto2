@@ -33,7 +33,7 @@ Ressalta-se que a visualização dos dados também será pensada afim de facilit
 **Criar → Custo do Setup**
 
 Com a visão de ampliar, agregar e integrar diversas ferramentas, pode-se citar alguns fatores determinantes na análise financeira para o escopo do projeto. Neste sentido, é importante ressaltar que o projeto “Chat-BTG” ainda é limitado ao escopo mínimo de requisitos de uma rede social específica, dentro de dados levantados a partir de uma base de dados pré-definida, sem atualização em tempo real. Consequentemente, a níveis de complexidade baixos, possuímos um custo muito interessante com base no benchmark do mercado. Sendo uma solução nativa, o custo de setup da solução é muito baixo, e outros custos de “web services” são mitigados com o processo interno realizado.
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Matriz_Oceano_Azul_CHATBTG.png">
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Oceano_azul.png">
 
 ### ⚠️ Matriz de riscos
 
@@ -57,19 +57,18 @@ No que diz respeito aos riscos evidenciados na Matriz acima, ressalta-se o plano
 
 O Canvas Proposta de Valor é uma ferramenta de negócios que auxilia no entendimento e criação do posicionamento do projeto (como um produtos que será desenvolvido), com base na criação de ganho que o cliente realmente valoriza e precisa. 
 
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Canva%20value%20proposition.png">
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Proposta_Valor.png">
 
 ### 💵 Análise Financeira
 
-A análise financeira corresponde à uma avaliação dos aspectos econômicos e financeiros que permeiam o projeto, com o objetivo de estimar a viabilidade e escabilidade do mesmo.
+A análise financeira corresponde à uma avaliação dos aspectos econômicos e financeiros que permeiam o projeto, com o objetivo de estimar a viabilidade e escalabilidade do mesmo.
 
-Conforme o site de notícias Reuters, o BTG Pactual (BTG Pactual S.A.). é um banco de investimentos brasileiro especializado em capital de investimento e capital de risco. O BTG se configura como uma empresa de capital aberto com cerca de 200 sócios (constituído por funcionários internos). Mesmo sua sede sendo no Rio de Janeiro, Brasil, sua atuação ocorre em escala global, alcançando EUA, Chile, México, Reino Unido, Portugal, Argentina, Colômbia e Peru. Além das já citadas, o banco atua em áreas como ‘Corporate Lending (Empréstimos e Financiamentos)’, Sales and Trading, Asset Management, Wealth Management e Ativos Florestais. Apesar da queda das receitas anuais totais (de 2022 para 2023) e também das ações nos últimos 6 meses, o banco BTG continua sendo uma das empresas mais relevantes e consolidadas do Brasil. 
+Conforme o site de notícias Reuters, o BTG Pactual (BTG Pactual S.A.) é um banco de investimentos brasileiro especializado em capital de investimento e capital de risco. O BTG se configura como uma empresa de capital aberto com cerca de 200 sócios (constituído por funcionários internos). Mesmo sua sede sendo no Rio de Janeiro, Brasil, sua atuação ocorre em escala global, alcançando EUA, Chile, México, Reino Unido, Portugal, Argentina, Colômbia e Peru. Além das já citadas, o banco atua em áreas como ‘Corporate Lending (Empréstimos e Financiamentos)’, Sales and Trading, Asset Management, Wealth Management e Ativos Florestais. Apesar da queda das receitas anuais totais (de 2022 para 2023) e também das ações nos últimos 6 meses, o banco BTG continua sendo uma das empresas mais relevantes e consolidadas do Brasil.
 
-Custos em relação ao projeto:
+Custos em relação ao projeto: Os custos estimados pelo cliente foram de R$250.000. Não foram informadas projeções de receita pelo cliente (projeto interno).
 
-O custos estimados pelo cliente foram de R$250.000. Não foram informadas projeções de receita pelo cliente (projeto interno).
+Em paralelo, foi feito uma projeção dos custos do projeto, contabilizando os gastos com funcionários e serviços de infraestrutura da AWS, tendo como média o valor de R$ 167.784.
 
-Em paralelo, foi feito uma projeção dos custos do projeto, contabilizando os gastos com funcionários e serviços de infraestrutura da AWS, tendo como média o valor de R$ 167.784.  
 
 
 **Profissionais Necessários Para o Desenvolvimento da Solução:**
@@ -77,8 +76,7 @@ Em paralelo, foi feito uma projeção dos custos do projeto, contabilizando os g
 - Engenheiro em Machine Learning
 - Desenvolver de Software
 - Cientista de Dados
-Opcional (Incomum no Brasil):
-- Especialista em linguística Computacional
+- Opcional (Incomum no Brasil): Especialista em linguística Computacional
 
 Salário Médio para Engenheiro em Machine Learning: R$ 8.900 /mês (Glassdoor) <br>
 Salário Médio para Desenvolver Pleno: R$ 10.200 /mês (Glassdoor) <br>
@@ -89,24 +87,26 @@ Gasto em dois meses: R$ 55.620<br>
 Gasto em três meses: R$ 83.430<br>
 
 **Custos da infraestrutura em AWS:**
+<br>
+<br>
 
-Sem o Amazon Comprehend: 
+ Sem o Amazon Comprehend: 
 
-Custo Inicial - R$12.312,18<br>
-Custo Mensal - R$34.341,58<br>
+- Custo Inicial - R$12.312,18<br>
+- Custo Mensal - R$34.341,58<br>
 
-Gastos em dois meses: R$ 80.995,34<br>
-Gastos em três meses: R$ 115.336,92<br>
+- Gastos em dois meses: R$ 80.995,34<br>
+- Gastos em três meses: R$ 115.336,92<br>
 
-
+<br>
+<br>
 Com o Amazon Comprehend: 
 
-Custo Inicial - R$12.312,18 <br>
-Custo Mensal - R$34.404,18 <br>
+- Custo Inicial - R$12.312,18 <br>
+- Custo Mensal - R$34.404,18 <br>
 
-Gastos em dois meses: R$ 81.120,54 <br>
-Gastos em três meses: R$ 115.524,72 <br>
-
+- Gastos em dois meses: R$ 81.120,54 <br>
+- Gastos em três meses: R$ 115.524,72 <br>
 
 **Contabilização total:**
 
