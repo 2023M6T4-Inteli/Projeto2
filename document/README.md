@@ -756,7 +756,7 @@ Para utilizar essas bibliotecas, é necessário instalá-las previamente no ambi
 ```!pip install spacy```
 Esses comandos utilizam o gerenciador de pacotes pip para instalar as bibliotecas "Normaliser" e "SpaCy" em seu ambiente Python. Após a instalação, você pode importar essas bibliotecas em seu código e utilizar suas funcionalidades para realizar as etapas necessárias de pré-processamento do dataset.
 
-3. Pipeline
+4. Pipeline
 No pré-processamento do dataset, são realizadas etapas de limpeza e preparação dos dados antes de serem usados em análises ou modelos de machine learning. Isso envolve a aplicação de técnicas e bibliotecas para transformar os dados brutos em um formato adequado para análise.
 
 Neste caso, o pré-processamento do dataset foi realizado utilizando um pipeline que incluiu as seguintes etapas:
