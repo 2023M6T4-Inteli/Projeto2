@@ -526,11 +526,17 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 3) Documentação do Modelo utilizando Word2Vec
 
-1) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação do modelo:
+### Objetivo da Sprint
+ 
 
--Sobre o Modelo Word2Vec 
+- Sobre o Modelo Word2Vec 
 
-O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palvras disponibilizas para o treinamento.
+ O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palvras disponibilizas para o treinamento. 
+ 
+ Ele, também, permite capturar nuances e contextos que podem influenciar o sentimento de um texto, que são dados pelo nível de similaridade e proximidade entre as palavras. Além disso, o word2vec pode facilitar a extração de características relevantes para a classificação, reduzindo a dimensionalidade e a esparsidade dos dados textuais. Este fatores, são determinates na justificativa da sua utilização no projeto, tão como sua importância.
+ 
+ O modelo word2vec pode ser combinado com outros modelos de aprendizado de máquina com facilidade, para obter melhores resultados de classificação. O word2vec também pode ser usado para gerar incorporações de frases ou documentos inteiros, usando técnicas como média ou soma dos vetores das palavras (neste caso utilizamos a soma, com adição de uma coluna em um novo dataframe). Portanto, o word2vec é um modelo muito útil para a construção e desenvolvimento de nossa análise, pois permite representar as palavras de forma mais rica e eficiente, capturando aspectos semânticos e sintáticos que afetaram na classificação de determinado corpus.
+
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/exemplo_word2vec.png" alt="representação word2vec" width="300" height="auto">
 
@@ -538,17 +544,17 @@ O modelo Word2Vec é uma técnica de PLN que permite representar palavras como v
 <br>
 <br>
 
--Vantagens do Modelo Word2Vec 
+- Vantagens do Modelo Word2Vec 
 
 Em comparação ao modelo anterior do Bag of Words, o modelo Word2Vec possui várias vantagens, a principal delas é conseguir capturar o contexto e semântica das palavras. Além disso, o Word2Vec também gera uma representação vetorial com uma dimensionalidade muito mais reduzida, ele consegue trabalhar de forma mais efetiva com palavras desconhecidas e é capaz de fazer esses cálculos semânticos entre similaridade entre palavras.
 
--Arquitetura do Modelo Word2Vec: CBOW
+- Arquitetura do Modelo Word2Vec: CBOW
 
 O modelo Word2Vec possui duas arquiteturas principais: CBOW (Continuos Bag-Of-Words) e Skip-Gram. Nossa equipe optou por utilizar o modelo CBOW pois computacionalmente ele é mais eficiente. Esse tipo de arquitetura recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos (CBOW e Skip-Gram) são treinados para maximizar a probabilidade de previsão correta das palavras.
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_cbow.png" alt="modelo CBOW" width="300" height="auto">
 
--Construção do Modelo Word2Vec
+- Construção do Modelo Word2Vec
 
 Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-processamento de dados, só que agora, na segunda base disponibilizada:
 
@@ -609,24 +615,29 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
   <br>
   <br>
   
--Algorítimos de Aprendizado: O objetivo no nosso projeto é exatamente fazer a classificação de frases com o objetivo de conferir o desempenho de campanhas de marketing, assim, apenas o modelo Word2Vec não é o suficente, pois mesmo organizando a similaridade de palavras, ele não consegue fazer a classificação de sentimentos. A solução é utilizar algorítimos de aprendizado supervizionado para fazer esse tipo de classificação.
+### Algorítimos de Aprendizado: 
+
+ O objetivo no nosso projeto é exatamente fazer a classificação de frases com o intuito de conferir o desempenho de campanhas de marketing, assim, apenas o modelo Word2Vec não é o suficente, pois mesmo organizando a similaridade de palavras, ele não consegue fazer a classificação de sentimentos. A solução é utilizar algorítimos de aprendizado supervizionado para fazer esse tipo de classificação. Neste sentido, nesta Sprint, testamos alguns algoritmos, mas optamos pela utilização do Naive Bayes e do Catboost.
 
 
-
-- Naive Bayes: Naive Bayes foi o primeiro algorítimo testado pelo grupo, ele se baseia em uma teoria matemática de probabilidades condicionais (teorema de Bayes). O algorítimo se detaca por sua eficiência e simplicidade. A biblioteca utilizada para esse método foi o sklearn (GaussianNB)
+- Naive Bayes
+ O Naive Bayes foi o primeiro algorítimo testado pelo grupo, ele se baseia em uma teoria matemática de probabilidades condicionais (teorema de Bayes). O algorítimo se detaca por sua eficiência e simplicidade. A biblioteca utilizada para esse método foi o sklearn (GaussianNB). A principal intenção do grupo, era de usar o algoritmo para realizar o cálculo da probabilidade condicional de cada palavra ou "n-grama" ocorrer em cada classe, com o intuito de estimar a probabilidade do texto pertencer a uma classificação de sentimento específico.
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_naive_bayes.png" alt="naive bayes" width="900" height="auto">  
 <em>Construção do modelo Naive Bayes aplicado</em>
 <br>
 <br>
-- CatBoost: o catboots é outro algorítimo de classificação, se destacando principalemnte com dados com características categóricas e dados desbalanceados. Esse algorítimo se baseia em conhecimentos matemáticos de gradiente (gradient boosting)
+
+- CatBoost
+ O catboots é outro algorítimo de classificação, se destacando principalemnte com dados com características categóricas e dados desbalanceados. Esse algorítimo se baseia em conhecimentos matemáticos de gradiente (gradient boosting). É importante ressaltar que o Catboost é muito usado na definição de características categóricas como palavras ou frases, sem a necessidade de codificá-las numericamente, o que pode reduzir a complexidade e o tempo de processamento. Com base nestes fatores, e mediante o uso prévio de alguns membros de nosso grupo, decidimos optar pela sua utilização nesta Sprint.
+
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_catboost.png" alt="modelo catboost" width="900" height="auto">  
 <em>Construção do modelo CatBoost aplicado</em>
 <br>
 <br>
 
--Resultados dos Algorítimos de Apredizado Supervisionado:
+- Resultados dos Algorítimos de Apredizado Supervisionado:
 
 - Naive Bayes:
 
