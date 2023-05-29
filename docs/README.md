@@ -567,7 +567,7 @@ Lematização: A lematização é um processo semelhante ao stemming, mas em vez
 
 Após a aplicação dessas etapas de pré-processamento, o texto tratado estará pronto para análises posteriores, como modelagem de tópicos, classificação de sentimentos, entre outros.
 
-## Modelos de vetorização:
+### Modelos de vetorização:
 
 Após as etapas de pré-processamento mencionadas anteriormente, foram utilizados dois modelos de vetorização para representar os textos de forma numérica. Esses modelos são:
 
@@ -577,7 +577,7 @@ Word2Vec: O Word2Vec é um modelo de vetorização baseado em redes neurais que 
 
 Após a aplicação desses modelos de vetorização, o texto tratado é representado em forma numérica, pronta para ser utilizada como entrada para algoritmos de aprendizado de máquina ou análises estatísticas. O output dessas etapas de vetorização será uma matriz numérica em que cada documento é representado por um vetor de características correspondentes às palavras ou conceitos relevantes extraídos do texto.
 
-#Bibliotecas para os modelos de vetorização
+#### Bibliotecas para os modelos de vetorização
 Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para realizar o pré-processamento do texto:
 
 NLTK (Natural Language Toolkit): O NLTK é uma biblioteca popular em Python para processamento de linguagem natural. Ele oferece uma ampla gama de recursos e ferramentas para tarefas como tokenização, lematização, stemming, análise sintática, entre outros. A biblioteca NLTK foi utilizada para realizar algumas etapas de pré-processamento, como tokenização e stemming.
@@ -650,7 +650,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 <em>Definições e contrução do modelo Wor2Vec</em>
   <br>
   <br>
-  
+
   
   - Vetorização para Word2Vec: a vetorização consiste em transformar dados textuais em representações numéricas. É um processo crucial para a contrução do modelo Wor2Vec, só assim será possível organizar a distribuição das palavras em um plano. Todos o tokens são vetorizados e suas somas em uma frase também são contabilizados.
 
@@ -704,7 +704,13 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
 - Resultados dos Algorítimos de Apredizado Supervisionado:
 
-- Naive Bayes:
+Diante as etapas exemplificadas acima, dividimos nossos dados para realizar o treinamento e avaliação do nosso modelo, com base na estruturação realizada. Sendo dividimos em duas seções
+
+- Dados de treino: separação com o intuito de fazer o modelo aprender as características e os padrões dos dados que permitem fazer previsões ou classificações. 
+
+- Dados de teste: separação usada como método de verificação do modelo, com base nas previsões ou classificações corretas e precisas.
+
+### Naive Bayes:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/2858ee49-47b2-4a80-aa4c-19ab348ef506)
 
@@ -713,7 +719,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 <em>Os resultados conferidos pleo Naive Bayes foram satisfatórios mas não ideais. Com 54% de acurárica de treinamento e 55% de acurácia total</em>
 
 
-- CatBoost:
+#### CatBoost:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/3952b8c2-fca2-4af5-8ea1-027dd886e15c)
 
@@ -722,6 +728,34 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4bbca284-8b45-4c13-94aa-d7e32abcbae5)
 
 <em>Os resultados conferidos pleo CatBoost foram satisfatórios. Entretanto, apresenta um overfitting, já que existe 95% de acurácia de treinamento e 72% de acurácia total, tendo uma diferença grande entre as duas separações, portanto, sendo necessário entender o motivo. Também foi obtido resultados satisfatórios na matriz de confusão </em>
+
+#### Avaliação e métricas do Modelo
+
+Para avaliar o desempenho do nosso modelo, precisamos definir algumas métricas que nos permitam quantificar a sua capacidade de classificar corretamente os textos em categorias como positivo, negativo ou neutro. Essas métricas devem levar em conta não apenas a taxa de acerto do modelo, mas também cada tipo de erro e o balanceamento das classes nos dados.
+
+Nesta seção, vamos apresentar as principais métricas que usamos para avaliar o nosso modelo, explicar como elas são calculadas e interpretadas, e mostrar os resultados obtidos com o nosso conjunto de teste. As métricas que vamos usar são:
+
+- Acurácia: foi uma das métricas que mais olhamos na definição e relevância dos dados que foram passados. A acurácia, em termos mais objetivos, se refere a “taxa de acerto” do modelo. Ela é calculada dividindo o número de previsões corretas pelo número total de previsões. É importante ressaltar que seu balanceamento foi feito de acordo com a base de dados que nos foi deferida.
+
+- Precisão: pode ser definido como a proporção de previsões positivas que são realmente positivas. Ela mede a confiabilidade do modelo em prever a classe positiva.
+
+- Revocação: é a proporção de positivos reais que são corretamente previstos como positivos. Ela mede a sensibilidade do modelo em capturar a classe positiva, mas pode ignorar a quantidade de falsos positivos.
+
+- F1-score: é a média harmônica entre precisão e revocação. Ela mede o equilíbrio entre essas duas métricas, dando mais peso aos valores baixos. Ela é útil para comparar modelos que têm trade-offs entre precisão e revocação.
+
+Para termos de referência, recomendamos a análise dos resultados obtidos com o nosso modelo usando estas métricas como base.
+
+Lembrando que diante da denfinição e alinhamento com o professor, pudemos definir:
+
+- **Verdadeiro Positivo:** referem-se aos comentários negativos que são classificados como negativos;
+
+- **Falso Positivo:** referem-se aos comentários positivos que são classificados como negativos;
+
+- **Falso Negativo:** referem-se aos comentários negativos que são classificados como positivos;
+
+- **Verdadeiro Negativo:** referem-se aos comentários positivos que são classificados como positivos.
+
+É importante ressaltar que a partir de análises feitas, foi possível identificar as proporções de "falso negativo" como as mais importantes, diante das predições que o modelo deve fazer, e com base na estratégia de negócio do parceiro.
 
 ### Arquitetura da Solução
 
