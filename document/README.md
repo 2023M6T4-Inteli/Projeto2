@@ -601,7 +601,7 @@ Após a aplicação dessas técnicas e bibliotecas de pré-processamento, o text
  O modelo word2vec pode ser combinado com outros modelos de aprendizado de máquina com facilidade, para obter melhores resultados de classificação. O word2vec também pode ser usado para gerar incorporações de frases ou documentos inteiros, usando técnicas como média ou soma dos vetores das palavras (neste caso utilizamos a soma, com adição de uma coluna em um novo dataframe). Portanto, o word2vec é um modelo muito útil para a construção e desenvolvimento de nossa análise, pois permite representar as palavras de forma mais rica e eficiente, capturando aspectos semânticos e sintáticos que afetaram na classificação de determinado corpus.
 
 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/exemplo_word2vec.png" alt="representação word2vec" width="300" height="auto">
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/exemplo_word2vec.png" alt="representação word2vec" width="300" height="auto">
 
 <em> Representação visual do modelo Word2Vec </em>
 <br>
@@ -615,7 +615,7 @@ Em comparação ao modelo anterior do Bag of Words, o modelo Word2Vec possui vá
 
 O modelo Word2Vec possui duas arquiteturas principais: CBOW (Continuos Bag-Of-Words) e Skip-Gram. Nossa equipe optou por utilizar o modelo CBOW pois computacionalmente ele é mais eficiente. Esse tipo de arquitetura recebe as palavras circundantes e tenta prever a palavra central. Ambos os modelos (CBOW e Skip-Gram) são treinados para maximizar a probabilidade de previsão correta das palavras.
 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_cbow.png" alt="modelo CBOW" width="300" height="auto">
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/modelo_cbow.png" alt="modelo CBOW" width="300" height="auto">
 
 ### Construção do Modelo Word2Vec
 
@@ -623,17 +623,17 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
   - Substituição de Emojis: nas frases, substituimos os emojis por palavras. Esse processo melhora e abrange a base de dados trabalhada
    
-   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/emojis_funcao.png" alt="emoji" width="700" height="auto">
+   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/emojis_funcao.png" alt="emoji" width="700" height="auto">
    <br>
 
   - Substituição de Abreviações: substituímos abreviações por suas formas originais
     
-   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/func_abreviacoes.png" alt="abreviaçao" width="300" height="auto">
+   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/func_abreviacoes.png" alt="abreviaçao" width="300" height="auto">
    <br>
 
   - Lematização: é o processo de transformação de palavras para sua forma base (derivação inversa). Para esse método de pré-processamento utilizamos a bibliotecas spaCy
   
-   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/resultado_pipilina_lematizacao.png" alt="lematizacao" width="900" height="auto">
+   <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/resultado_pipilina_lematizacao.png" alt="lematizacao" width="900" height="auto">
    <em>Tabela pós pré-processamento</em>
    <br>
    <br>
@@ -646,7 +646,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
   - Modelo word2Vec e Características: já na construção do Modelo Word2Vec em si, configuramos seus parâmetros da seguinte forma: 150 vetores de dimensioanalidade, 5 janelas de contexto, contagem mínima de palavras para 1 e 4 threads para treinamento paralelo
   
   <br> 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_word2vec_persi.png" alt="wor2vec" width="900" height="auto">  
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/modelo_word2vec_persi.png" alt="wor2vec" width="900" height="auto">  
 <em>Definições e contrução do modelo Wor2Vec</em>
   <br>
   <br>
@@ -655,7 +655,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
   - Vetorização para Word2Vec: a vetorização consiste em transformar dados textuais em representações numéricas. É um processo crucial para a contrução do modelo Wor2Vec, só assim será possível organizar a distribuição das palavras em um plano. Todos o tokens são vetorizados e suas somas em uma frase também são contabilizados.
 
   <br> 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/funcao_vetorizacao.png" alt="vetorizacao" width="900" height="auto">  
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/funcao_vetorizacao.png" alt="vetorizacao" width="900" height="auto">  
 <em>Função para o processo de Vetorização</em>
   <br>
   <br>
@@ -664,14 +664,14 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
   <br> 
   <br> 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/map_sentimentos.png" alt="map_sentimentos" width="800" height="auto">  
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/map_sentimentos.png" alt="map_sentimentos" width="800" height="auto">  
 <em>Mapeamento da Coluna Sentimentos</em>
   <br> 
   <br> 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/alocacao_150vetores.png" alt="150vetores" width="1000" height="auto">  
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/alocacao_150vetores.png" alt="150vetores" width="1000" height="auto">  
 <em>função para distribuição dos tokens nos vetores</em>
   <br> 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/tabel_final_word2Vec.png" alt="tabela w2v" width="900" height="auto">  
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/tabel_final_word2Vec.png" alt="tabela w2v" width="900" height="auto">  
 <em>Tabela final pós Word2Vec</em>
   <br> 
 
@@ -687,7 +687,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
  O Naive Bayes foi o primeiro algorítimo testado pelo grupo, ele se baseia em uma teoria matemática de probabilidades condicionais (teorema de Bayes). O algorítimo se detaca por sua eficiência e simplicidade. A biblioteca utilizada para esse método foi o sklearn (GaussianNB). A principal intenção do grupo, era de usar o algoritmo para realizar o cálculo da probabilidade condicional de cada palavra ou "n-grama" ocorrer em cada classe, com o intuito de estimar a probabilidade do texto pertencer a uma classificação de sentimento específico.
 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_naive_bayes.png" alt="naive bayes" width="900" height="auto">  
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/modelo_naive_bayes.png" alt="naive bayes" width="900" height="auto">  
 <em>Construção do modelo Naive Bayes aplicado</em>
 <br>
 <br>
@@ -697,7 +697,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
  O catboots é outro algorítimo de classificação, se destacando principalemnte com dados com características categóricas e dados desbalanceados. Esse algorítimo se baseia em conhecimentos matemáticos de gradiente (gradient boosting). É importante ressaltar que o Catboost é muito usado na definição de características categóricas como palavras ou frases, sem a necessidade de codificá-las numericamente, o que pode reduzir a complexidade e o tempo de processamento. Com base nestes fatores, e mediante o uso prévio de alguns membros de nosso grupo, decidimos optar pela sua utilização nesta Sprint.
 
 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/modelo_catboost.png" alt="modelo catboost" width="900" height="auto">  
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/modelo_catboost.png" alt="modelo catboost" width="900" height="auto">  
 <em>Construção do modelo CatBoost aplicado</em>
 <br>
 <br>
@@ -762,6 +762,9 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Arquitetura%20de%20solu%C3%A7%C3%A3o.png" alt="Arquitetura de solução" width="5000">
 
 1. Extração dos dados:
+
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Extra%C3%A7%C3%A3o.png" alt="Extração de dados" width="5000">
+
 - Utilizando a API da rede social Instagram, é possível extrair dados de comentários em postagens públicas. Esses dados são retornados em formato JSON, que é uma forma de representação de dados estruturados que facilita a análise e manipulação.
 
 - Depois de extrair os dados da API do Instagram, eles são processados e estruturados em uma fileira de dados, que pode ser um arquivo CSV, por exemplo. Isso facilita a manipulação e análise dos dados em etapas posteriores.
@@ -773,6 +776,8 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 - Por fim, os dados são pré-estruturados, o que significa que são organizados em uma estrutura que facilita a consulta e análise. Isso pode incluir a organização dosdados em tabelas ou a atribuição de tags ou categorias específicas para cada dado. Com a pré-estruturação, é possível realizar consultas mais eficientes e respostas mais rápidas a perguntas específicas sobre os dados.
 
 2. Análise descritiva:
+
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/descritiva.png" alt="Análise descritiva" width="5000">
 
 - Tipos de dados: identificação de quais são os tipos de dados presentes no dataset. Por exemplo, os dados podem incluir informações sobre o autor do comentário, a data e hora em que o comentário foi feito, o tipo de post (Reels, Foto, Vídeo, Carrossel) e o próprio comentário. Cada um desses tipos de dados pode ser tratado de forma diferente na análise.
 
