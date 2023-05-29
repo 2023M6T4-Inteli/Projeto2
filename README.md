@@ -6,19 +6,9 @@
 
 # IA para Marketing: Monitoramento de campanhas utilizando processamento de linguagem natural (PLN)
 
-## Banco BTG - Pactual
-
-<p align="center">
-<a href= "https://www.btgpactual.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Btg-logo-blue.svg" alt="BTG" border="0" width="200"></a>
-</p>
-  
 ## CHAT-BTG
 
-<p align="center">
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/CHAT-BTG.png" alt="Logo CHAT-BTG" border="0" width="150">
-</p>
-
-## Integrantes
+### Integrantes
 - <a href="https://www.linkedin.com/in/jo%C3%A3o-tourinho-marques-1b64b2232/">João Tourinho Marques</a>
 - <a href="https://www.linkedin.com/in/henri-harari-717930242/">Henri Harari</a>
 - <a href="https://www.linkedin.com/in/kathlyn-diwan-0a0189232/">Kathlyn Diwan</a>
@@ -38,11 +28,16 @@ Coloque aqui os links de vídeos de demonstração do seu projeto.
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
-|-->apresentacoes<br>
-|-->docs<br>
-  &emsp;|-->antigos<br>
-|-->videos<br>
+|-->assets<br>
+&emsp;|-->imagens<br>
+&emsp;|-->videos<br>
+|-->documentos<br>
+  &emsp;|-->apresentação<br>
+  &emsp;|-->outros<br>
+  
 |-->src<br>
+&emsp;|-->código fonte<br>
+&emsp;|-->notebook<br>
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
@@ -51,9 +46,11 @@ A pasta raiz contem dois arquivos que devem ser alterados:
 
 Há também 4 pastas que seguem da seguinte forma:
 
+<b>assets</b>: Aqui estão os arquivos relacionados a parte gráfica do projeto, ou seja, as imagens e vídeos que os representam.
+
 <b>apresentacoes</b>: Aqui estarão todas as apresentações do projeto.
 
-<b>docs</b>: Aqui estarão todos os documentos do projeto. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
+<b>documentos</b>: Aqui estarão todos os documentos do projeto. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
 
 <b>src</b>: Nesta pasta irá um README com todos os links dos vídeos de demonstração do projeto.
 
@@ -77,12 +74,11 @@ A cada atualização os detalhes devem ser lançados aqui (segue exemplo abaixo)
 * 0.2.0 - 15/01/2022
     * MUDANÇA: Remove `setDefaultXYZ()`
     * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 30/04/2023
+* 0.3.1 - 28/05/2023
+    * Inserção da lematização e Modelo Word2Vec
+* 0.2.0 - 12/05/2023
+    * Segunda entrega: Pipeline do Pré-processamento de dados e Modleo Bag Of Words
+* 0.1.0 - 30/04/2023
     * Primeira entrega - Análise de negócios, entendimento da experiência do usuário e estruturação de documentos
 
 ## 📋 Licença/License
