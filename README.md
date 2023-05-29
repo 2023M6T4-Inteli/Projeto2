@@ -74,7 +74,7 @@ A cada atualização os detalhes devem ser lançados aqui (segue exemplo abaixo)
 * 0.4.0 - XX/XX/2023
     
 * 0.3.0 - 28/05/2023
-    * Inserção da lematização e Modelo Word2Vec
+    * Terceira entrega: Inserção da lematização e Modelo Word2Vec
 * 0.2.0 - 12/05/2023
     * Segunda entrega: Pipeline do Pré-processamento de dados e Modleo Bag Of Words
 * 0.1.0 - 30/04/2023
