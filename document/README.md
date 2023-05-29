@@ -521,7 +521,7 @@ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim 
 
 ## Modelo utilizando Word2Vec (IPYNB)
 
-Colocar o link do artefato (deve estar na pasta src do repositório do projeto). (Link do arquivo Word2Vec do Rodrigo)
+<a href="https://https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/2_Word2Vec.ipynb">Jupyter Notebook do Modelo Word2Vec</a>
 
 ## (Sprint 3) Documentação do Modelo utilizando Word2Vec
 
@@ -759,7 +759,7 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 
 ### Arquitetura da Solução
 
-![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/af8e1382-532c-4a83-b72d-965123f0d87f)
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Arquitetura%20de%20solu%C3%A7%C3%A3o.png" alt="Arquitetura de solução" width="9000">
 
 1. Extração dos dados:
 - Utilizando a API da rede social Instagram, é possível extrair dados de comentários em postagens públicas. Esses dados são retornados em formato JSON, que é uma forma de representação de dados estruturados que facilita a análise e manipulação.
