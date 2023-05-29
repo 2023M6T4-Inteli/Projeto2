@@ -1,6 +1,12 @@
 # Documento Principal do Projeto
 
-Descrição sucinta do projeto, com descrição do problema, do objetivo e da solução em linhas gerais.
+<!-- Descrição sucinta do projeto, com descrição do problema, do objetivo e da solução em linhas gerais. -->
+
+Diante do que foi apresentado como objetivo, o principal problema ou necessidade de negócio identificado pelo Banco BTG Pactual é compreender as opiniões, sentimentos e necessidades dos clientes expressos nas redes sociais, em especial, para fins de prova de conceito, na plataforma Instagram. O banco reconhece o impacto das redes sociais em seus processos e entende que ouvir seus clientes é fundamental para aprimorar seus produtos, serviços e a percepção geral da instituição.
+
+Dessa forma, o BTG Pactual identificou a necessidade de implementar algum tipo de serviço que realizasse a classificação de acordo com o sentimento nos comentários. Neste sentido, pretendemos entregar um modelo de análise de sentimentos que faça a detecção de palavras-chave nos comentários das redes sociais, utilizando o Processamento de Linguagem Natural (PLN). 
+
+Este projeto visa suprir a necessidade de entender o cliente, o que ele deseja e o que não deseja em relação ao banco e suas campanhas. A análise de sentimento permite ao banco compreender melhor o cliente, adaptando-se e oferecendo uma experiência cada vez mais satisfatória.
 
 ## (Sprint 1) Entendimento do Negócio
 
