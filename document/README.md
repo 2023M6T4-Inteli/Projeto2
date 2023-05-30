@@ -801,6 +801,91 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 - Após a aplicação dessas técnicas e bibliotecas de pré-processamento, o texto tratado é transformado em uma representação numérica adequada para análise posterior, como classificação de documentos, agrupamento de tópicos ou outros modelos de aprendizado de máquina. O output dessas etapas de vetorização será uma matriz numérica em que cada documento é representado por um vetor de características correspondentes às palavras relevantes extraídas do texto.
 
 
+# Treinamento do Modelo
+- O treinamento do modelo é uma etapa fundamental no desenvolvimento de sistemas de aprendizado de máquina. Nessa fase, um algoritmo é alimentado com um conjunto de dados de treinamento para aprender padrões e relacionamentos entre as variáveis de entrada e saída. O objetivo é obter um modelo capaz de fazer previsões ou tomar decisões com base nos dados fornecidos.
+
+- Durante o treinamento do modelo, os dados de entrada são transformados em vetores numéricos por meio de técnicas de vetorização, como Bag of Words, Word2Vec, CountVectorizer ou TfidfVectorizer. Essa representação numérica permite que o modelo compreenda e processe os dados textuais de forma eficiente.
+
+## Algoritmos:
+### - CatBoost
+- O CatBoost é um algoritmo de aprendizado de máquina desenvolvido pela Yandex. Ele é particularmente adequado para lidar com dados categóricos, como variáveis com valores discretos. O CatBoost utiliza a técnica de "gradient boosting" para construir um modelo preditivo. Ele é capaz de tratar automaticamente variáveis categóricas, evitando a necessidade de codificação manual dessas variáveis. Além disso, o CatBoost inclui recursos como tratamento automático de valores ausentes e implementações eficientes para lidar com grandes conjuntos de dados.
+
+### Naive Bayes
+- O Naive Bayes é um algoritmo de aprendizado de máquina probabilístico baseado no teorema de Bayes. Ele é amplamente utilizado em problemas de classificação de texto, como filtragem de spam, análise de sentimento e categorização de documentos. O Naive Bayes assume a independência entre as características, o que simplifica o cálculo das probabilidades condicionais. Embora essa suposição simplificadora nem sempre seja verdadeira na prática, o Naive Bayes é conhecido por sua simplicidade, eficiência computacional e bom desempenho em muitos casos.
+
+## Métricas de Avaliação do Modelo
+- Ao avaliar o desempenho de um modelo de aprendizado de máquina para tarefas de classificação, é comum utilizar várias métricas para medir sua eficácia. Algumas métricas comumente usadas incluem:
+
+### Precisão: 
+- A precisão é a proporção de exemplos classificados corretamente como positivos em relação a todos os exemplos classificados como positivos, ou seja, a capacidade do modelo de evitar classificar incorretamente exemplos negativos como positivos.
+
+### F1-Score: 
+- O F1-Score é uma métrica que combina a precisão e o recall de um modelo. É a média harmônica dessas duas métricas e fornece uma medida equilibrada do desempenho do modelo em termos de precisão e capacidade de recuperar exemplos positivos.
+
+### Recall: 
+- O recall, também conhecido como taxa de verdadeiros positivos, é a proporção de exemplos positivos corretamente classificados em relação a todos os exemplos verdadeiramente positivos presentes no conjunto de dados. O recall mede a capacidade do modelo de identificar corretamente os exemplos positivos.
+
+### Acurácia (métrica central):
+- A acurácia é a proporção de exemplos classificados corretamente em relação a todos os exemplos do conjunto de dados. É uma métrica amplamente utilizada como medida geral de desempenho de um modelo. Ela fornece uma visão geral de quão bem o modelo está fazendo em todas as classes, considerando tanto os verdadeiros positivos quanto os verdadeiros negativos.
+
+- Essas métricas são utilizadas para avaliar diferentes aspectos do desempenho do modelo em tarefas de classificação. A precisão é útil quando o foco está na minimização de falsos positivos, enquanto o recall é importante quando é necessário evitar falsos negativos. O F1-Score é uma métrica balanceada que leva em consideração tanto a precisão quanto o recall.
+
+- Ao interpretar essas métricas, é importante considerar a natureza do problema e os requisitos específicos do contexto em que o modelo está sendo aplicado. Uma alta precisão pode ser fundamental em algumas situações, enquanto um alto recall pode ser mais importante em outras.
+
+- Além dessas métricas, existem outras que também podem ser utilizadas, dependendo do contexto. Algumas delas incluem a área sob a curva ROC (Receiver Operating Characteristic), a matriz de confusão, o índice de Gini e a taxa de erro.
+
+- Ao avaliar o desempenho de um modelo, é essencial considerar várias métricas e analisar seus resultados de forma holística, levando em conta as necessidades e os objetivos específicos do problema em questão.
+
+## Bibliotecas:
+### - Sklearn
+- O Sklearn, é uma biblioteca amplamente utilizada em Python para aprendizado de máquina. Ela oferece uma variedade de algoritmos e ferramentas para tarefas como classificação, regressão, agrupamento e pré-processamento de dados. O sklearn possui uma interface consistente e intuitiva, o que facilita a construção e avaliação de modelos de aprendizado de máquina. Além disso, ele fornece funções para dividir conjuntos de dados em treinamento e teste, realizar validação cruzada, aplicar métricas de avaliação e muito mais.
+
+### SpaCy
+- O SpaCy é uma biblioteca de processamento de linguagem natural (NLP) escrita em Python. Ela fornece uma ampla gama de recursos e ferramentas para realizar tarefas de processamento de texto, como tokenização, lematização, identificação de entidades nomeadas, análise sintática, entre outros. O SpaCy é conhecido por sua eficiência e desempenho, sendo capaz de processar grandes volumes de texto de forma rápida. Ele também possui modelos pré-treinados para várias línguas, que podem ser utilizados para tarefas de análise de texto sem a necessidade de treinamento adicional. O SpaCy é uma escolha popular para desenvolvedores e pesquisadores que trabalham com NLP devido à sua facilidade de uso e eficácia em diversas aplicações.
+
+# Serviço - API
+- Um serviço de API (Interface de Programação de Aplicativos) permite que os modelos de aprendizado de máquina sejam implantados e acessados de forma fácil e conveniente por meio de uma interface de programação. Ele oferece a capacidade de expor o modelo treinado como um serviço online, permitindo que os usuários façam solicitações e recebam previsões ou resultados do modelo em tempo real.
+
+- Ao fornecer um serviço de API, é possível integrar o modelo de aprendizado de máquina em diferentes aplicativos, plataformas ou sistemas, permitindo sua utilização em diversos contextos. Isso facilita a implementação e o consumo do modelo, eliminando a necessidade de executar todo o processo de treinamento e inferência localmente.
+
+## Pipeline
+- Um pipeline, no contexto de processamento de linguagem natural (NLP), é uma sequência de etapas ou transformações aplicadas a um texto durante o pré-processamento ou a análise. Ele consiste em encadear diferentes componentes, como tokenização, remoção de stop words, lematização, entre outros, para obter um resultado final desejado.
+
+- O uso de um pipeline permite automatizar e sistematizar o fluxo de trabalho de processamento de texto, aplicando uma série de operações em sequência. Cada etapa do pipeline é executada de forma consecutiva, utilizando os resultados intermediários como entrada para a próxima etapa.
+
+- Os pipelines são úteis para organizar e reutilizar o código de pré-processamento de texto, permitindo que diferentes textos passem por um conjunto consistente de etapas. Eles também simplificam o processo de análise e extração de informações dos textos, fornecendo uma estrutura clara para a implementação de fluxos de trabalho de NLP.
+
+## Modelos de Vetorização
+- Os modelos de vetorização são técnicas utilizadas para representar palavras ou documentos como vetores numéricos, de modo a serem processados por algoritmos de aprendizado de máquina. Essas representações vetoriais são essenciais para que os modelos de aprendizado de máquina possam trabalhar com dados textuais, que são representados por sequências de caracteres.
+
+- Existem diferentes modelos de vetorização, cada um com suas características e abordagens específicas. Alguns exemplos comuns incluem o Bag of Words (BoW), que representa cada documento como um vetor contendo a contagem de ocorrência de cada palavra, e o Word2Vec, que mapeia cada palavra para um espaço vetorial de dimensões reduzidas, capturando relações semânticas entre palavras.
+
+- A vetorização de textos é uma etapa crucial no processamento de linguagem natural, pois permite que as informações textuais sejam traduzidas em representações numéricas que podem ser processadas pelos algoritmos de aprendizado de máquina.
+
+## Visualização dos Dados
+- A visualização dos dados é uma técnica utilizada para representar informações de forma gráfica ou visual, permitindo uma compreensão mais intuitiva dos padrões, tendências e relações presentes nos dados. No contexto de processamento de linguagem natural (NLP), a visualização dos dados pode ser aplicada para explorar e entender características dos textos, tais como a frequência de palavras, distribuição de tópicos ou sentimentos.
+
+- As técnicas de visualização de dados podem incluir gráficos de barras, gráficos de dispersão, nuvens de palavras, mapas de calor, nuvens de palavras, entre outros. Essas representações visuais podem ajudar a identificar insights, detectar padrões, destacar outliers e comunicar informações de forma mais eficaz.
+
+- A visualização dos dados é uma ferramenta poderosa para auxiliar na exploração e análise de grandes conjuntos de dados textuais. Ela permite visualizar as características textuais de maneira intuitiva, facilitando a identificação de tendências e a comunicação dos resultados de forma clara e concisa.
+
+- Ao visualizar os dados textuais, é possível obter uma visão geral das informações contidas nos textos, identificar palavras-chave relevantes, verificar a distribuição de palavras ao longo do tempo ou comparar diferentes categorias ou grupos de textos.
+
+- A visualização dos dados textuais pode ser realizada utilizando bibliotecas gráficas como o Matplotlib, Seaborn ou Plotly, que oferecem uma ampla variedade de opções e recursos para criar visualizações atrativas e informativas.
+
+## API do Modelo
+- A API do modelo é uma interface que permite a comunicação e interação com um modelo de aprendizado de máquina implantado em um serviço ou servidor. Essa API define os endpoints e métodos disponíveis para fazer solicitações e receber respostas do modelo.
+
+- Ao expor um modelo como uma API, é possível enviar dados para o modelo e obter previsões ou resultados processados em tempo real. Isso facilita a integração do modelo em diferentes aplicativos, sistemas ou plataformas, permitindo sua utilização de forma flexível e escalável.
+
+- A API do modelo pode receber dados como parâmetros de entrada, realizar a pré-processamento necessário, aplicar o modelo treinado e retornar as previsões ou resultados ao usuário. Ela pode ser implementada usando frameworks web, como Flask ou Django, que fornecem ferramentas para criar e gerenciar uma API de forma eficiente.
+
+- A API do modelo permite que o modelo de aprendizado de máquina seja consumido de maneira mais acessível e fácil, oferecendo uma interface consistente e simplificada para interagir com o modelo e obter os resultados desejados.
+
+<img src = "![Captura de Tela 2023-05-30 às 17 27 47](https://github.com/2023M6T4-Inteli/Projeto2/assets/99759369/990249b2-9540-4b8a-923b-3432ccb20ff1)">
+
+
+
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
 Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
