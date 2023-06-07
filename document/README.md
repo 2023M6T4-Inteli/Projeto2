@@ -939,7 +939,7 @@ model.fit(X_train, y_train)
 accuracy = model.score(X_test, y_test)
 print("Acurácia:", accuracy)
 ```
-A resposta exibida após o carregamento do código é a acurácia alcançada  a acurácia alcançada pelo modelo no conjunto de teste, correspondente à 0.7519.
+A resposta exibida após o carregamento do código é a acurácia alcançada pelo modelo no conjunto de teste, correspondente à 0.7519.
 
 
 - Algoritmo: Modelo Naive Bayes 
