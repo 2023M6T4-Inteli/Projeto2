@@ -963,6 +963,10 @@ accuracy = accuracy_score(y_test, y_pred)
 ```
 
 Por fim, foi realizado um gráfico de plotagem da curva ROC. 
+
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/GloVe.png">
+
 ```
 ```
 
