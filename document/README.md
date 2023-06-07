@@ -892,8 +892,95 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 4) Documentação da proposta de uma nova modelagem
 
-Preencher conforme a descrição do artefato na Adalove.
+## 1. Elmo 
 
+
+## 2. BERT 
+
+## 3. Doc2Vec
+
+## 4. GloVe
+
+O Global Vectors for Word Representation, também conhecido como GloVe, é um modelo de vetorização de palavras desenvolvido com o intuito de identificar as relações sintáticas e semânticas em um conjunto de um texto. Esse modelo, utiliza estatísticas de co-ocorrência global de palavras para desenvolver representações vetoriais. Dessa forma, seu processo de treinamento envolve a construção de uma matriz que registra a frequência da ocorrência das palavras a partir da utilização da 'função de perda' (loss function) com o intuito de maximizar a probabilidade de co-ocorrência de pares de palavras. 
+
+- Algoritmo: Regressão Logística 
+
+O código está trabalhando com a leitura de um arquivo CSV, contendo os dados lematizados que já passaram pelo Pré-Processamento. Depois disso, como mostra o código abaixo, foi realizado o carregamento do modelo spaCy com vetores GloVe e feito um teste com a palavra 'amor' para calcular seus vetores. 
+
+```
+import spacy
+
+# Carregamento do modelo com a utilização de vetores GloVe
+nlp = spacy.load('en_core_web_sm')
+
+# Vetor da palavra teste (amor)
+word_vector = nlp('amor')[0].vector
+print("Vetor de 'amor':", word_vector)
+```
+
+Após isso, foi realizado a utilização da classe CountVectorizer do sklearn.feature_extraction.text para vetorizar os dados contidos na coluna "texto" doDataframe desenvolvido. Assim, a vetroização foi aplicada aos dados de teste (x_test) e treinamento (x_train) e armazenados em duas variáveis com o parâmetro 'random_state' definido como 42. Depois disso, foi realizado o treinamento do modelo de regressão logística utilizando os dados de treinamento. Dessa forma, a acurácia do modelo é calculada a partir do método score com X_test e y_test. 
+
+
+
+```
+X = df_lemma['texto']
+y = df_lemma['sentimento']
+
+vectorizer = CountVectorizer()
+X_counts = vectorizer.fit_transform(X)
+tfidf_transformer = TfidfTransformer()
+X_tfidf = tfidf_transformer.fit_transform(X_counts)
+
+X_train, X_test, y_train, y_test = train_test_split(X_tfidf, y, test_size=0.2, random_state=42)
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+accuracy = model.score(X_test, y_test)
+print("Acurácia:", accuracy)
+```
+A resposta exibida após o carregamento do código é a acurácia alcançada  a acurácia alcançada pelo modelo no conjunto de teste, correspondente à 0.7519.
+
+
+- Algoritmo: Modelo Naive Bayes 
+
+Primeiramente foi mapeado os rótulos 'POSITIVE', 'NEUTRAL' e 'NEGATIVE' para os valores numéricos 3, 1 e 2, respectivamente, e o resultado é armazenado em uma variável. 
+
+```
+sentimento_mapping = {'POSITIVE': 3, 'NEUTRAL': 1, 'NEGATIVE': 2}
+y_mapped = df['sentimento'].map(sentimento_mapping)
+```
+
+Depois disso, foi realizado o treinamento do modelo Naive Bayes Gaussiano, porém não obtivemos um valor de acurácia tão satisfatório, correspondente a 0,49.
+
+```
+model = GaussianNB()
+model.fit(X_train, y_train)
+
+# Predição e cálculo da acurácia
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+```
+
+Por fim, foi realizado um gráfico de plotagem da curva ROC. 
+```
+```
+
+```
+```
+
+
+
+
+## 5. FastText
+
+## 6. TF-IDF
+
+
+
+3) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação das técnicas, processamento e algoritmos utilizados pelo novo modelo;
+4) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação dos resultados obtidos pelo novo modelo;
+5) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para comparação entre todos os modelos, e a escolha do modelo final.
 ## (Sprint 5) Apresentação Final
 
 Colocar o link do artefato (deve estar na pasta apresentacoes do repositório do projeto).
