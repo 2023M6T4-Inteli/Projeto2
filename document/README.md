@@ -939,7 +939,10 @@ model.fit(X_train, y_train)
 accuracy = model.score(X_test, y_test)
 print("Acurácia:", accuracy)
 ```
-A resposta exibida após o carregamento do código é a acurácia alcançada pelo modelo no conjunto de teste, correspondente à 0.7519.
+Com base nos resultados obtidos é possível fazer as seguintes análises do algoritmo de Regressão Logística. A acurácia obtida para o modelo foi de 0.75, o que indica uma boa significância e uma taxa de acerto razoavelmente alta. Além disso foi também calculado os valores de precisã para cada uma das classes desenvolvidas. O valor obtido para as classe NEGATIVE, NEUTRAL e POSITIVE foram: 0,77; 0,71; e 0,81 respectivamente. Valores relativamente bons. Além disso, foi obtido também os valores de recall para cada uma das classes (NEGATIVE = 0,54; NEUTRAL = 0,85 e POSITIVE = 0,75. 
+Por fim, foi então calculado o F1-score, que é uma medida que combina a precisão e o recall em uma única métrica. Para a classe NEGATIVE, o F1-score é de 0,64, para a classe NEUTRAL é de 0,77 e para a classe POSITIVE é de 0,78.que o modelo tem uma taxa de acerto razoavelmente alta.
+
+
 
 
 - Algoritmo: Modelo Naive Bayes 
@@ -951,7 +954,7 @@ sentimento_mapping = {'POSITIVE': 3, 'NEUTRAL': 1, 'NEGATIVE': 2}
 y_mapped = df['sentimento'].map(sentimento_mapping)
 ```
 
-Depois disso, foi realizado o treinamento do modelo Naive Bayes Gaussiano, porém não obtivemos um valor de acurácia tão satisfatório, correspondente a 0,49.
+Depois disso, foi realizado o treinamento do modelo Naive Bayes Gaussiano, porém não obtivemos um valor de acurácia tão satisfatório, equivalente a 0.57, o que indica que o modelo tem uma taxa de acerto um pouco mais baixa em comparação com a regressão logística.
 
 ```
 model = GaussianNB()
@@ -962,11 +965,15 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 ```
 
-Por fim, foi realizado um gráfico de plotagem da curva ROC. 
+
+De acordo com as informações obtidas, é 
+Por fim, foi realizado um gráfico de plotagem da curva ROC.
 
 
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/GloVe.png">
 
+
+Em resumo, os resultados obtidos indicam que o modelo de regressão logística teve um desempenho melhor em comparação com o modelo de Naive Bayes. A regressão logística obteve uma acurácia mais alta e um melhor equilíbrio entre precisão e recall. Além disso, o gráfico de curva ROC mostra que o modelo de regressão logística possui uma capacidade satisfatória de distinguir entre as diferentes classes. No entanto, é importante lembrar que esse modelo obteve valores bons, porém não foram os melhores diante dos outros modelos desenvolvidos.
 ```
 ```
 
