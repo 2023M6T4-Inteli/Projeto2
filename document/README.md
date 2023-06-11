@@ -918,7 +918,7 @@ Próximo passos
 
 ## 4. GloVe
 
-O Global Vectors for Word Representation, também conhecido como GloVe, é um modelo de vetorização de palavras desenvolvido com o intuito de identificar as relações sintáticas e semânticas em um conjunto de um texto. Esse modelo, utiliza estatísticas de co-ocorrência global de palavras para desenvolver representações vetoriais. Dessa forma, seu processo de treinamento envolve a construção de uma matriz que registra a frequência da ocorrência das palavras a partir da utilização da 'função de perda' (loss function) com o intuito de maximizar a probabilidade de co-ocorrência de pares de palavras. 
+O Global Vectors for Word Representation, também conhecido como GloVe, é um modelo de vetorização de palavras desenvolvido com o intuito de identificar as relações sintáticas e semânticas em um conjunto de um texto. Esse modelo, utiliza estatísticas de co-ocorrência global de palavras para desenvolver representações vetoriais. O seu processo de treinamento, envolve a construção de uma matriz que registra a frequência da ocorrência das palavras a partir da utilização da 'função de perda' (loss function) com o intuito de maximizar a probabilidade de co-ocorrência de pares de palavras. 
 
 - Algoritmo: Regressão Logística 
 
@@ -964,14 +964,14 @@ Por fim, foi então calculado o F1-score, que é uma medida que combina a precis
 
 - Algoritmo: Modelo Naive Bayes 
 
-Primeiramente foi mapeado os rótulos 'POSITIVE', 'NEUTRAL' e 'NEGATIVE' para os valores numéricos 3, 1 e 2, respectivamente, e o resultado é armazenado em uma variável. 
+Primeiramente foi mapeado os rótulos 'POSITIVE', 'NEUTRAL' e 'NEGATIVE' para os valores numéricos 3, 1 e 2, respectivamente, e o resultado foi armazenado em uma variável. 
 
 ```
 sentimento_mapping = {'POSITIVE': 3, 'NEUTRAL': 1, 'NEGATIVE': 2}
 y_mapped = df['sentimento'].map(sentimento_mapping)
 ```
 
-Depois disso, foi realizado o treinamento do modelo Naive Bayes Gaussiano, porém não obtivemos um valor de acurácia tão satisfatório, equivalente a 0.57, o que indica que o modelo tem uma taxa de acerto um pouco mais baixa em comparação com a regressão logística.
+Depois disso, foi realizado o treinamento do modelo Naive Bayes Gaussiano, porém não foi obtido um valor de acurácia tão satisfatório, equivalente a 0.57. Isso indicou que o modelo tem uma taxa de acerto um pouco mais baixa com o valor obtido previamente com o algoritmo da regressão logística.
 
 ```
 model = GaussianNB()
@@ -983,8 +983,8 @@ accuracy = accuracy_score(y_test, y_pred)
 ```
 
 
-De acordo com as informações obtidas, é 
-Por fim, foi realizado um gráfico de plotagem da curva ROC.
+
+Por fim, foi realizado um gráfico de plotagem da curva ROC, que pode ser visto abaixo. 
 
 
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/GloVe.png">
