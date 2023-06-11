@@ -1004,6 +1004,64 @@ Em resumo, os resultados obtidos indicam que o modelo de regressão logística t
 
 ## 6. TF-IDF
 
+O TF-IDF (Term Frequency-Inverse Document Frequency) é uma medida estatística que permite avaliar a importância de uma palavra em um documento. Essa técnica foi escolhida por sua capacidade de destacar palavras-chave relevantes e reduzir o peso de palavras comuns, ajudando a identificar a relevância de um termo em relação ao contexto específico de um documento. Suas vantagens incluem a capacidade de lidar com grandes volumes de texto de maneira eficiente, reduzindo essa influência de palavras comuns e destacando exatamente os termos-chave que fornecem insights relevantes. O TF-IDF também é uma técnica simples de implementar e interpretar.
+
+- Algoritmo: Regressão Logística 
+
+A Regressão Logística é um algoritmo de aprendizado de máquina que é amplamente utilizado para tarefas de classificação binária. Ele modela a relação entre variáveis independentes e a probabilidade de uma resposta pertencer a uma determinada classe. Sua escolha foi feita especialmente pela sua capacidade de lidar com dados categóricos (como é o caso da base de dados trabalhada).
+
+A combinação de TF-IDF com Regressão Logística aproveita as vantagens de ambos os métodos. O TF-IDF fornece uma representação ponderada das palavras em um documento, enquanto a Regressão Logística modela a relação entre essas palavras e a probabilidade de classificação. Essa combinação é comum em processos de análise de sentimentos como esse.
+<br>
+<br>
+A base de dados utilizada já passou pelos primeiros processos de PLN (remoção de stop words, substituição de gírias e, em destaque, a lematização). Essa é a mesma base de dados lematizada que foi desenvolvida na Sprint 3 e utilizada no modelo anterior. Contudo, apenas as colunas das frases e suas qualificações estão sendo utilizadas. 
+<br>
+```
+#dividi os dados em conjunto de treinamento e teste
+X_train, X_test, y_train, y_test = train_test_split(dados["texto"], dados["sentimento"], test_size=0.2, random_state=42)
+```
+Após a importação da base de dados no modelo, foi feita uma divisão dos dados em conjunto de treinamento e teste, com o test size de 0.2 e random state de 42.
+<br>
+```
+#cria pipeline com TF-IDF e modelo de classificação
+pipeline = Pipeline([
+    ("tfidf", TfidfVectorizer()),
+    ("model", LogisticRegression(max_iter=1000))  # número máximo de iterações
+])
+```
+Como já indicado, o modelo criado utiliza TF-IDF com Regressão Logística para a análise de sentimentos. Para a regressão Logística o número de iterações foi configurado para mil a fim de conseguir um modelo que identifica mais correlações entre as palavras.
+<br>
+<br>
+Para avaliar os resultados obtidos foi utilizado principalmente os parâmetros de Recall e Acurácia 
+<br>
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/TF-IDF_Dados.png" alt="td-idf dados" width="500" height="auto">
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/TF-IDF_grafico.png">
+
+<br>
+
+Com base nos resultados obtidos, podemos concluir que o modelo apresenta um desempenho equilibrado e consistente, com valores de acurácia e recall macro próximos, na faixa de 0,7. Isso indica que o modelo é capaz de fazer previsões precisas na maioria das amostras de teste, classificando corretamente tanto as instâncias positivas quanto as negativas.
+
+Além disso, a similaridade entre a acurácia e o recall macro sugere que o modelo não está enviesado para uma classe específica e está tratando ambas as classes de forma equilibrada.
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/TF-IDF_MC.png">
+
+A partir da matriz de confusão é possível perceber que o modelo tem mais dificuldades ao avaliar comentários neutros e uma facilidade para avaliar positivos e, em segundo lugar, negativos. Os resultados nessa instância foram satisfatórios.
+
+Por fim, o modelo obteve bom resultados em avaliações de recall, acurácia e matriz de confusão, contudo, não foram os melhores diante dos outros modelos desenvolvidos.
+
+
+
+
+
+
+
+## 7.Comparação entre os modelos e escolha do modelo final
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/gr%C3%A1fico_comparativo.png">
+
+
+
+
 
 
 3) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação das técnicas, processamento e algoritmos utilizados pelo novo modelo;
