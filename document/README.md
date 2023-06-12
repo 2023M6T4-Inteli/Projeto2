@@ -801,13 +801,419 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 - Após a aplicação dessas técnicas e bibliotecas de pré-processamento, o texto tratado é transformado em uma representação numérica adequada para análise posterior, como classificação de documentos, agrupamento de tópicos ou outros modelos de aprendizado de máquina. O output dessas etapas de vetorização será uma matriz numérica em que cada documento é representado por um vetor de características correspondentes às palavras relevantes extraídas do texto.
 
 
+# Treinamento do Modelo
+- O treinamento do modelo é uma etapa fundamental no desenvolvimento de sistemas de aprendizado de máquina. Nessa fase, um algoritmo é alimentado com um conjunto de dados de treinamento para aprender padrões e relacionamentos entre as variáveis de entrada e saída. O objetivo é obter um modelo capaz de fazer previsões ou tomar decisões com base nos dados fornecidos.
+
+- Durante o treinamento do modelo, os dados de entrada são transformados em vetores numéricos por meio de técnicas de vetorização, como Bag of Words, Word2Vec, CountVectorizer ou TfidfVectorizer. Essa representação numérica permite que o modelo compreenda e processe os dados textuais de forma eficiente.
+
+## Algoritmos:
+### - CatBoost
+- O CatBoost é um algoritmo de aprendizado de máquina desenvolvido pela Yandex. Ele é particularmente adequado para lidar com dados categóricos, como variáveis com valores discretos. O CatBoost utiliza a técnica de "gradient boosting" para construir um modelo preditivo. Ele é capaz de tratar automaticamente variáveis categóricas, evitando a necessidade de codificação manual dessas variáveis. Além disso, o CatBoost inclui recursos como tratamento automático de valores ausentes e implementações eficientes para lidar com grandes conjuntos de dados.
+
+### Naive Bayes
+- O Naive Bayes é um algoritmo de aprendizado de máquina probabilístico baseado no teorema de Bayes. Ele é amplamente utilizado em problemas de classificação de texto, como filtragem de spam, análise de sentimento e categorização de documentos. O Naive Bayes assume a independência entre as características, o que simplifica o cálculo das probabilidades condicionais. Embora essa suposição simplificadora nem sempre seja verdadeira na prática, o Naive Bayes é conhecido por sua simplicidade, eficiência computacional e bom desempenho em muitos casos.
+
+## Métricas de Avaliação do Modelo
+- Ao avaliar o desempenho de um modelo de aprendizado de máquina para tarefas de classificação, é comum utilizar várias métricas para medir sua eficácia. Algumas métricas comumente usadas incluem:
+
+### Precisão: 
+- A precisão é a proporção de exemplos classificados corretamente como positivos em relação a todos os exemplos classificados como positivos, ou seja, a capacidade do modelo de evitar classificar incorretamente exemplos negativos como positivos.
+
+### F1-Score: 
+- O F1-Score é uma métrica que combina a precisão e o recall de um modelo. É a média harmônica dessas duas métricas e fornece uma medida equilibrada do desempenho do modelo em termos de precisão e capacidade de recuperar exemplos positivos.
+
+### Recall: 
+- O recall, também conhecido como taxa de verdadeiros positivos, é a proporção de exemplos positivos corretamente classificados em relação a todos os exemplos verdadeiramente positivos presentes no conjunto de dados. O recall mede a capacidade do modelo de identificar corretamente os exemplos positivos.
+
+### Acurácia (métrica central):
+- A acurácia é a proporção de exemplos classificados corretamente em relação a todos os exemplos do conjunto de dados. É uma métrica amplamente utilizada como medida geral de desempenho de um modelo. Ela fornece uma visão geral de quão bem o modelo está fazendo em todas as classes, considerando tanto os verdadeiros positivos quanto os verdadeiros negativos.
+
+- Essas métricas são utilizadas para avaliar diferentes aspectos do desempenho do modelo em tarefas de classificação. A precisão é útil quando o foco está na minimização de falsos positivos, enquanto o recall é importante quando é necessário evitar falsos negativos. O F1-Score é uma métrica balanceada que leva em consideração tanto a precisão quanto o recall.
+
+- Ao interpretar essas métricas, é importante considerar a natureza do problema e os requisitos específicos do contexto em que o modelo está sendo aplicado. Uma alta precisão pode ser fundamental em algumas situações, enquanto um alto recall pode ser mais importante em outras.
+
+- Além dessas métricas, existem outras que também podem ser utilizadas, dependendo do contexto. Algumas delas incluem a área sob a curva ROC (Receiver Operating Characteristic), a matriz de confusão, o índice de Gini e a taxa de erro.
+
+- Ao avaliar o desempenho de um modelo, é essencial considerar várias métricas e analisar seus resultados de forma holística, levando em conta as necessidades e os objetivos específicos do problema em questão.
+
+## Bibliotecas:
+### - Sklearn
+- O Sklearn, é uma biblioteca amplamente utilizada em Python para aprendizado de máquina. Ela oferece uma variedade de algoritmos e ferramentas para tarefas como classificação, regressão, agrupamento e pré-processamento de dados. O sklearn possui uma interface consistente e intuitiva, o que facilita a construção e avaliação de modelos de aprendizado de máquina. Além disso, ele fornece funções para dividir conjuntos de dados em treinamento e teste, realizar validação cruzada, aplicar métricas de avaliação e muito mais.
+
+### SpaCy
+- O SpaCy é uma biblioteca de processamento de linguagem natural (NLP) escrita em Python. Ela fornece uma ampla gama de recursos e ferramentas para realizar tarefas de processamento de texto, como tokenização, lematização, identificação de entidades nomeadas, análise sintática, entre outros. O SpaCy é conhecido por sua eficiência e desempenho, sendo capaz de processar grandes volumes de texto de forma rápida. Ele também possui modelos pré-treinados para várias línguas, que podem ser utilizados para tarefas de análise de texto sem a necessidade de treinamento adicional. O SpaCy é uma escolha popular para desenvolvedores e pesquisadores que trabalham com NLP devido à sua facilidade de uso e eficácia em diversas aplicações.
+
+# Serviço - API
+- Um serviço de API (Interface de Programação de Aplicativos) permite que os modelos de aprendizado de máquina sejam implantados e acessados de forma fácil e conveniente por meio de uma interface de programação. Ele oferece a capacidade de expor o modelo treinado como um serviço online, permitindo que os usuários façam solicitações e recebam previsões ou resultados do modelo em tempo real.
+
+- Ao fornecer um serviço de API, é possível integrar o modelo de aprendizado de máquina em diferentes aplicativos, plataformas ou sistemas, permitindo sua utilização em diversos contextos. Isso facilita a implementação e o consumo do modelo, eliminando a necessidade de executar todo o processo de treinamento e inferência localmente.
+
+## Pipeline
+- Um pipeline, no contexto de processamento de linguagem natural (NLP), é uma sequência de etapas ou transformações aplicadas a um texto durante o pré-processamento ou a análise. Ele consiste em encadear diferentes componentes, como tokenização, remoção de stop words, lematização, entre outros, para obter um resultado final desejado.
+
+- O uso de um pipeline permite automatizar e sistematizar o fluxo de trabalho de processamento de texto, aplicando uma série de operações em sequência. Cada etapa do pipeline é executada de forma consecutiva, utilizando os resultados intermediários como entrada para a próxima etapa.
+
+- Os pipelines são úteis para organizar e reutilizar o código de pré-processamento de texto, permitindo que diferentes textos passem por um conjunto consistente de etapas. Eles também simplificam o processo de análise e extração de informações dos textos, fornecendo uma estrutura clara para a implementação de fluxos de trabalho de NLP.
+
+## Modelos de Vetorização
+- Os modelos de vetorização são técnicas utilizadas para representar palavras ou documentos como vetores numéricos, de modo a serem processados por algoritmos de aprendizado de máquina. Essas representações vetoriais são essenciais para que os modelos de aprendizado de máquina possam trabalhar com dados textuais, que são representados por sequências de caracteres.
+
+- Existem diferentes modelos de vetorização, cada um com suas características e abordagens específicas. Alguns exemplos comuns incluem o Bag of Words (BoW), que representa cada documento como um vetor contendo a contagem de ocorrência de cada palavra, e o Word2Vec, que mapeia cada palavra para um espaço vetorial de dimensões reduzidas, capturando relações semânticas entre palavras.
+
+- A vetorização de textos é uma etapa crucial no processamento de linguagem natural, pois permite que as informações textuais sejam traduzidas em representações numéricas que podem ser processadas pelos algoritmos de aprendizado de máquina.
+
+## Visualização dos Dados
+- A visualização dos dados é uma técnica utilizada para representar informações de forma gráfica ou visual, permitindo uma compreensão mais intuitiva dos padrões, tendências e relações presentes nos dados. No contexto de processamento de linguagem natural (NLP), a visualização dos dados pode ser aplicada para explorar e entender características dos textos, tais como a frequência de palavras, distribuição de tópicos ou sentimentos.
+
+- As técnicas de visualização de dados podem incluir gráficos de barras, gráficos de dispersão, nuvens de palavras, mapas de calor, nuvens de palavras, entre outros. Essas representações visuais podem ajudar a identificar insights, detectar padrões, destacar outliers e comunicar informações de forma mais eficaz.
+
+- A visualização dos dados é uma ferramenta poderosa para auxiliar na exploração e análise de grandes conjuntos de dados textuais. Ela permite visualizar as características textuais de maneira intuitiva, facilitando a identificação de tendências e a comunicação dos resultados de forma clara e concisa.
+
+- Ao visualizar os dados textuais, é possível obter uma visão geral das informações contidas nos textos, identificar palavras-chave relevantes, verificar a distribuição de palavras ao longo do tempo ou comparar diferentes categorias ou grupos de textos.
+
+- A visualização dos dados textuais pode ser realizada utilizando bibliotecas gráficas como o Matplotlib, Seaborn ou Plotly, que oferecem uma ampla variedade de opções e recursos para criar visualizações atrativas e informativas.
+
+## API do Modelo
+- A API do modelo é uma interface que permite a comunicação e interação com um modelo de aprendizado de máquina implantado em um serviço ou servidor. Essa API define os endpoints e métodos disponíveis para fazer solicitações e receber respostas do modelo.
+
+- Ao expor um modelo como uma API, é possível enviar dados para o modelo e obter previsões ou resultados processados em tempo real. Isso facilita a integração do modelo em diferentes aplicativos, sistemas ou plataformas, permitindo sua utilização de forma flexível e escalável.
+
+- A API do modelo pode receber dados como parâmetros de entrada, realizar a pré-processamento necessário, aplicar o modelo treinado e retornar as previsões ou resultados ao usuário. Ela pode ser implementada usando frameworks web, como Flask ou Django, que fornecem ferramentas para criar e gerenciar uma API de forma eficiente.
+
+- A API do modelo permite que o modelo de aprendizado de máquina seja consumido de maneira mais acessível e fácil, oferecendo uma interface consistente e simplificada para interagir com o modelo e obter os resultados desejados.
+
+<img src = "![Captura de Tela 2023-05-30 às 17 27 47](https://github.com/2023M6T4-Inteli/Projeto2/assets/99759369/990249b2-9540-4b8a-923b-3432ccb20ff1)">
+
+
+
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
-Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
+- Elmo: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/ELMo.ipynb 
+
+- BERT: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/3_2_BERT(OVER).ipynb
+
+- DOC2Vec: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/DOC2Vec_2.ipynb
+
+- GloVe: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/GloVe.ipynb 
+
+- FastText: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/Fast_Text.ipynb 
+
+- TF_IDF: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/TF_IDF_com_Regressao_logistica.ipynb
+
 
 ## (Sprint 4) Documentação da proposta de uma nova modelagem
 
-Preencher conforme a descrição do artefato na Adalove.
+## 1. Elmo 
+
+O Elmo (Embeddings from Language Models) é um modelo de vetorização pré-treinado que captura representações contextuais de palavras e frases. 
+Tal utilização é fundamentada nas características estruturais do modelo. Evidencia-se a possibilidade de identificar palavras iguais ou semelhantes em contextos diferentes, agrupá-los e diferenciá-los.
+O modelo se destaca dado que possui capacidade de generalização, dado que, foi treinado em grandes quantidades de texto. 
+Ao aplicá-lo, a fim de obter melhores resultados, utiliza-se o csv do texto pré-processado. Em seguida, aplica-se no modelo de vetorização ELMo. 
+É de indubitável importância ressaltar que para a utilização do ELMo os arquivos de pré-treinamento, em português precisam ser importados.
+```
+weight_file = "/content/drive/MyDrive/Colab Notebooks/SI-MOD6/entrega_spt4/elmo_pt_weights_dgx1 (1).hdf5
+```
+Já a linha a seguir, define o local do arquivo JSON de opções para o modelo ELMo em português. O arquivo JSON contém a configuração e os hiperparâmetros do modelo.
+```
+options_file = 'https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/contributed/pt/brwac/options.json'
+```
+As frases de input são convertidas em identificadores de caracteres e, em seguida, é calculado os embeddings correspondentes. Os resultantes são armazenados em um array. Após a vetorização dos dados, os mesmos são direcionados para a rede neural simples. 
+Na rede neural, seta-se 2 dimensões dos embeddings redimensionados, uma vez que, a dimensionalidade do input, sem tratamento, é incompatível com o suporte da rede. Na mesma, são passados os vetores resultantes do ELMo e os targets. <br>
+
+Defini-se, então, a arquitetura da rede neural em duas camadas densas. A primeira camada possui 2 unidades com ativação sigmoidal, e a segunda camada possui 1 unidade com ativação sigmoidal. <br>
+Destaca-se a utilização do otimizador “Adam” devido a frequente utilização em conjuntos de dados enxutos e com redes profundas. Além disso, o otimizador atualiza os pesos da rede mais rapidamente.<br>
+
+A métrica escolhida para avaliar o resultado do modelo é recall, visto que, dentre todas as classificações positivas como valor esperado, quantas foram assertivas. Entretanto, ocorreram alguns desajustes durante o arranjo da rede neural. Portanto, nesse momento, a fim de avaliar a performance geral, utiliza-se a acurácia. <br>
+Os resultados emitidos na rede neural demonstram 43.17% de acurácia. A porcentagem apresentada, em consideração ao que é considerado ideal ou avaliativo para os modelos, não é satisfatória para aplicação, em comparação à modelos que obtiveram resultados mais assertivos. <br>
+
+Em síntese, destaca-se que esse número pode ser melhorado em decorrência da separação dos dados de treino e teste, diferenciação no número de epochs e variação nas dimensões.
+
+
+
+## 2. BERT 
+
+O BERT (Bidirectional Encoder Representations from Transformers) é um modelo de linguagem baseado em Transformers, arquitetura que é baseada em mecanismos de "atenção" e relevância. Isto permite que o modelo capture relações de dependência entre palavras de maneira eficiente e paralela. 
+
+Neste caso, o que utilizamos é uma versão pré-treinada, com o uso do "preenchimento de máscara" (masked language modeling), com a intenção de uma futura implementação da funcionalidade de predição da "próxima sentença" (next sentence prediction). Uma das principais características do BERT é sua capacidade de gerar representações contextualizadas de palavras. O modelo leva em consideração o contexto em que uma palavra aparece, o que ajuda a capturar relações e significados mais precisos. Consequentemente, essas representações contextualizadas são obtidas através do pré-treinamento bidirecional e podem ser usadas como entrada para o algoritmo.
+
+- Algoritmo: Rede Neural 
+
+Como algoritmo, utilizamos a Rede Neural na arquitetura Transformers, para realizar as etapas de predição.
+
+Etapas de implementação 
+
+- Preparação dos dados (exemplo com Label Encoder realizado):
+
+```
+label_encoder = LabelEncoder()
+
+df_lemma['sentimento_3'] = label_encoder.fit_transform(df_lemma['sentimento'])
+
+```
+
+- Pré-treinamento do modelo BERT:
+
+```
+model = BertModel.from_pretrained('neuralmind/bert-base-portuguese-cased')
+```
+
+Esta etapa envolve também a definição dos parâmetros, a alimentação dos dados no modelo, atribuição dos tensores e da famosa "attention_mask".
+
+- Avaliação e ajuste: 
+
+  Nesta etapa realizamos a avaliação do modelo, com base nos dados de treino e teste que foram previamente divididos, e realizamos a iteração do modelo sobre o conjunto de treinamento, para assim, em seguida, atribuir as predições às categorias (e targets) definidos. Por fim, realizamos a impressão das métricas de classificação.
+
+
+Após diversas implementações do modelo, e devido a sua complexidade nas etapas de entrada da Rede Neural, obtivemos resultados medianos com o modelo BERT. Consequentemente, com a primeira implementação, na métrica de maior relevância para o projeto, o "Recall" obtivemos 72% (0.72). Em termos de assertividade, em comparação aos outros modelos foi o nosso terceiro maior. 
+
+No entanto, devido ao seu alto nível de complexidade, obtivemos resultados com muitos sinais de overfitting e do enviesamento na entrada dos tensores, o que ocorreu após tentativa de resolução de problemas no código.
+
+Devido a isso, tratamos o modelo BERT como um "nice to have", mas não como principal modelo a ser utilizado. Mesmo assim, consideramos que na escala de modelos com algoritmos de Rede Neural, é com certeza o que mais gera escalabilidade e por isso há o interesse em sua implementação.
+
+**Próximos passos**
+
+  - Fine-tuning para tarefas específicas:
+    Depois do pré-treinamento, o BERT pode ser ajustado (fine-tuned) para tarefas específicas, como classificação de texto, extração de informações e resposta a perguntas. Ao ajustar o BERT para uma tarefa específica, as camadas de classificação são adicionadas ao modelo e o modelo é treinado em um conjunto de dados rotulados para aprender a tarefa específica.
+
+- Atention Mask: 
+  Na tarefa de preenchimento de máscara, palavras são mascaradas aleatoriamente e o modelo é treinado para prever as palavras mascaradas com base no contexto das palavras vizinhas e sua relevância.
+
+É importante citar que o modelo BERT tem sido amplamente utilizado em uma variedade de tarefas de processamento de linguagem natural e estabeleceu um novo parâmetro em muitas delas. Isso foi um dos fatores determinantes para a escolha e utilização deste modelo em nosso grupo. Ele se destaca pela sua capacidade de capturar informações contextuais em textos e fornecer representações de alta qualidade que podem ser usadas em várias aplicações de NLP.
+
+## 3. Doc2Vec
+
+O modelo Doc2Vec é uma técnica de aprendizado de máquina utilizada para representar documentos em formato vetorial. Ele é uma extensão do modelo Word2Vec, que é usado para representar palavras em vetores. O Doc2Vec permite que documentos inteiros sejam representados como vetores contínuos de valores numéricos, capturando o contexto semântico dos documentos.
+
+O objetivo do Doc2Vec é gerar representações vetoriais para documentos que preservem a semântica e a similaridade entre eles. Essas representações vetoriais podem ser usadas em várias tarefas de processamento de linguagem natural, como classificação de documentos, recomendação de conteúdo, agrupamento de documentos semelhantes e recuperação de informações.
+
+Algoritmos utilizados: Naive Bayes, Regressão Logística e Rede Neural
+
+No processamento do modelo, realizamos alguns tipos de taggeamento, que são próprios para treinamento do modelo, assim como a definição de parâmetros e outros recursos de vetorização. Abaixo segue o exemplo de taggeamento:
+
+```
+tagged_data = [TaggedDocument(words=word_tokenize(text.lower()), tags=[str(i)]) for i, text in enumerate(dados['texto'])]
+
+```
+
+Após estas definições realizamos a vetorização dos tokens com base nas definições da própria biblioteca gensim, e após impressão das iterações destes vetores, podemos aplicar nos algoritmos.
+
+** É importante ressaltar que a métrica de avaliação central foi o Recall **. 
+
+Na primeira implementação, com Regressão Logística, tivemos a porcentagem de 58% (0.58), em relação às classificações, assim como na segunda implementação em Random Search, que obtivemos, também, o recall em 58%. Já na terceira implementação utilizando Naive Bayes, conseguimos o bom resultado de 82% (0.82) em recall. 
+
+Por fim, implementamos a Rede Neural, apenas para satisfazer os termos acadêmicos, e obtivemos a acurácia de 73% (0.73).
+
+No caso específico, o modelo Doc2Vec foi escolhido como modelo final devido às suas vantagens e desempenho em relação aos outros métodos de representação de documentos. Além disso, levamos em conta a sua aplicabilidade, tendo em vista que o Doc2Vec é capaz de capturar relações semânticas complexas entre palavras e documentos, gerando vetores que preservam a semelhança semântica entre textos.
+
+Também foi evidenciado, nos testes que realizamos, que o modelo Doc2Vec possui uma implementação mais simples, eficiente e bem estabelecida na biblioteca Gensim, o que facilita sua utilização e treinamento. E em termos de assertividade, com a métrica de prioridade (Recall), em relação aos outros modelos, o modelo Doc2vec foi muito bem.
+
+## 4. GloVe
+
+O Global Vectors for Word Representation, também conhecido como GloVe, é um modelo de vetorização de palavras desenvolvido com o intuito de identificar as relações sintáticas e semânticas em um conjunto de um texto. Esse modelo, utiliza estatísticas de co-ocorrência global de palavras para desenvolver representações vetoriais. O seu processo de treinamento, envolve a construção de uma matriz que registra a frequência da ocorrência das palavras a partir da utilização da 'função de perda' (loss function) com o intuito de maximizar a probabilidade de co-ocorrência de pares de palavras. 
+
+- Algoritmo: Regressão Logística 
+
+O código está trabalhando com a leitura de um arquivo CSV, contendo os dados lematizados que já passaram pelo Pré-Processamento. Depois disso, como mostra o código abaixo, foi realizado o carregamento do modelo spaCy com vetores GloVe e feito um teste com a palavra 'amor' para calcular seus vetores. 
+
+```
+import spacy
+
+# Carregamento do modelo com a utilização de vetores GloVe
+nlp = spacy.load('en_core_web_sm')
+
+# Vetor da palavra teste (amor)
+word_vector = nlp('amor')[0].vector
+print("Vetor de 'amor':", word_vector)
+```
+
+Após isso, foi realizado a utilização da classe CountVectorizer do sklearn.feature_extraction.text para vetorizar os dados contidos na coluna "texto" doDataframe desenvolvido. Assim, a vetroização foi aplicada aos dados de teste (x_test) e treinamento (x_train) e armazenados em duas variáveis com o parâmetro 'random_state' definido como 42. Depois disso, foi realizado o treinamento do modelo de regressão logística utilizando os dados de treinamento. Dessa forma, a acurácia do modelo é calculada a partir do método score com X_test e y_test. 
+
+
+
+```
+X = df_lemma['texto']
+y = df_lemma['sentimento']
+
+vectorizer = CountVectorizer()
+X_counts = vectorizer.fit_transform(X)
+tfidf_transformer = TfidfTransformer()
+X_tfidf = tfidf_transformer.fit_transform(X_counts)
+
+X_train, X_test, y_train, y_test = train_test_split(X_tfidf, y, test_size=0.2, random_state=42)
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+accuracy = model.score(X_test, y_test)
+print("Acurácia:", accuracy)
+```
+Com base nos resultados obtidos é possível fazer as seguintes análises do algoritmo de Regressão Logística. A acurácia obtida para o modelo foi de 0.75, o que indica uma boa significância e uma taxa de acerto razoavelmente alta. Além disso foi também calculado os valores de precisã para cada uma das classes desenvolvidas. O valor obtido para as classe NEGATIVE, NEUTRAL e POSITIVE foram: 0,77; 0,71; e 0,81 respectivamente. Valores relativamente bons. Além disso, foi obtido também os valores de recall para cada uma das classes (NEGATIVE = 0,54; NEUTRAL = 0,85 e POSITIVE = 0,75. 
+Por fim, foi então calculado o F1-score, que é uma medida que combina a precisão e o recall em uma única métrica. Para a classe NEGATIVE, o F1-score é de 0,64, para a classe NEUTRAL é de 0,77 e para a classe POSITIVE é de 0,78.que o modelo tem uma taxa de acerto razoavelmente alta.
+
+
+
+
+- Algoritmo: Modelo Naive Bayes 
+
+Primeiramente foi mapeado os rótulos 'POSITIVE', 'NEUTRAL' e 'NEGATIVE' para os valores numéricos 3, 1 e 2, respectivamente, e o resultado foi armazenado em uma variável. 
+
+```
+sentimento_mapping = {'POSITIVE': 3, 'NEUTRAL': 1, 'NEGATIVE': 2}
+y_mapped = df['sentimento'].map(sentimento_mapping)
+```
+
+Depois disso, foi realizado o treinamento do modelo Naive Bayes Gaussiano, porém não foi obtido um valor de acurácia tão satisfatório, equivalente a 0.57. Isso indicou que o modelo tem uma taxa de acerto um pouco mais baixa com o valor obtido previamente com o algoritmo da regressão logística.
+
+```
+model = GaussianNB()
+model.fit(X_train, y_train)
+
+# Predição e cálculo da acurácia
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+```
+
+
+
+Por fim, foi realizado um gráfico de plotagem da curva ROC, que pode ser visto abaixo. 
+
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/GloVe.png">
+
+
+Em resumo, os resultados obtidos indicam que o modelo de regressão logística teve um desempenho melhor em comparação com o modelo de Naive Bayes. A regressão logística obteve uma acurácia mais alta e um melhor equilíbrio entre precisão e recall. Além disso, o gráfico de curva ROC mostra que o modelo de regressão logística possui uma capacidade satisfatória de distinguir entre as diferentes classes. No entanto, é importante lembrar que esse modelo obteve valores bons, porém não foram os melhores diante dos outros modelos desenvolvidos.
+
+
+## 5. FastText
+
+O FastText é uma biblioteca gratuita e de código aberto do Facebook AI Research (FAIR) para aprender embeddings e classificações de palavras. Este modelo permite a criação de um algoritmo de aprendizado para a obtenção de representações vetoriais de palavras, avaliando esses modelos.
+
+Primeiramente, os valores da coluna alvo foram transformados em valores numéricos:
+
+```
+df_2['sentimento'] = df_2['sentimento'].map({'NEUTRAL': 0, 'POSITIVE': 1, 'NEGATIVE': -1})
+```
+
+Foi feito o teste com o modelo possuindo 50 e 100 dimensões mas, como a diferença não foi significante, foi utilizado o de 50. O modelo de word embeddings pré treinadas foi instalado do repositório de word embeddings do NILC. Para aplicação no projeto, foi utilizada a base de dados com os dados já lematizados e tratados. O modelo foi carregado e aplicado em uma vetorização da coluna 'tokens', assim como é feito com o modelo Word2Vec. 
+
+```
+# Função para vetorizar um token
+def vetorizar_token(token):
+    vetor = np.zeros(model.vector_size) # incializa vetor de zeros com a mesma dimensão
+    if token in model: # verifica se a palavra está no word2vec treinado
+        vetor = model[token] # adiciona o valor do vetor
+    return vetor
+
+# Função para vetorizar uma frase
+def vetorizar_frase(frase):
+    vetores_tokens = [vetorizar_token(token) for token in frase] # verifica cada token da lista
+    return np.sum(vetores_tokens, axis=0) # retorna a soma dos vetores
+
+# Aplicar a função 'vetorizar_frase' a todas as frases
+df_2['vetores'] = df_2['tokens'].apply(vetorizar_frase)
+```
+
+Após isso, com os vetores criados, foram aplicados o modelo Naive Bayes (que retornou uma acurácia de 0.31) e a Regressão Logística (com esta última obtendo um melhor resultado, com acurácia de 0.56). Estes resultados foram um pouco inferiores em relação aos testes realizados em outros modelos com os mesmos algoritmos (Regressão logísitica e Naive Bayes). Sendo assim, o modelo não foi considerado com grande relevância para a escolha do modelo final.
+
+Com base nos resultados e processamentos, construímos diferentes gráficos: o da curva ROC, o da curva de aprendizado e o da curva de validação. 
+
+Abaixo estão os gráficos da curva ROC obtidos com cada modelo:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0a41966a-07cd-4309-ae1e-d80c82755166)
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0a6b22a9-7f79-4ba9-8b96-97f243fa2915)
+
+## 6. TF-IDF
+
+O TF-IDF (Term Frequency-Inverse Document Frequency) é uma medida estatística que permite avaliar a importância de uma palavra em um documento. Essa técnica foi escolhida por sua capacidade de destacar palavras-chave relevantes e reduzir o peso de palavras comuns, ajudando a identificar a relevância de um termo em relação ao contexto específico de um documento. Suas vantagens incluem a capacidade de lidar com grandes volumes de texto de maneira eficiente, reduzindo essa influência de palavras comuns e destacando exatamente os termos-chave que fornecem insights relevantes. O TF-IDF também é uma técnica simples de implementar e interpretar.
+
+- Algoritmo: Regressão Logística 
+
+A Regressão Logística é um algoritmo de aprendizado de máquina que é amplamente utilizado para tarefas de classificação binária. Ele modela a relação entre variáveis independentes e a probabilidade de uma resposta pertencer a uma determinada classe. Sua escolha foi feita especialmente pela sua capacidade de lidar com dados categóricos (como é o caso da base de dados trabalhada).
+
+A combinação de TF-IDF com Regressão Logística aproveita as vantagens de ambos os métodos. O TF-IDF fornece uma representação ponderada das palavras em um documento, enquanto a Regressão Logística modela a relação entre essas palavras e a probabilidade de classificação. Essa combinação é comum em processos de análise de sentimentos como esse.
+<br>
+<br>
+A base de dados utilizada já passou pelos primeiros processos de PLN (remoção de stop words, substituição de gírias e, em destaque, a lematização). Essa é a mesma base de dados lematizada que foi desenvolvida na Sprint 3 e utilizada no modelo anterior. Contudo, apenas as colunas das frases e suas qualificações estão sendo utilizadas. 
+<br>
+```
+#dividi os dados em conjunto de treinamento e teste
+X_train, X_test, y_train, y_test = train_test_split(dados["texto"], dados["sentimento"], test_size=0.2, random_state=42)
+```
+Após a importação da base de dados no modelo, foi feita uma divisão dos dados em conjunto de treinamento e teste, com o test size de 0.2 e random state de 42.
+<br>
+```
+#cria pipeline com TF-IDF e modelo de classificação
+pipeline = Pipeline([
+    ("tfidf", TfidfVectorizer()),
+    ("model", LogisticRegression(max_iter=1000))  # número máximo de iterações
+])
+```
+Como já indicado, o modelo criado utiliza TF-IDF com Regressão Logística para a análise de sentimentos. Para a regressão Logística o número de iterações foi configurado para mil a fim de conseguir um modelo que identifica mais correlações entre as palavras.
+<br>
+<br>
+Para avaliar os resultados obtidos foi utilizado principalmente os parâmetros de Recall e Acurácia 
+<br>
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/TF-IDF_Dados.png" alt="td-idf dados" width="500" height="auto">
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/TF-IDF_grafico.png">
+
+<br>
+
+Com base nos resultados obtidos, podemos concluir que o modelo apresenta um desempenho equilibrado e consistente, com valores de acurácia e recall macro próximos, na faixa de 0,7. Isso indica que o modelo é capaz de fazer previsões precisas na maioria das amostras de teste, classificando corretamente tanto as instâncias positivas quanto as negativas.
+
+Além disso, a similaridade entre a acurácia e o recall macro sugere que o modelo não está enviesado para uma classe específica e está tratando ambas as classes de forma equilibrada.
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/TF-IDF_MC.png">
+
+A partir da matriz de confusão é possível perceber que o modelo tem mais dificuldades ao avaliar comentários neutros e uma facilidade para avaliar positivos e, em segundo lugar, negativos. Os resultados nessa instância foram satisfatórios.
+
+Por fim, o modelo obteve bom resultados em avaliações de recall, acurácia e matriz de confusão, contudo, não foram os melhores diante dos outros modelos desenvolvidos.
+
+
+## 7.Comparação entre os modelos e escolha do modelo final
+
+Os modelos foram submetidos aos seus respectivos processos de vetorização e, em seguida, aos mesmos algoritmos, sendo eles, regressão logística e naive bayes, a fim de garantir a avaliação conforme a mesma otimização. Além do mais, ressalta-se a utilização do recall como métrica central de avaliação, pois, para a problemática estabelecida, é importante identificar verdadeiros positivos.
+
+Portanto, observa-se, respectivamente, as maiores precisões dos modelos: Doc2Vec, GloVe, Bert, TF-IDF e Fast-Text. Dessa forma, nota-se esse resultado como possibilidade de realizar melhores combinações no modelo Doc2Vec e os algoritmos associados, com o objetivo de resultantes mais precisos.
+
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/gr%C3%A1fico_comparativo.png">
+
+Esclarece-se que os resultados do ELMo não são expostos na comparação entre os modelos, dado que, durante a exploração do mesmo, foi possível perceber a complexidade no qual está equiparado, além da utilização de redes neurais profundas, diferente dos demais modelos, que utilizam algoritmos.
+
+## 8.Adicionando Features Novas
+
+Foram criadas novas features baseadas no tamanho das frases, em particular o número de tokens por frase, para comparar com modelos que incluam ou não essas features. Quatro algoritmos foram utilizados para esta comparação: regressão logística, cat-boost, naive-bayes e xg-boost. A vetorização escolhida para esta comparação foi o TF-IDF devido sua facilidade de aplicação e a combinação com os algoritimos escolhidos. Todos os modelos que utilizaram as novas features tiveram resultados inferiores em comparação aos modelos que não as utilizaram, apresentando uma média de recall de 38.7. No entanto, a inclusão das novas features permitiu a utilização do gráfico KDE (Estimativa de Gráfico Kernel) que demonstra a probabilidade de um sentimento, dado o número de tokens de uma frase. Onde -1 representa sentimentos negativos, 0 representa sentimentos neutros e 1 representa sentimentos positivos.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/5500412f-e3df-499d-baea-1ff9c862f9b1)
+
+Cálculo KDE para a Estimativa:
+KDE(x) = (1 / (n * h)) * Σ K((x - xi) / h)
+KDE(x) é o valor estimado da densidade de probabilidade para um determinado ponto x. n é o número total de pontos de dados no conjunto de dados. h é o parâmetro de suavização ou largura de banda (bandwidth). Σ representa a soma ao longo de todos os pontos de dados. K é a função kernel, que é uma função simétrica em torno de zero que define a forma da contribuição de cada ponto de dados para a estimativa de densidade.
+
+
+
+Comparação entre os modelos com a feature aplicada:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/6212235f-588c-466f-9439-38f3751095c6)
+
+
+Maior valor(cat-boost):
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/4c7c25b6-fa7a-4f83-8143-d0c970215746)
+
+
+Modelos sem a adição da feature aplicada:
+
+![newplot](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/af9eb689-e0a6-4ce9-b0de-e08411b1dc27)
+
+
+Maior valor(xg-boost):
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/f4a55487-b5b3-4d7a-94bd-ef23f8c63b03)
+
+
 
 ## (Sprint 5) Apresentação Final
 
