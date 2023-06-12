@@ -909,20 +909,24 @@ O Elmo (Embeddings from Language Models) é um modelo de vetorização pré-trei
 Tal utilização é fundamentada nas características estruturais do modelo. Evidencia-se a possibilidade de identificar palavras iguais ou semelhantes em contextos diferentes, agrupá-los e diferenciá-los.
 O modelo se destaca dado que possui capacidade de generalização, dado que, foi treinado em grandes quantidades de texto. 
 Ao aplicá-lo, a fim de obter melhores resultados, utiliza-se o csv do texto pré-processado. Em seguida, aplica-se no modelo de vetorização ELMo. 
-
 É de indubitável importância ressaltar que para a utilização do ELMo os arquivos de pré-treinamento, em português precisam ser importados.
 ```
 weight_file = "/content/drive/MyDrive/Colab Notebooks/SI-MOD6/entrega_spt4/elmo_pt_weights_dgx1 (1).hdf5
 ```
 Já a linha a seguir, define o local do arquivo JSON de opções para o modelo ELMo em português. O arquivo JSON contém a configuração e os hiperparâmetros do modelo.
-
 ```
-options_file = 'https://s3-us-west2.amazonaws.com/allennlp/models/elmo/contributed/pt/brwac/options.json'
+options_file = 'https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/contributed/pt/brwac/options.json'
 ```
+As frases de input são convertidas em identificadores de caracteres e, em seguida, é calculado os embeddings correspondentes. Os resultantes são armazenados em um array. Após a vetorização dos dados, os mesmos são direcionados para a rede neural simples. 
+Na rede neural, seta-se 2 dimensões dos embeddings redimensionados, uma vez que, a dimensionalidade do input, sem tratamento, é incompatível com o suporte da rede. Na mesma, são passados os vetores resultantes do ELMo e os targets. <br>
 
-Após a vetorização dos dados, os mesmos são direcionados para a rede neural simples. 
-A métrica escolhida para avaliar o resultado do modelo é recall, visto que, dentre todas as classificações positivas como valor esperado, quantas foram assertivas. Entretanto, ocorreram alguns desajustes durante o arranjo da rede neural. Portanto, nesse momento, a fim de avaliar a performance geral, utiliza-se a acurácia.
-Os resultados emitidos na rede neural demonstram 43.17% de acurácia. Ressalta-se que, em comparação com outros modelos implementados e analisados, ELMo não possui melhor resultado e adesão aos dados.
+Defini-se, então, a arquitetura da rede neural em duas camadas densas. A primeira camada possui 2 unidades com ativação sigmoidal, e a segunda camada possui 1 unidade com ativação sigmoidal. <br>
+Destaca-se a utilização do otimizador “Adam” devido a frequente utilização em conjuntos de dados enxutos e com redes profundas. Além disso, o otimizador atualiza os pesos da rede mais rapidamente.<br>
+
+A métrica escolhida para avaliar o resultado do modelo é recall, visto que, dentre todas as classificações positivas como valor esperado, quantas foram assertivas. Entretanto, ocorreram alguns desajustes durante o arranjo da rede neural. Portanto, nesse momento, a fim de avaliar a performance geral, utiliza-se a acurácia. <br>
+Os resultados emitidos na rede neural demonstram 43.17% de acurácia. A porcentagem apresentada, em consideração ao que é considerado ideal ou avaliativo para os modelos, não é satisfatória para aplicação, em comparação à modelos que obtiveram resultados mais assertivos. <br>
+
+Em síntese, destaca-se que esse número pode ser melhorado em decorrência da separação dos dados de treino e teste, diferenciação no número de epochs e variação nas dimensões.
 
 
 
@@ -993,7 +997,7 @@ tagged_data = [TaggedDocument(words=word_tokenize(text.lower()), tags=[str(i)]) 
 
 Após estas definições realizamos a vetorização dos tokens com base nas definições da própria biblioteca gensim, e após impressão das iterações destes vetores, podemos aplicar nos algoritmos.
 
-** É importante ressaltar que a métrica de atenção neste caso aqui foi o Recall"**. 
+** É importante ressaltar que a métrica de avaliação central foi o Recall **. 
 
 Na primeira implementação, com Regressão Logística, tivemos a porcentagem de 58% (0.58), em relação às classificações, assim como na segunda implementação em Random Search, que obtivemos, também, o recall em 58%. Já na terceira implementação utilizando Naive Bayes, conseguimos o bom resultado de 82% (0.82) em recall. 
 
@@ -1169,8 +1173,14 @@ Por fim, o modelo obteve bom resultados em avaliações de recall, acurácia e m
 
 
 ## 7.Comparação entre os modelos e escolha do modelo final
+
+Os modelos foram submetidos aos seus respectivos processos de vetorização e, em seguida, aos mesmos algoritmos, sendo eles, regressão logística e naive bayes, a fim de garantir a avaliação conforme a mesma otimização. Além do mais, ressalta-se a utilização do recall como métrica central de avaliação, pois, para a problemática estabelecida, é importante identificar verdadeiros positivos.
+
+Portanto, observa-se, respectivamente, as maiores precisões dos modelos: Doc2Vec, GloVe, Bert, TF-IDF e Fast-Text. Dessa forma, nota-se esse resultado como possibilidade de realizar melhores combinações no modelo Doc2Vec e os algoritmos associados, com o objetivo de resultantes mais precisos.
+
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/gr%C3%A1fico_comparativo.png">
 
+Esclarece-se que os resultados do ELMo não são expostos na comparação entre os modelos, dado que, durante a exploração do mesmo, foi possível perceber a complexidade no qual está equiparado, além da utilização de redes neurais profundas, diferente dos demais modelos, que utilizam algoritmos.
 
 ## 8.Adicionando Features Novas
 
