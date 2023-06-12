@@ -413,6 +413,17 @@ Preencher conforme a descrição do artefato na Adalove.
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
+# Modelo Doc2Vec
+O modelo Doc2Vec é uma técnica de aprendizado de máquina utilizada para representar documentos em formato vetorial. Ele é uma extensão do modelo Word2Vec, que é usado para representar palavras em vetores. O Doc2Vec permite que documentos inteiros sejam representados como vetores contínuos de valores numéricos, capturando o contexto semântico dos documentos.
+
+O objetivo do Doc2Vec é gerar representações vetoriais para documentos que preservem a semântica e a similaridade entre eles. Essas representações vetoriais podem ser usadas em várias tarefas de processamento de linguagem natural, como classificação de documentos, recomendação de conteúdo, agrupamento de documentos semelhantes e recuperação de informações.
+
+No seu caso específico, o modelo Doc2Vec foi escolhido como modelo final devido às suas vantagens e desempenho em relação aos outros métodos de representação de documentos. O Doc2Vec é capaz de capturar relações semânticas complexas entre palavras e documentos, gerando vetores que preservam a semelhança semântica entre textos.
+
+Além disso, o modelo Doc2Vec possui uma implementação eficiente e bem estabelecida na biblioteca Gensim, o que facilita sua utilização e treinamento. O código que você utilizou mostra a criação de um modelo Doc2Vec, treinamento com os documentos do seu dataframe e a obtenção de vetores de recursos para os textos. Essas etapas são padrão para aplicar o modelo Doc2Vec aos seus dados.
+
+Portanto, a escolha do modelo Doc2Vec como modelo final é justificada pela sua capacidade de representar documentos de forma semântica, sua eficiência e pela adequação às suas necessidades específicas de processamento de texto.
+
 Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## (Sprint 4) Documentação da proposta de uma nova modelagem
