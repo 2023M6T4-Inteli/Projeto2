@@ -702,27 +702,13 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 
 #### Comparação entre BOW e Word2Vec
 
-A acurácia do BOW com TF-IDF ficou como pode ser visto na imagem abaixo:
-
-![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4128a839-6279-438a-84c6-68a83638bedd)
+A acurácia do BOW com TF-IDF resultou em 75% e o recall resultou em 72%.
 
 Já os valores do Word2Vec ficaram como a seguir:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/c56abbd0-19e7-4d12-ac9a-8b2dc90b9170)
 
-Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, não sofreu muita alteração com o uso dos modelos
-
-#### Comparação entre BOW e Word2Vec
-
-A acurácia do BOW com TF-IDF ficou como pode ser visto na imagem abaixo:
-
-![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4128a839-6279-438a-84c6-68a83638bedd)
-
-Já os valores do Word2Vec ficaram como a seguir:
-
-![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/c56abbd0-19e7-4d12-ac9a-8b2dc90b9170)
-
-Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, não sofreu muita alteração com o uso de um modelo diferente. 
+Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, não sofreu muita alteração com o uso de um modelo diferente.
 
 ### Arquitetura da Solução
 
