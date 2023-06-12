@@ -12,7 +12,7 @@ Este projeto visa suprir a necessidade de entender o cliente, o que ele deseja e
 
  ### 📈 Matriz de avaliação de valor Oceano Azul 
 
-A Matriz Oceano Azul é a ferramenta que ajuda as empresas à identificar novas oportunidades de crescimento dentro do mercado e quais fatores às diferenciam da concorrência, criando valor para seus clientes.
+A Matriz Oceano Azul é a ferramenta que ajuda as empresas a identificar novas oportunidades de crescimento dentro do mercado e quais fatores as diferenciam da concorrência, criando valor para seus clientes.
 
 Para esta análise, foram setadas outras Inteligências Artificiais, baseadas em Processamento de Linguagem Natural (PLN), como **Open AI, Amazon Comprehend, Microsoft Azure Cognitive Services, Google Cloud Natural Language, IBM Watson.** 
 
@@ -21,9 +21,9 @@ A Amazon Comprehend é um serviço de análise de texto fornecido pela AWS que p
 
 O Microsoft Azure Cognitive Services é um conjunto de serviços cognitivos com alocação em nuvem que permite que desenvolvedores agreguem recursos de inteligência artificial (IA) a seus aplicativos sem a necessidade de experiência em aprendizado de máquina ou análise de dados. Esses serviços são construídos com base em algoritmos de aprendizado de máquina, visão computacional, reconhecimento de fala, processamento de linguagem natural e outras tecnologias. Consequentemente, os serviços cognitivos da Azure são altamente escaláveis e personalizáveis, permitindo que as empresas criem aplicativos sob medida para suas necessidades específicas, como por exemplo para realizar tarefas como reconhecimento de voz, análise de sentimentos, detecção de imagens, tradução de idiomas e muito mais. Além disso, os serviços podem ser facilmente integrados a outras tecnologias da Microsoft, como o Microsoft Power BI, Microsoft Dynamics 365 e Microsoft Office 365.
 
-A Google Cloud Natural Language é uma ferramenta de processamento de linguagem natural (PLN) criada pela Google que permite aos usuários extrair informações valiosas a partir de textos não estruturado, incluindo e-mails, documentos, artigos e outras fontes de dados. Com a técnica de aprendizado de máquina e processamento de linguagem natural, a Google Cloud Natural Language pode identificar entidades ou indivíduos mencionados em um texto, como nomes de pessoas, locais, organizações e datas, além de extrair sentimentos e emoções expressos pelo autor. Além disso, há possibilidade de agregação com o Google Cloud Natural Language, que permite as empresas analisarem grandes volumes de dados para obter insights úteis que podem ajudar a orientar decisões importantes de negócios.
+A Google Cloud Natural Language é uma ferramenta de processamento de linguagem natural (PLN) criada pela Google que permite aos usuários extrair informações valiosas a partir de textos não estruturados, incluindo e-mails, documentos, artigos e outras fontes de dados. Com a técnica de aprendizado de máquina e processamento de linguagem natural, a Google Cloud Natural Language pode identificar entidades ou indivíduos mencionados em um texto, como nomes de pessoas, locais, organizações e datas, além de extrair sentimentos e emoções expressos pelo autor. Além disso, há possibilidade de agregação com o Google Cloud Natural Language, que permite às empresas analisarem grandes volumes de dados para obter insights úteis que podem ajudar a orientar decisões importantes de negócios.
 
-O IBM Watson é um sistema de PLN, desenvolvido pela IBM. A ferramenta utiliza da análise de dados e aprendizado de máquina para processar informações e fornecer insights relevantes para seus usuários. O mesmo é utilizado em vários setores, incluindo saúde, finanças, educação, manufatura.
+O IBM Watson é um sistema de PLN, desenvolvido pela IBM. A ferramenta utiliza da análise de dados e aprendizado de máquina para processar informações e fornecer insights relevantes para seus usuários. O mesmo é utilizado em vários setores, incluindo saúde, finanças, educação e manufatura.
 O IBM Watson é uma plataforma de computação cognitiva e inteligência artificial desenvolvida pela empresa americana IBM. Ele utiliza tecnologias avançadas de processamento de linguagem natural, machine learning, análise de dados e outras técnicas de inteligência artificial para fornecer insights e soluções para uma ampla variedade de aplicações.
 
 **Eliminar → Assertividade, Escalabilidade, Robustez, confiabilidade, adaptabilidade, Assertividade, Tecnologia**
@@ -46,14 +46,14 @@ Com a visão de ampliar, agregar e integrar diversas ferramentas, pode-se citar 
 A Matriz de Riscos consiste em uma ferramenta de gestão de riscos e oportunidades, a fim de identificar, avaliar e priorizar os fatores associados ao projeto, por grau de impacto e probabilidade de ocorrência.
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Matriz%20de%20Risco.png">
 
-Por tanto, entende-se então, que o desenvolvimento de um Plano de Ação é de indubitável importância, dado que, o documento descreve as atividades que precisam ser realizadas para mitigar riscos e alcançar objetivos estipulados. O Plano define o que será feito, quem fará, como, quando e com quais recursos. <br>
+Portanto, entende-se então, que o desenvolvimento de um Plano de Ação é de indubitável importância, dado que, o documento descreve as atividades que precisam ser realizadas para mitigar riscos e alcançar objetivos estipulados. O Plano define o que será feito, quem fará, como, quando e com quais recursos. <br>
 No que diz respeito aos riscos evidenciados na Matriz acima, ressalta-se o plano de ação desenvolvido:
 
 **Ameaça 01:** Thainá - Identificar quais são as expectativas do cliente e manter o foco nelas durante a produção do modelo, além de revisar o modelo após cada mudança, comparando-o com as expectativas definidas para o projeto.
 
-**Ameaça 02:**  Vinicius - Identificar as causas da falha, e implementar medidas de solução monitorar os testes no tratamento dos dados. Revisar a metodologia de pré-processamento de dados.
+**Ameaça 02:**  Vinicius - Identificar as causas da falha, e implementar medidas de solução para monitorar os testes no tratamento dos dados. Revisar a metodologia de pré-processamento de dados.
 
-**Ameaça 03:** Kathy e Lucas -  Verificar por quais possíveis motivos existe um erro na coleta das palavras chaves, e indentificar pradões de possíveis palavras que estejam causando esses erros, buscando informações em relação a campanha de marketing. Além disso, caso o problema não for na coleta das palavras, ajustariamos o algoritmo e procurariamos possíveis falhas e tentariamos treinar o modelo  om mais dados e exemplos para melhorar a precisão, realizando testes regulares. 
+**Ameaça 03:** Kathy e Lucas -  Verificar por quais possíveis motivos existe um erro na coleta das palavras chaves, e identificar padrões de possíveis palavras que estejam causando esses erros, buscando informações em relação a campanha de marketing. Além disso, caso o problema não for na coleta das palavras, ajustaremos o algoritmo e procuraremos possíveis falhas e tentaremos treinar o modelo  com mais dados e exemplos para melhorar a precisão, realizando testes regulares. 
 
 **Ameaça 04:** Henri e Rodrigo -  Avaliar se a métrica de classificação dos comentários é suficientemente complexa para a correta classificação dos comentários, conferir com testes se não há algum caso que produza resultados incorretos/indesejados.
 
@@ -131,7 +131,7 @@ A Persona é a representação fictícia do cliente ideal para o projeto, com o 
 
 ### 📄 User Stories
 
-A User Stories são representações simples e clara dos requisitos e funcionalidades de um software, escritas do ponto de vista do usuário final. Essas histórias ajudam a manter o foco nas necessidades dos usuários e a priorizar as funcionalidades mais importantes para o projeto. Portanto, a seguir, existem duas User Story por persona (Marketing, Produto e Automações)
+A User Stories são representações simples e claras dos requisitos e funcionalidades de um software, escritas do ponto de vista do usuário final. Essas histórias ajudam a manter o foco nas necessidades dos usuários e a priorizar as funcionalidades mais importantes para o projeto. Portanto, a seguir, existem duas User Story por persona (Marketing, Produto e Automações)
 
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/dev-jo%C3%A3o/assets/Imagens/user_storie_01.png" alt="user storie 1" width="400" height="auto">
 <br>
@@ -158,7 +158,7 @@ A fase de preparação de dados começou com a obtenção da base de dados com o
 
 No Pandas, as importações de bibliotecas são usadas para trazer funcionalidades específicas de bibliotecas externas para o seu código. O Pandas é uma biblioteca popular para análise de dados em Python, mas para aproveitar ainda mais recursos, pode ser necessário importar outras bibliotecas. As importações no Pandas geralmente são feitas no início do código e são usadas para importar módulos adicionais que fornecem funcionalidades extras.
 
-Em primeira instância utilizamos as seguintes bibliiotecas:
+Em primeira instância utilizamos as seguintes bibliotecas:
 
 pip install emoji: Este comando utiliza o gerenciador de pacotes pip para instalar a biblioteca emoji. A biblioteca emoji é uma biblioteca Python que fornece funcionalidades para trabalhar com emojis, como a exibição, codificação e manipulação de emojis em texto. Ao executar esse comando, você estará instalando a biblioteca emoji em seu ambiente Python.
 
@@ -169,7 +169,7 @@ Segue abaixo os códigos:
 - ```!pip install pyspellchecker```
 
 ### Compreensão dos Dados 
-Foi implementado o método de carregamento do Dataframe utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
+Foi implementado o método de carregamento do data frame utilizado. Sendo assim, foi criado o caminho da pasta no Google Drive e sua leitura usando "pd.read_csv".
 Reorganizamos dessa forma, e renomeamos algumas colunas com o intuito de facilitar o processo de análise.
 
 Nesta Etapa será explicado as colunas da base de dados, “BASE-DEPRECATED”, fornecida pela empresa BTG Pactual durante a Sprint 2. A base de dados possui 4549 linhas e foram utilizadas apenas 11 colunas para a realização das análises. Tais colunas serão descritas abaixo:
@@ -188,7 +188,7 @@ Nesta Etapa será explicado as colunas da base de dados, “BASE-DEPRECATED”, 
 
 ### Análise Descritiva
 
-A análise descritiva é uma etapa fundamental no acompanhamento e análise de dados. É uma técnica que aplicada no contexto do nosso proejto em parceria com o BTG-Pactual, envolve a interpretação, comprreensão e organização dos dados de forma a obterpadrões e tendências. Em nosso projeto, essa análise será feita com o intuito de realizar uma análise de sentimentos dos usuários em relação às campanhas do BTG, além de facilitar o banco no processo de desenvolver futuras estrtaégias e ompreender melhor como eles podem gerenciar um bom relacionamento com os clientes. Utilizaremos a análise descritiva para identificar:
+A análise descritiva é uma etapa fundamental no acompanhamento e análise de dados. É uma técnica aplicada no contexto do nosso projeto em parceria com o BTG-Pactual, envolve a interpretação, compreensão e organização dos dados de forma a obter padrões e tendências. Em nosso projeto, essa análise será feita com o intuito de realizar uma análise de sentimentos dos usuários em relação às campanhas do BTG, além de facilitar o banco no processo de desenvolver futuras estratégias e compreender melhor como eles podem gerenciar um bom relacionamento com os clientes. Utilizaremos a análise descritiva para identificar:
 
 - **Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel):**
     Dado que cada tipo de mídia possui um objetivo diferente, entende-se que, conforme as suas diferenciações, as palavras mais comentadas podem ser diferentes e podem agregar para o usuário.
@@ -207,37 +207,37 @@ A análise descritiva é uma etapa fundamental no acompanhamento e análise de d
    
 ### Pré-Processamento
 
-O pré processamento é uma etapa crucial na análise de dados. Esse processo consiste no conjunto de tecnicas aplicados nos dados quando em desenvolvimento de modelos de aprendizado de máquina. No contexto do Processamento de Linguagem Natural (PLN), o pré-processamento refere-se no na técnica de transformar e preparar os dados em uma forma mais adequada para a realização de análise de textos. 
+O pré-processamento é uma etapa crucial na análise de dados. Esse processo consiste no conjunto de técnicas aplicadas nos dados quando em desenvolvimento de modelos de aprendizado de máquina. No contexto do Processamento de Linguagem Natural (PLN), o pré-processamento refere-se no na técnica de transformar e preparar os dados em uma forma mais adequada para a realização de análise de textos. 
 
 Este processo é crucial no momento de construção de uma análise de dados, e nos modelos de machine learning e geralmente seguem as seguintes etapas: 
 * Tokenização: Processo de dividir um texto em pequenas unidades de texto chamadas de "token". 
-* Remoção de pontuações: Eliminação de caracteres de pontuação: vírculas, pontos, aspas, entre outros. 
+* Remoção de pontuações: Eliminação de caracteres de pontuação: vírgulas, pontos, aspas, entre outros. 
 * Conversão para minúscula: Padronizar as palavras. 
-* Remoção de stopwords: Remoção das palavrad comuns e que não costumam contribuir significativamente para o texto. 
+* Remoção de stopwords: Remoção das palavras comuns e que não costumam contribuir significativamente para o texto. 
 * Stemming e Lematização: Técnica de reduzir as palavras em seus radicais, ou formas mais básicas. 
 
 ### Testando etapas do Pré-processamento
 #### Estruturação do Pré-processamento
 
 ##### Função: Retirando valores nulos
-Descrição: Essa função remove linhas do DataFrame dados que possuem valores nulos nas colunas 'autor' e 'texto'. O resultado é armazenado na variável df_textoAutor.
+Descrição: Essa função remove linhas do data frame dados que possuem valores nulos nas colunas 'autor' e 'texto'. O resultado é armazenado na variável df_textoAutor.
 ``` df_textoAutor = dados[['autor', 'texto']].dropna() ```
 
 ##### Função: Retirando posts do btg
-Descrição: Essa função remove do DataFrame dados todas as linhas em que o valor da coluna 'autor' é igual a 'btgpactual'. O resultado é armazenado na variável 
+Descrição: Essa função remove do data frame dados todas as linhas em que o valor da coluna 'autor' é igual a 'btgpactual'. O resultado é armazenado na variável 
 ```df_textoAutor = dados.drop(dados[dados['autor'] == 'btgpactual'].index) ```
 
 ##### Função: Shape
-Descrição: Essa função retorna a dimensão do DataFrame df_textoAutor, ou seja, o número de linhas e colunas. O resultado será uma tupla com dois elementos, em que o primeiro elemento representa o número de linhas e o segundo elemento representa o número de colunas.
+Descrição: Essa função retorna a dimensão do data frame df_textoAutor, ou seja, o número de linhas e colunas. O resultado será uma tupla com dois elementos, em que o primeiro elemento representa o número de linhas e o segundo elemento representa o número de colunas.
 ```df_textoAutor.shape```
 
 #### Função: Transformando uma frase em minúsculas
-Descrição: Essa função extrai a frase localizada na linha 100 da coluna 'texto' do DataFrame dados. Em seguida, a função lower() é aplicada para converter todos os caracteres da frase em minúsculas. O resultado é armazenado na variável sentence_teste. Essa transformação é comumente utilizada para normalizar o texto, tornando-o uniforme e facilitando comparações e análises, independentemente das diferenças de capitalização.
+Descrição: Essa função extrai a frase localizada na linha 100 da coluna 'texto' do data frame dados. Em seguida, a função lower() é aplicada para converter todos os caracteres da frase em minúsculas. O resultado é armazenado na variável sentence_teste. Essa transformação é comumente utilizada para normalizar o texto, tornando-o uniforme e facilitando comparações e análises, independentemente das diferenças de capitalização.
 ```sentence_teste = dados['texto'].iloc[100].lower()```
 
 ### Tokenização
 A tokenização é uma etapa importante no pré-processamento de texto que envolve a divisão de uma sequência de texto em unidades menores chamadas de tokens. Esses tokens podem ser palavras individuais, frases, símbolos ou outros elementos, dependendo do objetivo do processamento.
-No contexto do pré-processamento de texto no Pandas, a tokenização geralmente é realizada em um DataFrame que contém uma coluna de texto. Cada valor nessa coluna, que representa uma sentença ou um documento, é dividido em tokens individuais. Isso é útil para várias tarefas de processamento de texto, como contagem de palavras, análise de sentimentos, classificação de texto e muito mais.
+No contexto do pré-processamento de texto no Pandas, a tokenização geralmente é realizada em um data frame que contém uma coluna de texto. Cada valor nessa coluna, que representa uma sentença ou um documento, é dividido em tokens individuais. Isso é útil para várias tarefas de processamento de texto, como contagem de palavras, análise de sentimentos, classificação de texto e muito mais.
 Existem diferentes abordagens de tokenização disponíveis, como tokenização com base em espaços em branco, tokenização com base em pontuação, tokenização com base em expressões regulares e tokenização com base em modelos de linguagem pré-treinados. A escolha da técnica de tokenização depende da natureza dos dados e do objetivo específico do processamento de texto que está sendo realizado.
 
 #### Funções utilizadas
@@ -258,7 +258,7 @@ Stop words são palavras comuns que geralmente são removidas durante o pré-pro
 
 A remoção de stop words é uma etapa comum no pré-processamento de texto, pois ajuda a reduzir o ruído e o tamanho do vocabulário utilizado na análise. Ao remover essas palavras, é possível focar em termos mais relevantes e significativos para a tarefa em questão, como análise de sentimentos, classificação de texto ou mineração de tópicos.
 
-No contexto do pandas, a remoção de stop words geralmente envolve o uso de bibliotecas de processamento de linguagem natural, como NLTK (Natural Language Toolkit) ou spaCy. Essas bibliotecas possuem listas predefinidas de stop words em diferentes idiomas, que podem ser aplicadas aos dados textuais para remover essas palavras desnecessárias antes de prosseguir com a análise ou modelagem de texto.
+No contexto do pandas, a remoção de stop words geralmente envolve o uso de bibliotecas de processamento de linguagem natural, como NLTK (Natural Language Toolkit) ou spaCy. Essas bibliotecas possuem listas predefinidas de stop words em diferentes idiomas, que podem ser aplicadas aos dados textuais para remover essas palavras desnecessárias antes de prosseguir com a análise ou a modelagem de texto.
 
 #### Funções utilizadas
 A função translate() é utilizada para remover pontuações de uma string. Nesse caso específico, a função ```str.maketrans('', '', string.punctuation)``` cria uma tabela de tradução que mapeia os caracteres de pontuação para um valor vazio (''). Em seguida, a função translate() aplica essa tabela de tradução à string sentence_teste, removendo todas as pontuações.
@@ -270,7 +270,7 @@ Segue o código abaixo:
 - ```sentence_teste = sentence_teste.translate(str.maketrans('', '', string.punctuation)) ```
 - ```sentence_teste = sentence_teste.strip()```
 
-Também encontra-se nesse código, a variável stop_words é inicializada com um conjunto de palavras de parada (stop words) em português, obtidas a partir do módulo nltk.corpus.stopwords. Essas palavras são geralmente consideradas irrelevantes para a análise de texto, como artigos, preposições e pronomes.
+Também encontra-se neste código, a variável stop_words é inicializada com um conjunto de palavras de parada (stop words) em português, obtidas a partir do módulo nltk.corpus.stopwords. Essas palavras são geralmente consideradas irrelevantes para a análise de texto, como artigos, preposições e pronomes.
 
 Em seguida, uma lista adicional chamada stop_words_add é criada, contendo palavras adicionais que serão incluídas nas stop words. Essas palavras podem ser personalizadas de acordo com as necessidades do projeto.
 
@@ -348,9 +348,9 @@ Segue o código abaixo:
     
     
 ##### Pipeline 
-Utiliza-se o pipeline com a finalidade de evidenciar as etapas utilizadas nesse processo, demonstando que os outputs de um procedimento torna-se input da sequente.
+Utiliza-se o pipeline com a finalidade de evidenciar as etapas utilizadas nesse processo, demonstrando que os output de um procedimento torna-se input da seguinte.
 
-![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/pipeline.jpeg)
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/pipeline.jpeg)
     
 ### Bag Of Words
 
@@ -412,7 +412,7 @@ O código fornecido realiza a vetorização de texto usando o CountVectorizer da
 
 ### Análise Descritiva
 
-Na Análise Descritiva dos dados, trabalhamos com a criação de tabelas para oganizarmos técnicas de visualização, para identificar informações importantes e relevantes das campanhas, e podermos obter insights valiosos dos dados analisados. 
+Na Análise Descritiva dos dados, trabalhamos com a criação de tabelas para organizarmos  técnicas de visualização, para identificar informações importantes e relevantes das campanhas, e podermos obter insights valiosos dos dados analisados. 
 
 #### - Comentários por tipo de post (Reels, Foto, Vídeo, Carrossel): 
 
@@ -444,7 +444,7 @@ Além disso, criamos a partir do código abaixo uma visualização gráfica da f
 
 #### - Conjunto de três palavras com maior frequência:
 
-Nessa etapa, a fim de ter maior arcabouço de palavras frequentes nos comentários, opta-se pela seleção dos conjuntos de três palavras. O código abaixo foi realizado e nos trouxe resultados para entendermos melhor quais os conjuntos de plaavras que aparecem com a maior frequência. 
+Nessa etapa, a fim de ter maior arcabouço de palavras frequentes nos comentários, opta-se pela seleção dos conjuntos de três palavras. O código abaixo foi realizado e nos trouxe resultados para entendermos melhor quais os conjuntos de palavras que aparecem com maior frequência. 
 
 ```for frase in frases_pre:```
     ```words = frase.split()```
@@ -455,13 +455,13 @@ Nessa etapa, a fim de ter maior arcabouço de palavras frequentes nos comentári
 ```top = freq_tri.most_common(100)```
 ```top```
 
-Depois disso, criamos uma tabela para represnetarmos qual a frequência dos conjuntos. 
-![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/freqtigramas.png)
+Depois disso, criamos uma tabela para representarmos qual a frequência dos conjuntos. 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/freqtigramas.png)
 
 
 #### - Uso de emoji na base de Dados:
 
-o objetivo desta hipótese foi entender quais são emojis que mais aparecem no dataset e qual seria o melhor tratamento para os mesmos, com o intuito de que a análise de sentimento seja mais precisa, com base nas aparições no dataset. Dessa forma, utilizamos o código abaixo para calcular a porcentagem de aparição dos emojis nos comentários
+O objetivo desta hipótese foi entender quais são emojis que mais aparecem no dataset e qual seria o melhor tratamento para os mesmos, com o intuito de que a análise de sentimento seja mais precisa, com base nas aparições no dataset. Dessa forma, utilizamos o código abaixo para calcular a porcentagem de aparição dos emojis nos comentários
 
 ```emoji_dict = dict(Counter(c for c in texto if emoji.is_emoji(c)))```
 
@@ -474,20 +474,20 @@ o objetivo desta hipótese foi entender quais são emojis que mais aparecem no d
 ```df = df.sort_values(by='percentage', ascending=False)```
 ```print(df)```
 
-![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/emojidataframe.png)
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/emojidataframe.png)
 
 
 ###  Gráfico Word Cloud
 
-O Gráfico de Nuvem de Palavras, conhecido também como como Word Cloud, é uma ferramenta de representação visual que trabalha com a *plotagem* das palavras mais frequentes em um conjunto de textos. Nesse contexto, foi desenvolvido com o intuito de mostrar as palavras mais recorrentes e utilizadas pelos usuários nos comentários das postagens. 
+O Gráfico de Nuvem de Palavras, conhecido também como Word Cloud, é uma ferramenta de representação visual que trabalha com a *plotagem* das palavras mais frequentes em um conjunto de textos. Nesse contexto, foi desenvolvido com o intuito de mostrar as palavras mais recorrentes e utilizadas pelos usuários nos comentários das postagens. 
 
-![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/wordcloud.png)
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/wordcloud.png)
 
 ### Tokenização:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/cd243004-d587-4c77-8be5-4e53b45b750f)
 
-Esta é uma pequena amostra dos resultados do processo de tokenização. A partir dele conseguimos ter alguns insights de para novos tratamentos de dados e futuras estapas de pré-processamento. A partir desse tokenização é que foi possível progredir com os outros métodos do pré-processamento.
+Esta é uma pequena amostra dos resultados do processo de tokenização. A partir dele conseguimos ter alguns insights de para novos tratamentos de dados e futuras estapas de pré-processamento. A partir dessa tokenização é que foi possível progredir com os outros métodos do pré-processamento.
 
 ### Stop Words:
 
@@ -499,7 +499,7 @@ Remoção de stop words
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/b5c7e5c3-1f48-41eb-8245-f3edd3946fdf)
 
-Esse foi uns dos resultados que obtivemos ao aplicar o método de remoção de stop words, consistindo em retirar das frases palavras descessárias que não contribuém para a análise de sentimentos.
+Esse foi uns dos resultados que obtivemos ao aplicar o método de remoção de stop words, consistindo em retirar das frases palavras desnecessárias que não contribuem para a análise de sentimentos.
 
 ### Stemming:
 
@@ -533,13 +533,13 @@ O TfidVectorizer calcula o inverso das frequências e codifica os vetores a fim 
 
 ### Objetivo da Sprint
  
-Pré-processamento para utilização de Word2Vec (carregando vetores para cada palavras num modelo já treinado) e entrega do modelo word2vec em algortimos classificatórios.
+Pré-processamento para utilização de Word2Vec (carregando vetores para cada palavras num modelo já treinado) e entrega do modelo word2vec em algoritmos classificatórios.
 
 ### Sobre o Modelo Word2Vec 
 
- O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palvras disponibilizas para o treinamento. 
+ O modelo Word2Vec é uma técnica de PLN que permite representar palavras como vetores numéricos em um espaço de várias dimensões. Este processo consiste em capturar relações entre as palavras com base nos seus contextos. Como resultado final, é possível ter uma representação matemática da similaridade entre as palavras disponibilizadas para o treinamento. 
  
- Ele, também, permite capturar nuances e contextos que podem influenciar o sentimento de um texto, que são dados pelo nível de similaridade e proximidade entre as palavras. Além disso, o word2vec pode facilitar a extração de características relevantes para a classificação, reduzindo a dimensionalidade e a esparsidade dos dados textuais. Este fatores, são determinates na justificativa da sua utilização no projeto, tão como sua importância.
+ Ele, também, permite capturar nuances e contextos que podem influenciar o sentimento de um texto, que são dados pelo nível de similaridade e proximidade entre as palavras. Além disso, o word2vec pode facilitar a extração de características relevantes para a classificação, reduzindo a dimensionalidade e a esparsidade dos dados textuais. Esses fatores são determinantes na justificativa da sua utilização no projeto, tão como sua importância.
  
  O modelo word2vec pode ser combinado com outros modelos de aprendizado de máquina com facilidade, para obter melhores resultados de classificação. O word2vec também pode ser usado para gerar incorporações de frases ou documentos inteiros, usando técnicas como média ou soma dos vetores das palavras (neste caso utilizamos a soma, com adição de uma coluna em um novo dataframe). Portanto, o word2vec é um modelo muito útil para a construção e desenvolvimento de nossa análise, pois permite representar as palavras de forma mais rica e eficiente, capturando aspectos semânticos e sintáticos que afetaram na classificação de determinado corpus.
 
@@ -564,7 +564,7 @@ O modelo Word2Vec possui duas arquiteturas principais: CBOW (Continuos Bag-Of-Wo
 
 Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-processamento de dados, só que agora, na segunda base disponibilizada:
 
-  - Substituição de Emojis: nas frases, substituimos os emojis por palavras. Esse processo melhora e abrange a base de dados trabalhada
+  - Substituição de Emojis: nas frases, substituímos os emojis por palavras. Esse processo melhora e abrange a base de dados trabalhada
    
    <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/emojis_funcao.png" alt="emoji" width="700" height="auto">
    <br>
@@ -586,16 +586,16 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
   <br>
   <br>
   
-  - Modelo word2Vec e Características: já na construção do Modelo Word2Vec em si, configuramos seus parâmetros da seguinte forma: 150 vetores de dimensioanalidade, 5 janelas de contexto, contagem mínima de palavras para 1 e 4 threads para treinamento paralelo
+  - Modelo word2Vec e Características: já na construção do Modelo Word2Vec em si, configuramos seus parâmetros da seguinte forma: 150 vetores de dimensionalidade, 5 janelas de contexto, contagem mínima de palavras para 1 e 4 threads para treinamento paralelo
   
   <br> 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/modelo_word2vec_persi.png" alt="wor2vec" width="900" height="auto">  
-<em>Definições e contrução do modelo Wor2Vec</em>
+<em>Definições e construção do modelo Wor2Vec</em>
   <br>
   <br>
 
   
-  - Vetorização para Word2Vec: a vetorização consiste em transformar dados textuais em representações numéricas. É um processo crucial para a contrução do modelo Wor2Vec, só assim será possível organizar a distribuição das palavras em um plano. Todos o tokens são vetorizados e suas somas em uma frase também são contabilizados.
+  - Vetorização para Word2Vec: a vetorização consiste em transformar dados textuais em representações numéricas. É um processo crucial para a contrução do modelo Wor2Vec, só assim será possível organizar a distribuição das palavras em um plano. Todos os tokens são vetorizados e suas somas em uma frase também são contabilizados.
 
   <br> 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/funcao_vetorizacao.png" alt="vetorizacao" width="900" height="auto">  
@@ -621,14 +621,14 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
   <br>
   <br>
   
-### Algorítimos de Aprendizado: 
+### Algoritimos de Aprendizado: 
 
  O objetivo no nosso projeto é fazer a classificação de frases com o intuito de conferir o desempenho de campanhas de marketing. Assim, apenas o modelo Word2Vec não é o suficente, pois mesmo organizando a similaridade de palavras, ele não consegue fazer a classificação de sentimentos. A solução é utilizar algorítimos de aprendizado supervizionado para fazer esse tipo de classificação. Neste sentido, testamos alguns algoritmos, mas optamos pela utilização do Naive Bayes e do Catboost.
 
 
 #### Naive Bayes
 
- O Naive Bayes foi o primeiro algorítimo testado pelo grupo, ele se baseia em uma teoria matemática de probabilidades condicionais (teorema de Bayes). O algorítimo se detaca por sua eficiência e simplicidade. A biblioteca utilizada para esse método foi o sklearn (GaussianNB). A principal intenção do grupo, era de usar o algoritmo para realizar o cálculo da probabilidade condicional de cada palavra ou "n-grama" ocorrer em cada classe, com o intuito de estimar a probabilidade do texto pertencer a uma classificação de sentimento específico.
+ O Naive Bayes foi o primeiro algoritmo testado pelo grupo, ele se baseia em uma teoria matemática de probabilidades condicionais (teorema de Bayes). O algoritmo se destaca por sua eficiência e simplicidade. A biblioteca utilizada para esse método foi o sklearn (GaussianNB). A principal intenção do grupo, era de usar o algoritmo para realizar o cálculo da probabilidade condicional de cada palavra ou "n-grama" ocorrer em cada classe, com o intuito de estimar a probabilidade do texto pertencer a uma classificação de sentimento específico.
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/modelo_naive_bayes.png" alt="naive bayes" width="900" height="auto">  
 <em>Construção do modelo Naive Bayes aplicado</em>
@@ -637,7 +637,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
 #### CatBoost
 
- O catboots é outro algorítimo de classificação, se destacando principalemnte com dados com características categóricas e dados desbalanceados. Esse algorítimo se baseia em conhecimentos matemáticos de gradiente (gradient boosting). É importante ressaltar que o Catboost é muito usado na definição de características categóricas como palavras ou frases, sem a necessidade de codificá-las numericamente, o que pode reduzir a complexidade e o tempo de processamento. Com base nestes fatores, e mediante o uso prévio de alguns membros de nosso grupo, decidimos optar pela sua utilização nesta Sprint.
+ O catboots é outro algoritmo de classificação, se destacando principalmente com dados com características categóricas e dados desbalanceados. Esse algoritmo se baseia em conhecimentos matemáticos de gradiente (gradient boosting). É importante ressaltar que o Catboost é muito usado na definição de características categóricas como palavras ou frases, sem a necessidade de codificá-las numericamente, o que pode reduzir a complexidade e o tempo de processamento. Com base nestes fatores, e mediante o uso prévio de alguns membros de nosso grupo, decidimos optar pela sua utilização nesta Sprint.
 
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/modelo_catboost.png" alt="modelo catboost" width="900" height="auto">  
@@ -647,7 +647,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
 
 - Resultados dos Algorítimos de Apredizado Supervisionado:
 
-Diante as etapas exemplificadas acima, dividimos nossos dados para realizar o treinamento e avaliação do nosso modelo, com base na estruturação realizada. Sendo dividimos em duas seções
+Diante das etapas exemplificadas acima, dividimos nossos dados para realizar o treinamento e avaliação do nosso modelo, com base na estruturação realizada. Sendo dividimos em duas seções
 
 - Dados de treino: separação com o intuito de fazer o modelo aprender as características e os padrões dos dados que permitem fazer previsões ou classificações. 
 
@@ -659,7 +659,7 @@ Diante as etapas exemplificadas acima, dividimos nossos dados para realizar o tr
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/27f6dd26-3243-4a51-a9e3-31b614bdf577)
 
-<em>Os resultados conferidos pleo Naive Bayes foram satisfatórios mas não ideais. Com 54% de acurárica de treinamento e 55% de acurácia total</em>
+<em>Os resultados conferidos pelo Naive Bayes foram satisfatórios mas não ideais. Com 54% de acurácia de treinamento e 55% de acurácia total</em>
 
 
 #### CatBoost:
@@ -670,15 +670,15 @@ Diante as etapas exemplificadas acima, dividimos nossos dados para realizar o tr
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4bbca284-8b45-4c13-94aa-d7e32abcbae5)
 
-<em>Os resultados conferidos pleo CatBoost foram satisfatórios. Entretanto, apresenta um overfitting, já que existe 95% de acurácia de treinamento e 72% de acurácia total, tendo uma diferença grande entre as duas separações, portanto, sendo necessário entender o motivo. Também foi obtido resultados satisfatórios na matriz de confusão </em>
+<em>Os resultados conferidos pelo CatBoost foram satisfatórios. Entretanto, apresenta um overfitting, já que existe 95% de acurácia de treinamento e 72% de acurácia total, tendo uma diferença grande entre as duas separações, portanto, sendo necessário entender o motivo. Também foi obtido resultados satisfatórios na matriz de confusão </em>
 
 #### Avaliação e métricas do Modelo
 
 Para avaliar o desempenho do nosso modelo, precisamos definir algumas métricas que nos permitam quantificar a sua capacidade de classificar corretamente os textos em categorias como positivo, negativo ou neutro. Essas métricas devem levar em conta não apenas a taxa de acerto do modelo, mas também cada tipo de erro e o balanceamento das classes nos dados.
 
-Nesta seção, vamos apresentar as principais métricas que usamos para avaliar o nosso modelo, explicar como elas são calculadas e interpretadas, e mostrar os resultados obtidos com o nosso conjunto de teste. As métricas que vamos usar são:
+Nesta seção, vamos apresentar as principais métricas que usamos para avaliar o nosso modelo, explicar como elas são calculadas e interpretadas, e mostrar os resultados obtidos com o nosso conjunto de testes. As métricas que vamos usar são:
 
-- Acurácia: foi uma das métricas que mais olhamos na definição e relevância dos dados que foram passados. A acurácia, em termos mais objetivos, se refere a “taxa de acerto” do modelo. Ela é calculada dividindo o número de previsões corretas pelo número total de previsões. É importante ressaltar que seu balanceamento foi feito de acordo com a base de dados que nos foi deferida.
+- Acurácia: foi uma das métricas que mais olhamos na definição e relevância dos dados que foram passados. A acurácia, em termos mais objetivos, se refere à “taxa de acerto” do modelo. Ela é calculada dividindo o número de previsões corretas pelo número total de previsões. É importante ressaltar que seu balanceamento foi feito de acordo com a base de dados que nos foi deferida.
 
 - Precisão: pode ser definido como a proporção de previsões positivas que são realmente positivas. Ela mede a confiabilidade do modelo em prever a classe positiva.
 
@@ -688,7 +688,7 @@ Nesta seção, vamos apresentar as principais métricas que usamos para avaliar 
 
 Para termos de referência, recomendamos a análise dos resultados obtidos com o nosso modelo usando estas métricas como base.
 
-Lembrando que diante da denfinição e alinhamento com o professor, pudemos definir:
+Lembrando que diante da definição e alinhamento com o professor, pudemos definir:
 
 - **Verdadeiro Positivo:** referem-se aos comentários negativos que são classificados como negativos;
 
@@ -726,7 +726,7 @@ Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, n
 
 - Depois de serem recebidos pelo sistema de mensageria, os dados passam por um processo de processamento, no qual podem ser manipulados e transformados em uma estrutura mais adequada para análise.
 
-- Por fim, os dados são pré-estruturados, o que significa que são organizados em uma estrutura que facilita a consulta e análise. Isso pode incluir a organização dosdados em tabelas ou a atribuição de tags ou categorias específicas para cada dado. Com a pré-estruturação, é possível realizar consultas mais eficientes e respostas mais rápidas a perguntas específicas sobre os dados.
+- Por fim, os dados são pré-estruturados, o que significa que são organizados em uma estrutura que facilita a consulta e análise. Isso pode incluir a organização dos dados em tabelas ou a atribuição de tags ou categorias específicas para cada dado. Com a pré-estruturação, é possível realizar consultas mais eficientes e respostas mais rápidas a perguntas específicas sobre os dados.
 
 2. Análise descritiva:
 
@@ -746,7 +746,7 @@ Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, n
 
 - Relação determinística entre as colunas Anomalia e Comentário: Análise se há alguma relação determinística entre a presença de anomalias em uma postagem e a natureza dos comentários feitos pelos usuários.
 
-- Uso de emojis na base de dados: é possível identificar o uso de emojis nos comentários e analisar quais são os emojis mais frequentes. Isso pode ajudar a entender aemoção e o sentimento dos usuários em relação às postagens. Sendo realizado uma substituição por palavras de seus respectivos significados.
+- Uso de emojis na base de dados: é possível identificar o uso de emojis nos comentários e analisar quais são os emojis mais frequentes. Isso pode ajudar a entender a emoção e o sentimento dos usuários em relação às postagens. Sendo realizado uma substituição por palavras de seus respectivos significados.
 
 3. Pré-processamento do Dataset
 
@@ -986,7 +986,7 @@ Devido a isso, tratamos o modelo BERT como um "nice to have", mas não como prin
     Depois do pré-treinamento, o BERT pode ser ajustado (fine-tuned) para tarefas específicas, como classificação de texto, extração de informações e resposta a perguntas. Ao ajustar o BERT para uma tarefa específica, as camadas de classificação são adicionadas ao modelo e o modelo é treinado em um conjunto de dados rotulados para aprender a tarefa específica.
 
 - Atention Mask: 
-  Na tarefa de preenchimento de máscara, palavras são mascaradas aleatoriamente e o modelo é treinado para prever as palavras mascaradas com base no contexto das palavras vizinhas e sua relevância.
+  Na tarefa de preenchimento de máscara, as palavras são mascaradas aleatoriamente e o modelo é treinado para prever as palavras mascaradas com base no contexto das palavras vizinhas e sua relevância.
 
 É importante citar que o modelo BERT tem sido amplamente utilizado em uma variedade de tarefas de processamento de linguagem natural e estabeleceu um novo parâmetro em muitas delas. Isso foi um dos fatores determinantes para a escolha e utilização deste modelo em nosso grupo. Ele se destaca pela sua capacidade de capturar informações contextuais em textos e fornecer representações de alta qualidade que podem ser usadas em várias aplicações de NLP.
 
@@ -1019,7 +1019,7 @@ Também foi evidenciado, nos testes que realizamos, que o modelo Doc2Vec possui 
 
 ## 4. GloVe
 
-O Global Vectors for Word Representation, também conhecido como GloVe, é um modelo de vetorização de palavras desenvolvido com o intuito de identificar as relações sintáticas e semânticas em um conjunto de um texto. Esse modelo, utiliza estatísticas de co-ocorrência global de palavras para desenvolver representações vetoriais. O seu processo de treinamento, envolve a construção de uma matriz que registra a frequência da ocorrência das palavras a partir da utilização da 'função de perda' (loss function) com o intuito de maximizar a probabilidade de co-ocorrência de pares de palavras. 
+O Global Vectors for Word Representation, também conhecido como GloVe, é um modelo de vetorização de palavras desenvolvido com o intuito de identificar as relações sintáticas e semânticas em um conjunto de um texto. Esse modelo utiliza estatísticas de co-ocorrência global de palavras para desenvolver representações vetoriais. O seu processo de treinamento, envolve a construção de uma matriz que registra a frequência da ocorrência das palavras a partir da utilização da 'função de perda' (loss function) com o intuito de maximizar a probabilidade de co-ocorrência de pares de palavras. 
 
 - Algoritmo: Regressão Logística 
 
@@ -1036,7 +1036,7 @@ word_vector = nlp('amor')[0].vector
 print("Vetor de 'amor':", word_vector)
 ```
 
-Após isso, foi realizado a utilização da classe CountVectorizer do sklearn.feature_extraction.text para vetorizar os dados contidos na coluna "texto" doDataframe desenvolvido. Assim, a vetroização foi aplicada aos dados de teste (x_test) e treinamento (x_train) e armazenados em duas variáveis com o parâmetro 'random_state' definido como 42. Depois disso, foi realizado o treinamento do modelo de regressão logística utilizando os dados de treinamento. Dessa forma, a acurácia do modelo é calculada a partir do método score com X_test e y_test. 
+Após isso, foi realizado a utilização da classe CountVectorizer do sklearn.feature_extraction.text para vetorizar os dados contidos na coluna "texto" doDataframe desenvolvido. Assim, a vetorização foi aplicada aos dados de teste (x_test) e treinamento (x_train) e armazenados em duas variáveis com o parâmetro 'random_state' definido como 42. Depois disso, foi realizado o treinamento do modelo de regressão logística utilizando os dados de treinamento. Dessa forma, a acurácia do modelo é calculada a partir do método score com X_test e y_test. 
 
 
 
@@ -1057,7 +1057,7 @@ model.fit(X_train, y_train)
 accuracy = model.score(X_test, y_test)
 print("Acurácia:", accuracy)
 ```
-Com base nos resultados obtidos é possível fazer as seguintes análises do algoritmo de Regressão Logística. A acurácia obtida para o modelo foi de 0.75, o que indica uma boa significância e uma taxa de acerto razoavelmente alta. Além disso foi também calculado os valores de precisã para cada uma das classes desenvolvidas. O valor obtido para as classe NEGATIVE, NEUTRAL e POSITIVE foram: 0,77; 0,71; e 0,81 respectivamente. Valores relativamente bons. Além disso, foi obtido também os valores de recall para cada uma das classes (NEGATIVE = 0,54; NEUTRAL = 0,85 e POSITIVE = 0,75. 
+Com base nos resultados obtidos é possível fazer as seguintes análises do algoritmo de Regressão Logística. A acurácia obtida para o modelo foi de 0.75, o que indica uma boa significância e uma taxa de acerto razoavelmente alta. Além disso foi também calculado os valores de precisão para cada uma das classes desenvolvidas. O valor obtido para as classe NEGATIVE, NEUTRAL e POSITIVE foram: 0,77; 0,71; e 0,81 respectivamente. Valores relativamente bons. Além disso, foi obtido também os valores de recall para cada uma das classes (NEGATIVE = 0,54; NEUTRAL = 0,85 e POSITIVE = 0,75. 
 Por fim, foi então calculado o F1-score, que é uma medida que combina a precisão e o recall em uma única métrica. Para a classe NEGATIVE, o F1-score é de 0,64, para a classe NEUTRAL é de 0,77 e para a classe POSITIVE é de 0,78.que o modelo tem uma taxa de acerto razoavelmente alta.
 
 
@@ -1065,7 +1065,7 @@ Por fim, foi então calculado o F1-score, que é uma medida que combina a precis
 
 - Algoritmo: Modelo Naive Bayes 
 
-Primeiramente foi mapeado os rótulos 'POSITIVE', 'NEUTRAL' e 'NEGATIVE' para os valores numéricos 3, 1 e 2, respectivamente, e o resultado foi armazenado em uma variável. 
+Primeiramente foram mapeados os rótulos 'POSITIVE', 'NEUTRAL' e 'NEGATIVE' para os valores numéricos 3, 1 e 2, respectivamente, e o resultado foi armazenado em uma variável. 
 
 ```
 sentimento_mapping = {'POSITIVE': 3, 'NEUTRAL': 1, 'NEGATIVE': 2}
@@ -1123,7 +1123,7 @@ def vetorizar_frase(frase):
 df_2['vetores'] = df_2['tokens'].apply(vetorizar_frase)
 ```
 
-Após isso, com os vetores criados, foram aplicados o modelo Naive Bayes (que retornou uma acurácia de 0.31) e a Regressão Logística (com esta última obtendo um melhor resultado, com acurácia de 0.56). Estes resultados foram um pouco inferiores em relação aos testes realizados em outros modelos com os mesmos algoritmos (Regressão logísitica e Naive Bayes). Sendo assim, o modelo não foi considerado com grande relevância para a escolha do modelo final.
+Após isso, com os vetores criados, foram aplicados o modelo Naive Bayes (que retornou uma acurácia de 0.31) e a Regressão Logística (com esta última obtendo um melhor resultado, com acurácia de 0.56). Estes resultados foram um pouco inferiores em relação aos testes realizados em outros modelos com os mesmos algoritmos (Regressão logística e Naive Bayes). Sendo assim, o modelo não foi considerado com grande relevância para a escolha do modelo final.
 
 Com base nos resultados e processamentos, construímos diferentes gráficos: o da curva ROC, o da curva de aprendizado e o da curva de validação. 
 
@@ -1177,7 +1177,7 @@ Além disso, a similaridade entre a acurácia e o recall macro sugere que o mode
 
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/TF-IDF_MC.png">
 
-A partir da matriz de confusão é possível perceber que o modelo tem mais dificuldades ao avaliar comentários neutros e uma facilidade para avaliar positivos e, em segundo lugar, negativos. Os resultados nessa instância foram satisfatórios.
+A partir da matriz de confusão é possível perceber que o modelo tem mais dificuldades ao avaliar comentários neutros e uma facilidade para avaliar positivos e, em segundo lugar, negativos. Os resultados nesta instância foram satisfatórios.
 
 Por fim, o modelo obteve bom resultados em avaliações de recall, acurácia e matriz de confusão, contudo, não foram os melhores diante dos outros modelos desenvolvidos.
 
@@ -1194,7 +1194,7 @@ Esclarece-se que os resultados do ELMo não são expostos na comparação entre 
 
 ## 8.Adicionando Features Novas
 
-Foram criadas novas features baseadas no tamanho das frases, em particular o número de tokens por frase, para comparar com modelos que incluam ou não essas features. Quatro algoritmos foram utilizados para esta comparação: regressão logística, cat-boost, naive-bayes e xg-boost. A vetorização escolhida para esta comparação foi o TF-IDF devido sua facilidade de aplicação e a combinação com os algoritimos escolhidos. Todos os modelos que utilizaram as novas features tiveram resultados inferiores em comparação aos modelos que não as utilizaram, apresentando uma média de recall de 38.7. No entanto, a inclusão das novas features permitiu a utilização do gráfico KDE (Estimativa de Gráfico Kernel) que demonstra a probabilidade de um sentimento, dado o número de tokens de uma frase. Onde -1 representa sentimentos negativos, 0 representa sentimentos neutros e 1 representa sentimentos positivos.
+Foram criadas novas features baseadas no tamanho das frases, em particular o número de tokens por frase, para comparar com modelos que incluam ou não essas features. Quatro algoritmos foram utilizados para esta comparação: regressão logística, cat-boost, naive-bayes e xg-boost. A vetorização escolhida para esta comparação foi o TF-IDF devido sua facilidade de aplicação e a combinação com os algoritmos escolhidos. Todos os modelos que utilizaram as novas features tiveram resultados inferiores em comparação aos modelos que não as utilizaram, apresentando uma média de recall de 38.7. No entanto, a inclusão das novas features permitiu a utilização do gráfico KDE (Estimativa de Gráfico Kernel) que demonstra a probabilidade de um sentimento, dado o número de tokens de uma frase. Onde -1 representa sentimentos negativos, 0 representa sentimentos neutros e 1 representa sentimentos positivos.
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/5500412f-e3df-499d-baea-1ff9c862f9b1)
 
