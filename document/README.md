@@ -888,7 +888,9 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
-Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
+Elmo - https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/ELMo.ipynb 
+BERT - 
+
 
 ## (Sprint 4) Documentação da proposta de uma nova modelagem
 
@@ -898,6 +900,7 @@ O Elmo (Embeddings from Language Models) é um modelo de vetorização pré-trei
 Tal utilização é fundamentada nas características estruturais do modelo. Evidencia-se a possibilidade de identificar palavras iguais ou semelhantes em contextos diferentes, agrupá-los e diferenciá-los.
 O modelo se destaca dado que possui capacidade de generalização, dado que, foi treinado em grandes quantidades de texto. 
 Ao aplicá-lo, a fim de obter melhores resultados, utiliza-se o csv do texto pré-processado. Em seguida, aplica-se no modelo de vetorização ELMo. 
+
 É de indubitável importância ressaltar que para a utilização do ELMo os arquivos de pré-treinamento, em português precisam ser importados.
 ```
 weight_file = "/content/drive/MyDrive/Colab Notebooks/SI-MOD6/entrega_spt4/elmo_pt_weights_dgx1 (1).hdf5
@@ -920,13 +923,44 @@ O BERT (Bidirectional Encoder Representations from Transformers) é um modelo de
 
 Neste caso, o que utilizamos é uma versão pré-treinada, com o uso do "preenchimento de máscara" (masked language modeling), com a intenção de uma futura implementação da funcionalidade de predição da "próxima sentença" (next sentence prediction). Uma das principais características do BERT é sua capacidade de gerar representações contextualizadas de palavras. O modelo leva em consideração o contexto em que uma palavra aparece, o que ajuda a capturar relações e significados mais precisos. Consequentemente, essas representações contextualizadas são obtidas através do pré-treinamento bidirecional e podem ser usadas como entrada para o algoritmo.
 
+- Algoritmo: Rede Neural 
+
 Como algoritmo, utilizamos a Rede Neural na arquitetura Transformers, para realizar as etapas de predição.
 
+Etapas de implementação 
 
-Próximo passos
+- Preparação dos dados (exemplo com Label Encoder realizado):
+
+```
+label_encoder = LabelEncoder()
+
+df_lemma['sentimento_3'] = label_encoder.fit_transform(df_lemma['sentimento'])
+
+```
+
+- Pré-treinamento do modelo BERT:
+
+```
+model = BertModel.from_pretrained('neuralmind/bert-base-portuguese-cased')
+```
+
+Esta etapa envolve também a definição dos parâmetros, a alimentação dos dados no modelo, atribuição dos tensores e da famosa "attention_mask".
+
+- Avaliação e ajuste: 
+
+  Nesta etapa realizamos a avaliação do modelo, com base nos dados de treino e teste que foram previamente divididos, e realizamos a iteração do modelo sobre o conjunto de treinamento, para assim, em seguida, atribuir as predições às categorias (e targets) definidos. Por fim, realizamos a impressão das métricas de classificação.
+
+
+Após diversas implementações do modelo, e devido a sua complexidade nas etapas de entrada da Rede Neural, obtivemos resultados medianos com o modelo BERT. Consequentemente, com a primeira implementação, na métrica de maior relevância para o projeto, o "Recall" obtivemos 72% (0.72). Em termos de assertividade, em comparação aos outros modelos foi o nosso terceiro maior. 
+
+No entanto, devido ao seu alto nível de complexidade, obtivemos resultados com muitos sinais de overfitting e do enviesamento na entrada dos tensores, o que ocorreu após tentativa de resolução de problemas no código.
+
+Devido a isso, tratamos o modelo BERT como um "nice to have", mas não como principal modelo a ser utilizado. Mesmo assim, consideramos que na escala de modelos com algoritmos de Rede Neural, é com certeza o que mais gera escalabilidade e por isso há o interesse em sua implementação.
+
+**Próximos passos**
+
   - Fine-tuning para tarefas específicas:
     Depois do pré-treinamento, o BERT pode ser ajustado (fine-tuned) para tarefas específicas, como classificação de texto, extração de informações e resposta a perguntas. Ao ajustar o BERT para uma tarefa específica, as camadas de classificação são adicionadas ao modelo e o modelo é treinado em um conjunto de dados rotulados para aprender a tarefa específica.
-
 
 - Atention Mask: 
   Na tarefa de preenchimento de máscara, palavras são mascaradas aleatoriamente e o modelo é treinado para prever as palavras mascaradas com base no contexto das palavras vizinhas e sua relevância.
@@ -934,6 +968,18 @@ Próximo passos
 É importante citar que o modelo BERT tem sido amplamente utilizado em uma variedade de tarefas de processamento de linguagem natural e estabeleceu um novo parâmetro em muitas delas. Isso foi um dos fatores determinantes para a escolha e utilização deste modelo em nosso grupo. Ele se destaca pela sua capacidade de capturar informações contextuais em textos e fornecer representações de alta qualidade que podem ser usadas em várias aplicações de NLP.
 
 ## 3. Doc2Vec
+
+O modelo Doc2Vec é uma técnica de aprendizado de máquina utilizada para representar documentos em formato vetorial. Ele é uma extensão do modelo Word2Vec, que é usado para representar palavras em vetores. O Doc2Vec permite que documentos inteiros sejam representados como vetores contínuos de valores numéricos, capturando o contexto semântico dos documentos.
+
+O objetivo do Doc2Vec é gerar representações vetoriais para documentos que preservem a semântica e a similaridade entre eles. Essas representações vetoriais podem ser usadas em várias tarefas de processamento de linguagem natural, como classificação de documentos, recomendação de conteúdo, agrupamento de documentos semelhantes e recuperação de informações.
+
+Algoritmos: Naive Bayes, Regressão Logística e Rede Neural
+
+No seu caso específico, o modelo Doc2Vec foi escolhido como modelo final devido às suas vantagens e desempenho em relação aos outros métodos de representação de documentos. O Doc2Vec é capaz de capturar relações semânticas complexas entre palavras e documentos, gerando vetores que preservam a semelhança semântica entre textos.
+
+Além disso, o modelo Doc2Vec possui uma implementação eficiente e bem estabelecida na biblioteca Gensim, o que facilita sua utilização e treinamento. Como métrica de target, utilizamos o Recall, e assim que foi estabelecida a comparação e superioridade em relação aos outros modelos.
+
+Portanto, a escolha do modelo Doc2Vec como modelo final é justificada pela sua capacidade de representar documentos de forma semântica, sua eficiência e pela adequação às suas necessidades específicas de processamento de texto.
 
 ## 4. GloVe
 
@@ -1010,13 +1056,6 @@ Por fim, foi realizado um gráfico de plotagem da curva ROC, que pode ser visto 
 
 
 Em resumo, os resultados obtidos indicam que o modelo de regressão logística teve um desempenho melhor em comparação com o modelo de Naive Bayes. A regressão logística obteve uma acurácia mais alta e um melhor equilíbrio entre precisão e recall. Além disso, o gráfico de curva ROC mostra que o modelo de regressão logística possui uma capacidade satisfatória de distinguir entre as diferentes classes. No entanto, é importante lembrar que esse modelo obteve valores bons, porém não foram os melhores diante dos outros modelos desenvolvidos.
-```
-```
-
-```
-```
-
-
 
 
 ## 5. FastText
@@ -1048,7 +1087,10 @@ def vetorizar_frase(frase):
 df_2['vetores'] = df_2['tokens'].apply(vetorizar_frase)
 ```
 
-Após isso, com os vetores criados, foram aplicados o modelo Naive Bayes (que retornou uma acurácia de 0.31) e a Regressão Logística (com esta última obtendo um melhor resultado, com acurácia de 0.56). Diferentes gráficos foram construídos a partir dos resultados: o da curva ROC, o da curva de aprendizado e o da curva de validação. 
+Após isso, com os vetores criados, foram aplicados o modelo Naive Bayes (que retornou uma acurácia de 0.31) e a Regressão Logística (com esta última obtendo um melhor resultado, com acurácia de 0.56). Estes resultados foram um pouco inferiores em relação aos testes realizados em outros modelos com os mesmos algoritmos (Regressão logísitica e Naive Bayes). Sendo assim, o modelo não foi considerado com grande relevância para a escolha do modelo final.
+
+Com base nos resultados e processamentos, construímos diferentes gráficos: o da curva ROC, o da curva de aprendizado e o da curva de validação. 
+
 Abaixo estão os gráficos da curva ROC obtidos com cada modelo:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0a41966a-07cd-4309-ae1e-d80c82755166)
@@ -1102,9 +1144,6 @@ Além disso, a similaridade entre a acurácia e o recall macro sugere que o mode
 A partir da matriz de confusão é possível perceber que o modelo tem mais dificuldades ao avaliar comentários neutros e uma facilidade para avaliar positivos e, em segundo lugar, negativos. Os resultados nessa instância foram satisfatórios.
 
 Por fim, o modelo obteve bom resultados em avaliações de recall, acurácia e matriz de confusão, contudo, não foram os melhores diante dos outros modelos desenvolvidos.
-
-
-
 
 
 
