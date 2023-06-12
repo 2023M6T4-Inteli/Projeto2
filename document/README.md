@@ -888,8 +888,17 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 
 ## (Sprint 4) Proposta de uma nova modelagem utilizando novas features (IPYNB)
 
-Elmo - https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/ELMo.ipynb 
-BERT - 
+- Elmo: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/ELMo.ipynb 
+
+- BERT: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/3_2_BERT(OVER).ipynb
+
+- DOC2Vec: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/DOC2Vec_2.ipynb
+
+- GloVe: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/GloVe.ipynb 
+
+- FastText: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/Fast_Text.ipynb 
+
+- TF_IDF: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/TF_IDF_com_Regressao_logistica.ipynb
 
 
 ## (Sprint 4) Documentação da proposta de uma nova modelagem
@@ -973,13 +982,26 @@ O modelo Doc2Vec é uma técnica de aprendizado de máquina utilizada para repre
 
 O objetivo do Doc2Vec é gerar representações vetoriais para documentos que preservem a semântica e a similaridade entre eles. Essas representações vetoriais podem ser usadas em várias tarefas de processamento de linguagem natural, como classificação de documentos, recomendação de conteúdo, agrupamento de documentos semelhantes e recuperação de informações.
 
-Algoritmos: Naive Bayes, Regressão Logística e Rede Neural
+Algoritmos utilizados: Naive Bayes, Regressão Logística e Rede Neural
 
-No seu caso específico, o modelo Doc2Vec foi escolhido como modelo final devido às suas vantagens e desempenho em relação aos outros métodos de representação de documentos. O Doc2Vec é capaz de capturar relações semânticas complexas entre palavras e documentos, gerando vetores que preservam a semelhança semântica entre textos.
+No processamento do modelo, realizamos alguns tipos de taggeamento, que são próprios para treinamento do modelo, assim como a definição de parâmetros e outros recursos de vetorização. Abaixo segue o exemplo de taggeamento:
 
-Além disso, o modelo Doc2Vec possui uma implementação eficiente e bem estabelecida na biblioteca Gensim, o que facilita sua utilização e treinamento. Como métrica de target, utilizamos o Recall, e assim que foi estabelecida a comparação e superioridade em relação aos outros modelos.
+```
+tagged_data = [TaggedDocument(words=word_tokenize(text.lower()), tags=[str(i)]) for i, text in enumerate(dados['texto'])]
 
-Portanto, a escolha do modelo Doc2Vec como modelo final é justificada pela sua capacidade de representar documentos de forma semântica, sua eficiência e pela adequação às suas necessidades específicas de processamento de texto.
+```
+
+Após estas definições realizamos a vetorização dos tokens com base nas definições da própria biblioteca gensim, e após impressão das iterações destes vetores, podemos aplicar nos algoritmos.
+
+** É importante ressaltar que a métrica de atenção neste caso aqui foi o Recall"**. 
+
+Na primeira implementação, com Regressão Logística, tivemos a porcentagem de 58% (0.58), em relação às classificações, assim como na segunda implementação em Random Search, que obtivemos, também, o recall em 58%. Já na terceira implementação utilizando Naive Bayes, conseguimos o bom resultado de 82% (0.82) em recall. 
+
+Por fim, implementamos a Rede Neural, apenas para satisfazer os termos acadêmicos, e obtivemos a acurácia de 73% (0.73).
+
+No caso específico, o modelo Doc2Vec foi escolhido como modelo final devido às suas vantagens e desempenho em relação aos outros métodos de representação de documentos. Além disso, levamos em conta a sua aplicabilidade, tendo em vista que o Doc2Vec é capaz de capturar relações semânticas complexas entre palavras e documentos, gerando vetores que preservam a semelhança semântica entre textos.
+
+Também foi evidenciado, nos testes que realizamos, que o modelo Doc2Vec possui uma implementação mais simples, eficiente e bem estabelecida na biblioteca Gensim, o que facilita sua utilização e treinamento. E em termos de assertividade, com a métrica de prioridade (Recall), em relação aos outros modelos, o modelo Doc2vec foi muito bem.
 
 ## 4. GloVe
 
@@ -1146,13 +1168,12 @@ A partir da matriz de confusão é possível perceber que o modelo tem mais difi
 Por fim, o modelo obteve bom resultados em avaliações de recall, acurácia e matriz de confusão, contudo, não foram os melhores diante dos outros modelos desenvolvidos.
 
 
-
-
 ## 7.Comparação entre os modelos e escolha do modelo final
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/gr%C3%A1fico_comparativo.png">
 
 
 ## 8.Adicionando Features Novas
+
 Foram criadas novas features baseadas no tamanho das frases, em particular o número de tokens por frase, para comparar com modelos que incluam ou não essas features. Quatro algoritmos foram utilizados para esta comparação: regressão logística, cat-boost, naive-bayes e xg-boost. A vetorização escolhida para esta comparação foi o TF-IDF devido sua facilidade de aplicação e a combinação com os algoritimos escolhidos. Todos os modelos que utilizaram as novas features tiveram resultados inferiores em comparação aos modelos que não as utilizaram, apresentando uma média de recall de 38.7. No entanto, a inclusão das novas features permitiu a utilização do gráfico KDE (Estimativa de Gráfico Kernel) que demonstra a probabilidade de um sentimento, dado o número de tokens de uma frase. Onde -1 representa sentimentos negativos, 0 representa sentimentos neutros e 1 representa sentimentos positivos.
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/5500412f-e3df-499d-baea-1ff9c862f9b1)
