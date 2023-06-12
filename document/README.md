@@ -894,6 +894,25 @@ Colocar o link do artefato (deve estar na pasta src do repositório do projeto).
 
 ## 1. Elmo 
 
+O Elmo (Embeddings from Language Models) é um modelo de vetorização pré-treinado que captura representações contextuais de palavras e frases. 
+Tal utilização é fundamentada nas características estruturais do modelo. Evidencia-se a possibilidade de identificar palavras iguais ou semelhantes em contextos diferentes, agrupá-los e diferenciá-los.
+O modelo se destaca dado que possui capacidade de generalização, dado que, foi treinado em grandes quantidades de texto. 
+Ao aplicá-lo, a fim de obter melhores resultados, utiliza-se o csv do texto pré-processado. Em seguida, aplica-se no modelo de vetorização ELMo. 
+É de indubitável importância ressaltar que para a utilização do ELMo os arquivos de pré-treinamento, em português precisam ser importados.
+```
+weight_file = "/content/drive/MyDrive/Colab Notebooks/SI-MOD6/entrega_spt4/elmo_pt_weights_dgx1 (1).hdf5
+```
+Já a linha a seguir, define o local do arquivo JSON de opções para o modelo ELMo em português. O arquivo JSON contém a configuração e os hiperparâmetros do modelo.
+
+```
+options_file = 'https://s3-us-west2.amazonaws.com/allennlp/models/elmo/contributed/pt/brwac/options.json'
+```
+
+Após a vetorização dos dados, os mesmos são direcionados para a rede neural simples. 
+A métrica escolhida para avaliar o resultado do modelo é recall, visto que, dentre todas as classificações positivas como valor esperado, quantas foram assertivas. Entretanto, ocorreram alguns desajustes durante o arranjo da rede neural. Portanto, nesse momento, a fim de avaliar a performance geral, utiliza-se a acurácia.
+Os resultados emitidos na rede neural demonstram 43.17% de acurácia. Ressalta-se que, em comparação com outros modelos implementados e analisados, ELMo não possui melhor resultado e adesão aos dados.
+
+
 
 ## 2. BERT 
 
