@@ -1004,7 +1004,7 @@ Em resumo, os resultados obtidos indicam que o modelo de regressão logística t
 
 O FastText é uma biblioteca gratuita e de código aberto do Facebook AI Research (FAIR) para aprender embeddings e classificações de palavras. Este modelo permite a criação de um algoritmo de aprendizado para a obtenção de representações vetoriais de palavras, avaliando esses modelos.
 
-Primeiramente, os valores da coluna alvo foram transformados em valores numéridos:
+Primeiramente, os valores da coluna alvo foram transformados em valores numéricos:
 
 ```
 df_2['sentimento'] = df_2['sentimento'].map({'NEUTRAL': 0, 'POSITIVE': 1, 'NEGATIVE': -1})
