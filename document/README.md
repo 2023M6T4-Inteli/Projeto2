@@ -1152,13 +1152,38 @@ Por fim, o modelo obteve bom resultados em avaliações de recall, acurácia e m
 <img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/gr%C3%A1fico_comparativo.png">
 
 
+## 8.Adicionando Features Novas
+Foram criadas novas features baseadas no tamanho das frases, em particular o número de tokens por frase, para comparar com modelos que incluam ou não essas features. Quatro algoritmos foram utilizados para esta comparação: regressão logística, cat-boost, naive-bayes e xg-boost. A vetorização escolhida para esta comparação foi o TF-IDF devido sua facilidade de aplicação e a combinação com os algoritimos escolhidos. Todos os modelos que utilizaram as novas features tiveram resultados inferiores em comparação aos modelos que não as utilizaram, apresentando uma média de recall de 38.7. No entanto, a inclusão das novas features permitiu a utilização do gráfico KDE (Estimativa de Gráfico Kernel) que demonstra a probabilidade de um sentimento, dado o número de tokens de uma frase. Onde -1 representa sentimentos negativos, 0 representa sentimentos neutros e 1 representa sentimentos positivos.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/5500412f-e3df-499d-baea-1ff9c862f9b1)
+
+Cálculo KDE para a Estimativa:
+KDE(x) = (1 / (n * h)) * Σ K((x - xi) / h)
+KDE(x) é o valor estimado da densidade de probabilidade para um determinado ponto x. n é o número total de pontos de dados no conjunto de dados. h é o parâmetro de suavização ou largura de banda (bandwidth). Σ representa a soma ao longo de todos os pontos de dados. K é a função kernel, que é uma função simétrica em torno de zero que define a forma da contribuição de cada ponto de dados para a estimativa de densidade.
 
 
 
+Comparação entre os modelos com a feature aplicada:
 
-3) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação das técnicas, processamento e algoritmos utilizados pelo novo modelo;
-4) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para apresentação dos resultados obtidos pelo novo modelo;
-5) O grupo deve adicionar explicações, linhas de raciocínio e justificativas para comparação entre todos os modelos, e a escolha do modelo final.
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/6212235f-588c-466f-9439-38f3751095c6)
+
+
+Maior valor(cat-boost):
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/4c7c25b6-fa7a-4f83-8143-d0c970215746)
+
+
+Modelos sem a adição da feature aplicada:
+
+![newplot](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/af9eb689-e0a6-4ce9-b0de-e08411b1dc27)
+
+
+Maior valor(xg-boost):
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/f4a55487-b5b3-4d7a-94bd-ef23f8c63b03)
+
+
+
 ## (Sprint 5) Apresentação Final
 
 Colocar o link do artefato (deve estar na pasta apresentacoes do repositório do projeto).
