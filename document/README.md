@@ -603,7 +603,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
   <br>
   <br>
   
-  - Output e tabela pós Word2Vec: ao final do processo de Word2Vec, configuramos a tabela que será utilizada para algorítimos de aprendizado. Um dos passos é tranformação da coluna de sentimentos para valores numéricos. O segundo passo é exatamente a atribuição dos tokens às 150 colunas definidas 
+  - Output e tabela pós Word2Vec: ao final do processo de Word2Vec, configuramos a tabela que será utilizada para algorítimos de aprendizado. Um dos passos é tranformação da coluna de sentimentos para valores numéricos. O segundo passo é exatamente a atribuição dos tokens às 150 colunas definidas.
 
   <br> 
   <br> 
@@ -623,7 +623,7 @@ Para a construção do modelo Word2Vec, a equipe fez uma nova limpeza e pré-pro
   
 ### Algorítimos de Aprendizado: 
 
- O objetivo no nosso projeto é exatamente fazer a classificação de frases com o intuito de conferir o desempenho de campanhas de marketing, assim, apenas o modelo Word2Vec não é o suficente, pois mesmo organizando a similaridade de palavras, ele não consegue fazer a classificação de sentimentos. A solução é utilizar algorítimos de aprendizado supervizionado para fazer esse tipo de classificação. Neste sentido, nesta Sprint, testamos alguns algoritmos, mas optamos pela utilização do Naive Bayes e do Catboost.
+ O objetivo no nosso projeto é fazer a classificação de frases com o intuito de conferir o desempenho de campanhas de marketing. Assim, apenas o modelo Word2Vec não é o suficente, pois mesmo organizando a similaridade de palavras, ele não consegue fazer a classificação de sentimentos. A solução é utilizar algorítimos de aprendizado supervizionado para fazer esse tipo de classificação. Neste sentido, testamos alguns algoritmos, mas optamos pela utilização do Naive Bayes e do Catboost.
 
 
 #### Naive Bayes
@@ -699,6 +699,30 @@ Lembrando que diante da denfinição e alinhamento com o professor, pudemos defi
 - **Verdadeiro Negativo:** referem-se aos comentários positivos que são classificados como positivos.
 
 É importante ressaltar que a partir de análises feitas, foi possível identificar as proporções de "falso negativo" como as mais importantes, diante das predições que o modelo deve fazer, e com base na estratégia de negócio do parceiro.
+
+#### Comparação entre BOW e Word2Vec
+
+A acurácia do BOW com TF-IDF ficou como pode ser visto na imagem abaixo:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4128a839-6279-438a-84c6-68a83638bedd)
+
+Já os valores do Word2Vec ficaram como a seguir:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/c56abbd0-19e7-4d12-ac9a-8b2dc90b9170)
+
+Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, não sofreu muita alteração com o uso dos modelos
+
+#### Comparação entre BOW e Word2Vec
+
+A acurácia do BOW com TF-IDF ficou como pode ser visto na imagem abaixo:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/4128a839-6279-438a-84c6-68a83638bedd)
+
+Já os valores do Word2Vec ficaram como a seguir:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/c56abbd0-19e7-4d12-ac9a-8b2dc90b9170)
+
+Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, não sofreu muita alteração com o uso de um modelo diferente. 
 
 ### Arquitetura da Solução
 
