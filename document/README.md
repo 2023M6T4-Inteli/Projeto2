@@ -1002,6 +1002,40 @@ Em resumo, os resultados obtidos indicam que o modelo de regressão logística t
 
 ## 5. FastText
 
+O FastText é uma biblioteca gratuita e de código aberto do Facebook AI Research (FAIR) para aprender embeddings e classificações de palavras. Este modelo permite a criação de um algoritmo de aprendizado para a obtenção de representações vetoriais de palavras, avaliando esses modelos.
+
+Primeiramente, os valores da coluna alvo foram transformados em valores numéridos:
+
+```
+df_2['sentimento'] = df_2['sentimento'].map({'NEUTRAL': 0, 'POSITIVE': 1, 'NEGATIVE': -1})
+```
+
+Foi feito o teste com o modelo possuindo 50 e 100 dimensões mas, como a diferença não foi significante, foi utilizado o de 50. O modelo de word embeddings pré treinadas foi instalado do repositório de word embeddings do NILC. Para aplicação no projeto, foi utilizada a base de dados com os dados já lematizados e tratados. O modelo foi carregado e aplicado em uma vetorização da coluna 'tokens', assim como é feito com o modelo Word2Vec. 
+
+```
+# Função para vetorizar um token
+def vetorizar_token(token):
+    vetor = np.zeros(model.vector_size) # incializa vetor de zeros com a mesma dimensão
+    if token in model: # verifica se a palavra está no word2vec treinado
+        vetor = model[token] # adiciona o valor do vetor
+    return vetor
+
+# Função para vetorizar uma frase
+def vetorizar_frase(frase):
+    vetores_tokens = [vetorizar_token(token) for token in frase] # verifica cada token da lista
+    return np.sum(vetores_tokens, axis=0) # retorna a soma dos vetores
+
+# Aplicar a função 'vetorizar_frase' a todas as frases
+df_2['vetores'] = df_2['tokens'].apply(vetorizar_frase)
+```
+
+Após isso, com os vetores criados, foram aplicados o modelo Naive Bayes (que retornou uma acurácia de 0.31) e a Regressão Logística (com esta última obtendo um melhor resultado, com acurácia de 0.56). Diferentes gráficos foram construídos a partir dos resultados: o da curva ROC, o da curva de aprendizado e o da curva de validação. 
+Abaixo estão os gráficos da curva ROC obtidos com cada modelo:
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0a41966a-07cd-4309-ae1e-d80c82755166)
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0a6b22a9-7f79-4ba9-8b96-97f243fa2915)
+
 ## 6. TF-IDF
 
 O TF-IDF (Term Frequency-Inverse Document Frequency) é uma medida estatística que permite avaliar a importância de uma palavra em um documento. Essa técnica foi escolhida por sua capacidade de destacar palavras-chave relevantes e reduzir o peso de palavras comuns, ajudando a identificar a relevância de um termo em relação ao contexto específico de um documento. Suas vantagens incluem a capacidade de lidar com grandes volumes de texto de maneira eficiente, reduzindo essa influência de palavras comuns e destacando exatamente os termos-chave que fornecem insights relevantes. O TF-IDF também é uma técnica simples de implementar e interpretar.
