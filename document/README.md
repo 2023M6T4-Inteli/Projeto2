@@ -1235,4 +1235,8 @@ Colocar o link dos artefatos (devem estar nas pastas videos e src do repositóri
 
 ## (Sprint 5) Documentação da Solução
 
-Preencher conforme a descrição do artefato na Adalove.
+O Streamlit é uma ferramenta de código que permite permite a criação de aplicações web mais eficientes e de forma mais rápida para a análise e visualização de dados. A partir da integração de diversas bibliotecas de visualização de dados, a ferramenta disponbiliza recursos interativos e de implantação flexível para análise de dados. 
+
+O Chat-BTG consiste de um sistema criado com o intuito de identificar os sentimentos dos comentários de campanhas do banco BTG através do Processamento de Linguagem Natural e aprendizado de máquina. Para o desenvolvimento do projeto após o processo de limpeza, carregamento, e pré-processamento e vetorização o Streamlit será utilizado com o intuito de facilitar o processo de criação de uma interface interativa para a análise do conjunto de dados. 
+
+A aplicação web esperada conta com a presença de uma página que sejá atualizada em tempo real onde o usuário consiga inserir nvos comentários referentes às campanhas do BTG, e desse modo o próprio sistema retornará o sentimento captado. O objetivo do uso dessa ferramenta é desenvolver um 
