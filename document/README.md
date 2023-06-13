@@ -44,7 +44,8 @@ Com a visão de ampliar, agregar e integrar diversas ferramentas, pode-se citar 
 ### ⚠️ Matriz de riscos
 
 A Matriz de Riscos consiste em uma ferramenta de gestão de riscos e oportunidades, a fim de identificar, avaliar e priorizar os fatores associados ao projeto, por grau de impacto e probabilidade de ocorrência.
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/Matriz%20de%20Risco.png">
+<br>
+<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Matriz%20de%20Risco.png">
 
 Portanto, entende-se então, que o desenvolvimento de um Plano de Ação é de indubitável importância, dado que, o documento descreve as atividades que precisam ser realizadas para mitigar riscos e alcançar objetivos estipulados. O Plano define o que será feito, quem fará, como, quando e com quais recursos. <br>
 No que diz respeito aos riscos evidenciados na Matriz acima, ressalta-se o plano de ação desenvolvido:
@@ -436,10 +437,10 @@ Após esse processo o código abaixo foi criado, com o intuito de exibir em form
 ```plt.axis('off'))```
 ```plt.show())```
 
-![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/wordcloudpalavras.png)
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/wordcloudpalavras.png)
 
 Além disso, criamos a partir do código abaixo uma visualização gráfica da frequência e dispersão das palavras
-![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/docs/Imagens/freqpalavras.png)
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/freqpalavras.png)
 
 
 #### - Conjunto de três palavras com maior frequência:
@@ -712,8 +713,8 @@ Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, n
 
 ### Arquitetura da Solução
 
-<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Arquitetura%20de%20solu%C3%A7%C3%A3o.png" alt="Arquitetura de solução" width="5000">
-
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/arquitetura_da_soluc_1.png" width="4000">
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/arquitetura_da_soluc_2.png" width="4000">
 1. Extração dos dados:
 
 <img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Extra%C3%A7%C3%A3o.png" alt="Extração de dados" width="5000">
