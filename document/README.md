@@ -708,7 +708,7 @@ Já os valores do Word2Vec ficaram como a seguir:
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/c56abbd0-19e7-4d12-ac9a-8b2dc90b9170)
 
-Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, não sofreu muita alteração com o uso de um modelo diferente. Como o modelo Word2Vec trabalha com contexto e gera vetores com uma dimensionalidade reduzida em comparação aos gerados pelo BOW, pode-se considerar que este modelo seja mais vantajoso ao projeto do que o Bag of Words.
+Assim, conclui-se que a métrica na qual estamos focando no projeto, o recall, não sofreu muita alteração com o uso de cada um dos dois modelos. Como o modelo Word2Vec trabalha com contexto e gera vetores com uma dimensionalidade reduzida em comparação aos gerados pelo BOW, pode-se considerar que este modelo seja mais vantajoso ao projeto do que o Bag of Words.
 
 ### Arquitetura da Solução
 
