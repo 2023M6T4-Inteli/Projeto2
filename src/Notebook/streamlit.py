@@ -5,6 +5,9 @@ import base64
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from io import BytesIO
+from collections import Counter
+import emoji
+
 
 
 # Função para renderizar a barra lateral com os links para as seções da sua aplicação
@@ -102,6 +105,30 @@ def word_cloud_negative(df, sentimento):
         xaxis=dict(visible=False), yaxis=dict(visible=False)
     )
     st.plotly_chart(fig)
+
+
+
+def count_emojis(df, text):
+    texto = "".join(df[text]).lower()
+    count = emoji.emoji_count(texto) # Contar a quantidade de emojis 
+    emoji_dict = dict(Counter(c for c in texto if emoji.is_emoji(c))) # Contagem de emojis do dicionario
+
+    most_common_emojis = Counter(emoji_dict).most_common(15) # Top 15 emojis mais utilizados nos comentários
+
+    total_emojis = sum(emoji_dict.values()) # Cálculo da porcentagem de aparição de cada emoji
+    emoji_percentages = {k: v / total_emojis for k, v in most_common_emojis}
+
+    df = pd.DataFrame({'emoji': list(emoji_percentages.keys()), 'percentage': list(emoji_percentages.values())}) # Dataframe dos resultados
+
+    df = df.sort_values(by='percentage', ascending=False)# Ordena os resultados por porcentagem decrescente
+    
+    # Criar o gráfico de barras
+    fig = px.bar(df, x='emoji', y='percentage', labels={'emoji': 'Emoji', 'percentage': 'Porcentagem'})
+
+    # Exibir o gráfico
+    st.plotly_chart(fig)
+
+
     
 # Renderiza a barra lateral
 page = render_sidebar()
@@ -134,7 +161,7 @@ if page == "Dashboards":
             #word cloud positiva
             word_cloud_positive(df, 'sentimento')
             #word cloud negative
-            word_cloud_neagative(df, 'sentimento')
+            word_cloud_negative(df, 'sentimento')
 
 
 
@@ -145,6 +172,8 @@ if page == "Dashboards":
         elif plot_select == 'Emojis que mais aparecem':
             # Código para criar o gráfico de dispersão
             st.write("Gráfico de barra")
+
+            count_emojis(df, 'texto')
 
 elif page == "Chat-Btg":
     # Título da página
