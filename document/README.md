@@ -134,17 +134,17 @@ A Persona é a representação fictícia do cliente ideal para o projeto, com o 
 
 A User Stories são representações simples e claras dos requisitos e funcionalidades de um software, escritas do ponto de vista do usuário final. Essas histórias ajudam a manter o foco nas necessidades dos usuários e a priorizar as funcionalidades mais importantes para o projeto. Portanto, a seguir, existem duas User Story por persona (Marketing, Produto e Automações)
 
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/dev-jo%C3%A3o/assets/Imagens/user_storie_01.png" alt="user storie 1" width="400" height="auto">
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/66722e93-8042-4296-bb02-b4b712a3b921)
 <br>
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/dev-jo%C3%A3o/assets/Imagens/user_storie_02.png" alt="user storie 2" width="400" height="auto">
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/8828a9c8-7792-4eb6-adaa-4307ce4d6192)
 <br>
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/dev-jo%C3%A3o/assets/Imagens/user_storie_03.png" alt="user storie 3" width="400" height="auto">
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/033cac33-6669-4c15-afbf-3c4caa6c46d9)
 <br>
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/dev-jo%C3%A3o/assets/Imagens/user_storie_04.png" alt="user storie 4" width="400" height="auto">
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/325bc1e7-eb82-4bb5-ab61-b2b01f47bf50)
 <br>
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/dev-jo%C3%A3o/assets/Imagens/user_storie_05.png" alt="user storie 5" width="400" height="auto">
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/98face23-d1ce-4f28-bc22-bacee1de1141)
 <br>
-<img src = "https://github.com/2023M6T4-Inteli/Projeto2/blob/dev-jo%C3%A3o/assets/Imagens/user_storie_06.png" alt="user storie 6" width="400" height="auto">
+![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99270135/0f9b646d-3dbc-47cb-8d52-41212d33854d)
 
 
 ## (Sprint 2) Modelo Bag Of Words (IPYNB)
