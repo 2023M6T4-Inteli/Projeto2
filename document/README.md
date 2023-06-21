@@ -1236,8 +1236,10 @@ Colocar o link dos artefatos (devem estar nas pastas videos e src do repositóri
 
 ## (Sprint 5) Documentação da Solução
 
-O Streamlit é uma ferramenta de código que permite permite a criação de aplicações web mais eficientes e de forma mais rápida para a análise e visualização de dados. A partir da integração de diversas bibliotecas de visualização de dados, a ferramenta disponbiliza recursos interativos e de implantação flexível para análise de dados. 
+O Streamlit é uma ferramenta de código que permite a criação de aplicações web mais eficientes e de forma mais rápida para a análise e visualização de dados. A partir da integração de diversas bibliotecas de visualização de dados, a ferramenta disponbiliza recursos interativos e de implantação flexível para análise de dados. 
 
-O Chat-BTG consiste de um sistema criado com o intuito de identificar os sentimentos dos comentários de campanhas do banco BTG através do Processamento de Linguagem Natural e aprendizado de máquina. Para o desenvolvimento do projeto após o processo de limpeza, carregamento, e pré-processamento e vetorização o Streamlit será utilizado com o intuito de facilitar o processo de criação de uma interface interativa para a análise do conjunto de dados. 
+O Chat-BTG consiste de um sistema criado com o intuito de identificar os sentimentos dos comentários de campanhas do banco BTG através do Processamento de Linguagem Natural e aprendizado de máquina. Após o processo de limpeza, carregamento e pré-processamento dos dados, o Streamlit é utilizado com o intuito de facilitar o processo de criação de uma interface interativa para a análise do conjunto de dados.
 
-A aplicação web esperada conta com a presença de uma página que sejá atualizada em tempo real onde o usuário consiga inserir nvos comentários referentes às campanhas do BTG, e desse modo o próprio sistema retornará o sentimento captado. O objetivo do uso dessa ferramenta é desenvolver um 
+A aplicação web resultante possui uma página atualizada em tempo real, na qual os usuários podem podem importar um arquivo CSV para a plataforma integrada. Isso permite visualizar e analisar os dados de forma mais convenientes em formatos interativos.  O sistema oferece a possibilidade de selecionar quais comentários serão analisados. Em seguida, o Streamlit disponibiliza uma variedade de gráficos e histogramas, permitindo uma visualização mais detalhada dos dados.
+
+Essa integração entre meu sistema e o Streamlit proporciona uma experiência mais intuitiva e eficiente na análise e visualização dos dados de sentimentos das campanhas do BTG. Através dessa interface interativa, os usuários podem explorar os comentários e obter insights valiosos de maneira fácil e rápida.
