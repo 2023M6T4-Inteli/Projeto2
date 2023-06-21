@@ -7,7 +7,10 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 from collections import Counter
 import emoji
-
+import string
+import spacy
+import torch
+from transformers import BertTokenizer, BertForSequenceClassification
 
 
 # Função para renderizar a barra lateral com os links para as seções da sua aplicação
@@ -35,30 +38,35 @@ def download_link(df, filename='predicoes.csv', link_text='Download CSV'):
 #sentimento = coluna de sentimento
 def percentage_hist_sentiment(df, sentimento):
     st.write('Gráfico de Pizza e Histograma')
+    df = pd.DataFrame(df[sentimento].map({'POSITIVE':0, 'NEGATIVE':2, 'NEUTRAL':1}), columns=[sentimento])
     # Porcentagens
     # Positivo
     total = len(df)
-    positivo = len(df.query(f'{sentimento} == 1')) / total
+    positivo = len(df.query(f'{sentimento} == 0')) / total
     # Neutro
-    neutro = len(df.query(f'{sentimento} == 0')) / total
+    neutro = len(df.query(f'{sentimento} == 1')) / total
     # Negativo
-    negativo = len(df.query(f'{sentimento} == -1')) / total
+    negativo = len(df.query(f'{sentimento} == 2')) / total
     # Criar DataFrame para o gráfico de barras
     # Plotar o gráfico de barras
+    st.subheader(f'Quantidade Total:  {len(df)}')
     fig = px.pie(df, values=[positivo, neutro, negativo], names=['Positivo', 'Neutro', 'Negativo'])
     st.plotly_chart(fig)
     #Histograma
-    labels = df[sentimento].map({1 :'Positivo', 0: 'Neutro', -1: 'Negativo'})
+    labels = df[sentimento].map({0 :'Positivo', 1: 'Neutro', 2: 'Negativo'})
     fig_hist = px.histogram(df, labels)
     st.plotly_chart(fig_hist)
 
 #Gráfico word cloud positivo
-def word_cloud_positive(df, sentimento):
+def word_cloud_positive(df, texto, sentimento):
     st.write(f"Gráfico Word Cloud de Frases {sentimento.capitalize()}s")
+    df_1 = pd.DataFrame(df[sentimento].map({'POSITIVE':0, 'NEGATIVE':2, 'NEUTRAL':1}), columns=[sentimento])
+    df_1[texto] = df[texto].astype(str)
+
     # Pegando apenas as frases com o sentimento correspondente
-    filtered_df = df.query(f'{sentimento} == 1')
+    filtered_df = df_1.query(f'{sentimento} == 0')
     # Transformando em tokens
-    tokens = filtered_df['texto_pre'].apply(lambda x: x.split())
+    tokens = filtered_df[texto].apply(lambda x: str(x).split())
     # Array para armazenar
     words = []
     # Looping para salvar os tokens em um array
@@ -80,12 +88,15 @@ def word_cloud_positive(df, sentimento):
     st.plotly_chart(fig)
     
 #Gráfico word cloud negativo
-def word_cloud_negative(df, sentimento):
+def word_cloud_negative(df,texto, sentimento):
     st.write(f"Gráfico Word Cloud de Frases {sentimento.capitalize()}s")
     # Pegando apenas as frases com o sentimento correspondente
-    filtered_df = df.query(f'{sentimento} == -1')
+    df_3 = pd.DataFrame(df[sentimento].map({'POSITIVE':0, 'NEGATIVE':2, 'NEUTRAL':1}), columns=[sentimento])
+    df_3[texto] = df[texto].astype(str)
+
+    filtered_df = df_3.query(f'{sentimento} == 2')
     # Transformando em tokens
-    tokens = filtered_df['texto_pre'].apply(lambda x: x.split())
+    tokens = filtered_df[texto].apply(lambda x: str(x).split())
     # Array para armazenar
     words = []
     # Looping para salvar os tokens em um array
@@ -128,6 +139,61 @@ def count_emojis(df, text):
     # Exibir o gráfico
     st.plotly_chart(fig)
 
+#função para realizar predição da frase
+tokenizer = BertTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased', do_lower_case=False)
+def predict(model, tokenizer, sentence):
+    model.eval()
+
+    inputs = tokenizer.encode_plus(
+        sentence,
+        None,
+        add_special_tokens=True,
+        max_length=200,
+        padding='max_length',
+        truncation=True,
+        return_token_type_ids=True
+    )
+
+    ids = inputs['input_ids']
+    mask = inputs['attention_mask']
+
+    ids = torch.tensor(ids, dtype=torch.long).unsqueeze(0)
+    mask = torch.tensor(mask, dtype=torch.long).unsqueeze(0)
+
+    ids = ids.to(device)
+    mask = mask.to(device)
+
+    with torch.no_grad():
+        outputs = model(ids, token_type_ids=None, attention_mask=mask)
+
+    outputs = outputs[0].detach().cpu().numpy()
+    predict_code = np.argmax(outputs, axis=1)[0]
+
+    inversed_map = {0: 'POSITIVE', 1: 'NEUTRAL', 2: 'NEGATIVE'}
+    return inversed_map[predict_code]
+
+#retirar stop_words
+def stop(texto):
+    stop_words = ['eu', 'tu', 'ele', 'ela', 'nós', 'nos', 'vós', 'vos', 'eles', 'elas', 'um', 'em', 'de'
+                  'isso', 'isto', 'aquilo', 'algum', 'alguma', 'alguns', 'algumas',
+                  'outro', 'outra', 'outros', 'outras', 'tão', 'tal', 'tanto', 'tanta', 'tantos', 'tantas', 
+                  'seu', 'sua', 'seus', 'suas', 'dele', 'dela', 'deles', 'delas', 
+                  'quem', 'qual', 'quais', 'que', 'onde', 'como', 'e','um', 'as', 'no',
+                  'para', 'por', 'com', 'sem', 'sob', 'sobre', 'de', 'da', 'desde', 'em', 'entre', 'porque',
+                  'á', 'a', 'o', 'ola', 'olá', 'pra', 'para', 'bemvindo', 'benvindo', 'bem-vindo', 'bemvindos', 'aqui', 'vai', 'na', 'no', 'esse', 'este', 'voce', 'nosso', 'ou', 'btg','ser', 'mais', 'ter', 'meu', 'se', 'esta', 'todo', 'estar']
+    
+
+    new = []
+    for word in texto.split():
+        if word not in stop_words:
+            new.append(word)
+    return ' '.join(new)
+#função para realizar predição da coluna
+def add_prediction_column(df,text, model, tokenizer):
+    df['Predicao'] = df[text].apply(lambda x: predict(model, tokenizer, x))
+    return df
+
+
 
     
 # Renderiza a barra lateral
@@ -159,15 +225,10 @@ if page == "Dashboards":
 
         elif plot_select == 'Word Cloud':
             #word cloud positiva
-            word_cloud_positive(df, 'sentimento')
+            word_cloud_positive(df, 'texto_pre', 'sentimento')
             #word cloud negative
-            word_cloud_negative(df, 'sentimento')
+            word_cloud_negative(df, 'texto_pre', 'sentimento')
 
-
-
-        elif plot_select == 'Número de Tokens por Sentimento':
-            # Código para criar o gráfico de barras
-            st.write("Gráfico KDE")
 
         elif plot_select == 'Emojis que mais aparecem':
             # Código para criar o gráfico de dispersão
@@ -184,6 +245,26 @@ elif page == "Chat-Btg":
         raw_text = st.text_area("Coloque seu texto aqui")
         submit_button = st.form_submit_button(label='Analyze')
 
+    if submit_button:
+        nlp = spacy.load("pt_core_news_lg")
+
+        # Remover pontuação do texto inserido pelo usuário
+        raw_text = raw_text.translate(str.maketrans('', '', string.punctuation))
+        #substitui emojis por palavras
+        raw_text = emoji.demojize(raw_text, delimiters=(' ', ' '), language='pt')
+        #retirando stop_words
+        raw_text = stop(raw_text)
+        # Lematizar o texto
+        doc = nlp(raw_text)
+        lemmas = [token.lemma_ for token in doc]
+        preprocessed_text = " ".join(lemmas)
+
+        st.write('Texto pré-Processado:', preprocessed_text)
+        st.write('Tokens:', preprocessed_text.split())
+
+
+     
+
 
 elif page == "Predição":
     st.title("PREDIÇÃO")
@@ -197,10 +278,8 @@ elif page == "Predição":
         
         pred_button = st.button(label='Predição')
         if pred_button:
-            #Executar função de criar coluna com predição
-            #Lembrar de mudar df_2 para o dataframe com a coluna de predição
+            df_2 = add_prediction_column(df_2, texto, model, tokenizer)
             st.dataframe(df_2)
-            #Baixar CSV 
-            st.markdown(download_link(df_2), unsafe_allow_html= True)
+            st.markdown(download_link(df_2), unsafe_allow_html=True)
 
             
