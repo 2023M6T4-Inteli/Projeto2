@@ -138,6 +138,9 @@ def count_emojis(df, text):
 
     # Exibir o gráfico
     st.plotly_chart(fig)
+    
+#Load no modelo
+model = torch.load('C:\Users\Rodrigo.INTELI\Downloads\INTELI\PROJETO-6\Projeto2\src\Notebook/model.pt')
 
 #função para realizar predição da frase
 tokenizer = BertTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased', do_lower_case=False)
@@ -244,7 +247,7 @@ elif page == "Chat-Btg":
     with st.form(key='nlpForm'):
         raw_text = st.text_area("Coloque seu texto aqui")
         submit_button = st.form_submit_button(label='Analyze')
-
+    #Quando executar o botão, realiza o pre, p
     if submit_button:
         nlp = spacy.load("pt_core_news_lg")
 
@@ -258,7 +261,10 @@ elif page == "Chat-Btg":
         doc = nlp(raw_text)
         lemmas = [token.lemma_ for token in doc]
         preprocessed_text = " ".join(lemmas)
-
+        
+        # Fazer a predição na entrada lematizada
+        prediction = predict(model, tokenizer, preprocessed_text)
+        st.write('O sentimento do texto é', prediction)
         st.write('Texto pré-Processado:', preprocessed_text)
         st.write('Tokens:', preprocessed_text.split())
 
