@@ -1253,3 +1253,11 @@ No momento que o arquivo for lido, o usuário poderá selecionar quais infromaç
 
 Imagem 3: Construção dos gráficos ou histogramas 
 A partir da integração do Streamlit com o sistema, a plataforma construirá gráficos, histogramas e outras formas visuais para apresentar os dados. 
+
+## Diagrama de implantação UML da solução
+<br>
+
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Classe%20UML%20(corrigido).png" width="3000">
+<br>
+O diagrama UML acima representa o modelo desenvolvido como um todo, detalhando o seu funcionamento.  
+
