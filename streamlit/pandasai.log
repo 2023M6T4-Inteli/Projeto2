@@ -1,0 +1,46 @@
+2023-06-22 17:37:44 [INFO] Running PandasAI with openai LLM...
+2023-06-22 17:37:44 [INFO] Prompt ID: 1f637d3a-f7f9-4d57-81c4-cf5232b8e0b0
+2023-06-22 17:37:58 [INFO] 
+Code running:
+```
+sentiment_percentage = df['sentimento'].value_counts(normalize=True) * 100
+print(sentiment_percentage)
+```
+2023-06-22 17:37:58 [INFO] Answer: NEUTRAL     38.463749
+POSITIVE    38.205153
+NEGATIVE    23.331099
+Name: sentimento, dtype: float64
+2023-06-22 17:37:58 [INFO] Executed in: 14.77022099494934s
+2023-06-22 17:38:27 [INFO] Running PandasAI with openai LLM...
+2023-06-22 17:38:27 [INFO] Prompt ID: 83f9676d-c02e-43c6-8ce1-e7436e7f8e72
+2023-06-22 17:38:47 [INFO] 
+                        Code generated:
+                        ```
+                        # First, we need to import the necessary libraries
+import pandas as pd
+import emoji
+
+# Load the dataframe
+df = pd.read_csv('dataframe.csv')
+
+# Define a function to count the number of emojis in a string
+def count_emojis(text):
+    return len([c for c in text if c in emoji.UNICODE_EMOJI])
+
+# Apply the function to the 'texto_pre' column to create a new column with the number of emojis in each comment
+df['num_emojis'] = df['texto_pre'].apply(count_emojis)
+
+# Calculate the total number of emojis in all comments
+total_emojis = df['num_emojis'].sum()
+
+# Calculate the percentage of each emoji in all comments
+emoji_percentages = {}
+for c in emoji.UNICODE_EMOJI:
+    count = df['texto_pre'].apply(lambda x: x.count(c)).sum()
+    if count > 0:
+        emoji_percentages[c] = round(count/total_emojis*100, 2)
+
+# Print the dictionary with the percentage of each emoji
+print(emoji_percentages)
+                        ```
+                    
