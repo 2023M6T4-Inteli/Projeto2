@@ -16,6 +16,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
+from pandasai import PandasAI
+from pandasai.llm.openai import OpenAI
+
+
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
+
+# create an LLM by instantiating OpenAI object, and passing API token
+llm = OpenAI(api_token="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")
+
+# create PandasAI object, passing the LLM
+pandas_ai = PandasAI(llm)
 
 
 # Função para renderizar a barra lateral com os links para as seções da sua aplicação
@@ -64,7 +76,7 @@ def percentage_hist_sentiment(df, sentimento):
 
 #Gráfico word cloud positivo
 def word_cloud_positive(df, texto, sentimento):
-    st.write(f"Gráfico Word Cloud de Frases {sentimento.capitalize()}s")
+    st.write("Gráfico Word Cloud Positiva")
     df_1 = pd.DataFrame(df[sentimento].map({'POSITIVE':0, 'NEGATIVE':2, 'NEUTRAL':1}), columns=[sentimento])
     df_1[texto] = df[texto].astype(str)
 
@@ -94,7 +106,7 @@ def word_cloud_positive(df, texto, sentimento):
     
 #Gráfico word cloud negativo
 def word_cloud_negative(df,texto, sentimento):
-    st.write(f"Gráfico Word Cloud de Frases {sentimento.capitalize()}s")
+    st.write("Gráfico Word Cloud Negativa")
     # Pegando apenas as frases com o sentimento correspondente
     df_3 = pd.DataFrame(df[sentimento].map({'POSITIVE':0, 'NEGATIVE':2, 'NEUTRAL':1}), columns=[sentimento])
     df_3[texto] = df[texto].astype(str)
@@ -200,7 +212,7 @@ def search_bar():
 # model = torch.load('C:\\Users\\Inteli\\Downloads\\modelo_BERT\\model.pt')
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = torch.load('C:\\Users\\Inteli\\Downloads\\model.pt', map_location=torch.device('cpu'))
+model = torch.load("C:\\Users\\Rodrigo.INTELI\\Downloads\\model.pt", map_location=torch.device('cpu'))
 
 #função para realizar predição da frase
 tokenizer = BertTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased', do_lower_case=False)
@@ -278,7 +290,7 @@ if page == "Upload do dataset":
         df = read_csv(upload_file)
         st.dataframe(df)
         # success
-        st.success("Success")
+        st.success("Success")        
 # Mostra a página correspondente à opção selecionada na barra lateral
 elif page == "Dashboard":
     #Título Página
@@ -298,7 +310,7 @@ elif page == "Dashboard":
         # Select box para os gráficos que gostaria de analisar
         plot_select = st.selectbox(
             'O que você gostaria de analisar?',
-            ('Porcentagem de Sentimento', 'Word Cloud', 'Número de Tokens por Sentimento', 'Emojis que mais aparecem', 'Frequência das palavras')
+            ('Porcentagem de Sentimento', 'Word Cloud','Emojis que mais aparecem', 'Frequência das palavras')
         )
 
         # Mostrar gráfico correspondente à opção selecionada
@@ -327,7 +339,7 @@ elif page == "Dashboard":
 elif page == "Chat-Btg":
     # Título da página
     st.title('CHAT-BTG')
-    st.subheader('Teste o modelo de predição')
+    st.subheader('Teste o modelo BERT de predição')
     
     with st.form(key='nlpForm'):
         raw_text = st.text_area("Coloque seu texto aqui")
@@ -353,6 +365,21 @@ elif page == "Chat-Btg":
         st.write('O sentimento do texto é', prediction)
         st.write('Texto pré-Processado:', preprocessed_text)
         st.write('Tokens:', preprocessed_text.split())
+    st.title("Análise de dados por texto com Pandas AI")
+    uploaded_file = st.file_uploader("Insira o arquivo CSV", type=['csv'])
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        st.write(df.head(3))
+        prompt = st.text_area("Coloque a análise desejada:")
+
+        # Generate output
+        if st.button("Generate"):
+            if prompt:
+                # call pandas_ai.run(), passing dataframe and prompt
+                with st.spinner("Gerando a resposta..."):
+                    st.write(pandas_ai.run(df, prompt))
+            else:
+                st.warning("Por favor, coloque uma análise.")
 
 
 elif page == "Predição":

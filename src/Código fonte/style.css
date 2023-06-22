@@ -1,0 +1,33 @@
+.stButton > button {
+    color:'white';
+    width: 100%;
+    margin-top:20px;
+    height:3rem;
+}
+.e1akgbir4 {
+    padding: 0rem 1rem 1.5rem;
+}
+.css-q8sbsg > p {
+    font-size: 21px;
+}
+.e1g8pov64 {
+    max-width: 90rem;
+    padding: 2rem 2rem 10rem;
+}
+
+.sidebar .sidebar-content {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.sidebar .sidebar-content .sidebar-section {
+  margin-top: 1rem;
+}
+
+.sidebar .sidebar-content .sidebar-section a {
+  color: #333;
+  font-size: 1.2rem;
+}
