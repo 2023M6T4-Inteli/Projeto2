@@ -1249,7 +1249,7 @@ Imagem 1: Importação do arquivo csv
 Na nossa plataforma, criamos um espaço onde o usuário tem a possibilidade de importar um arquivo csv. Dessa forma, o próprio sistema fará uma leitura do arquvo e apresentará então todos os comentários presentes no arquivo e construirá uma análise dos dados obtidos. 
 
 Imagem 2: Selecionar o que será visto 
-No momento que o arquivo for lido, o usuário poderá selecionar quais infromações ele quer ter acesso (sejá análisar a porcentagem de algum sentimento, display dos emojis que mais aparecem entre outros. 
+No momento que o arquivo for lido, o usuário poderá selecionar quais infromações ele quer ter acesso (sejá análisar a porcentagem de algum sentimento, display dos emojis que mais aparecem entre outras features. 
 
 Imagem 3: Construção dos gráficos ou histogramas 
 A partir da integração do Streamlit com o sistema, a plataforma construirá gráficos, histogramas e outras formas visuais para apresentar os dados. 
