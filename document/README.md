@@ -1236,6 +1236,7 @@ Colocar o link dos artefatos (devem estar nas pastas videos e src do repositóri
 
 ## (Sprint 5) Documentação da Solução
 
+
 O Streamlit é uma ferramenta de código que permite a criação de aplicações web mais eficientes e de forma mais rápida para a análise e visualização de dados. A partir da integração de diversas bibliotecas de visualização de dados, a ferramenta disponbiliza recursos interativos e de implantação flexível para análise de dados. 
 
 O Chat-BTG consiste de um sistema criado com o intuito de identificar os sentimentos dos comentários de campanhas do banco BTG através do Processamento de Linguagem Natural e aprendizado de máquina. Após o processo de limpeza, carregamento e pré-processamento dos dados, o Streamlit é utilizado com o intuito de facilitar o processo de criação de uma interface interativa para a análise do conjunto de dados.
@@ -1243,3 +1244,12 @@ O Chat-BTG consiste de um sistema criado com o intuito de identificar os sentime
 A aplicação web resultante possui uma página atualizada em tempo real, na qual os usuários podem podem importar um arquivo CSV para a plataforma integrada. Isso permite visualizar e analisar os dados de forma mais convenientes em formatos interativos.  O sistema oferece a possibilidade de selecionar quais comentários serão analisados. Em seguida, o Streamlit disponibiliza uma variedade de gráficos e histogramas, permitindo uma visualização mais detalhada dos dados.
 
 Essa integração entre meu sistema e o Streamlit proporciona uma experiência mais intuitiva e eficiente na análise e visualização dos dados de sentimentos das campanhas do BTG. Através dessa interface interativa, os usuários podem explorar os comentários e obter insights valiosos de maneira fácil e rápida.
+
+Imagem 1: Importação do arquivo csv 
+Na nossa plataforma, criamos um espaço onde o usuário tem a possibilidade de importar um arquivo csv. Dessa forma, o próprio sistema fará uma leitura do arquvo e apresentará então todos os comentários presentes no arquivo e construirá uma análise dos dados obtidos. 
+
+Imagem 2: Selecionar o que será visto 
+No momento que o arquivo for lido, o usuário poderá selecionar quais infromações ele quer ter acesso (sejá análisar a porcentagem de algum sentimento, display dos emojis que mais aparecem entre outros. 
+
+Imagem 3: Construção dos gráficos ou histogramas 
+A partir da integração do Streamlit com o sistema, a plataforma construirá gráficos, histogramas e outras formas visuais para apresentar os dados. 
