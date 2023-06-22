@@ -24,7 +24,7 @@ with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
 
 # create an LLM by instantiating OpenAI object, and passing API token
-llm = OpenAI(api_token="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")
+llm = OpenAI(api_token="")
 
 # create PandasAI object, passing the LLM
 pandas_ai = PandasAI(llm)
