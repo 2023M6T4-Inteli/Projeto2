@@ -59,7 +59,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## 🛠 Instalação
 
-Insira aqui as instruções para instalação (uso) do projeto.
+Todos os notebooks e códigos-fonte do projeto tem os resultados de execução visíveis no próprio repositório Github. Portanto, é possível fazer o download dos códigos e utilizá-los na plataforma que preferir, sendo as sugestões principais: Visual Studio Code, Google Colaboratory ou o Jupyter Notebook, utilizando o Python3.
 
 ## 💻 Configuração para Desenvolvimento
 
