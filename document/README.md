@@ -848,7 +848,7 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 - Ao avaliar o desempenho de um modelo, é essencial considerar várias métricas e analisar seus resultados de forma holística, levando em conta as necessidades e os objetivos específicos do problema em questão.
 
 ## Bibliotecas:
-### - Sklearn
+### Sklearn
 - O Sklearn, é uma biblioteca amplamente utilizada em Python para aprendizado de máquina. Ela oferece uma variedade de algoritmos e ferramentas para tarefas como classificação, regressão, agrupamento e pré-processamento de dados. O sklearn possui uma interface consistente e intuitiva, o que facilita a construção e avaliação de modelos de aprendizado de máquina. Além disso, ele fornece funções para dividir conjuntos de dados em treinamento e teste, realizar validação cruzada, aplicar métricas de avaliação e muito mais.
 
 ### SpaCy
@@ -901,10 +901,10 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 
 - Elmo: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/ELMo.ipynb 
 
-- BERT: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/3_2_BERT(OVER).ipynb
+- BERT: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/BERT.ipynb
 
-- DOC2Vec: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/DOC2Vec_2.ipynb
-
+- DOC2Vec: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/DOC2Vec_2%20(1).ipynb
+  
 - GloVe: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/GloVe.ipynb 
 
 - FastText: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/Fast_Text.ipynb 
@@ -991,6 +991,8 @@ Devido a isso, tratamos o modelo BERT como um "nice to have", mas não como prin
 
 É importante citar que o modelo BERT tem sido amplamente utilizado em uma variedade de tarefas de processamento de linguagem natural e estabeleceu um novo parâmetro em muitas delas. Isso foi um dos fatores determinantes para a escolha e utilização deste modelo em nosso grupo. Ele se destaca pela sua capacidade de capturar informações contextuais em textos e fornecer representações de alta qualidade que podem ser usadas em várias aplicações de NLP.
 
+<sub> ***Nota: Foi escolhido como modelo final, para implementação do projeto, após novas amostragens, fine-tuning realizado e aumento nos resultados das métricas. Com um recall de 87%*** </sub>
+
 ## 3. Doc2Vec
 
 O modelo Doc2Vec é uma técnica de aprendizado de máquina utilizada para representar documentos em formato vetorial. Ele é uma extensão do modelo Word2Vec, que é usado para representar palavras em vetores. O Doc2Vec permite que documentos inteiros sejam representados como vetores contínuos de valores numéricos, capturando o contexto semântico dos documentos.
@@ -1017,6 +1019,8 @@ Por fim, implementamos a Rede Neural, apenas para satisfazer os termos acadêmic
 No caso específico, o modelo Doc2Vec foi escolhido como modelo final devido às suas vantagens e desempenho em relação aos outros métodos de representação de documentos. Além disso, levamos em conta a sua aplicabilidade, tendo em vista que o Doc2Vec é capaz de capturar relações semânticas complexas entre palavras e documentos, gerando vetores que preservam a semelhança semântica entre textos.
 
 Também foi evidenciado, nos testes que realizamos, que o modelo Doc2Vec possui uma implementação mais simples, eficiente e bem estabelecida na biblioteca Gensim, o que facilita sua utilização e treinamento. E em termos de assertividade, com a métrica de prioridade (Recall), em relação aos outros modelos, o modelo Doc2vec foi muito bem.
+
+<sub> ***Nota: após testagens e aprofundamento nas implementações de Rede Neural, fizemos a mudança de implementação do modelo final para o BERT. O modelo também foi superior nos resultados de amostragem*** </sub>
 
 ## 4. GloVe
 
@@ -1234,12 +1238,49 @@ Colocar o link do artefato (deve estar na pasta apresentacoes do repositório do
 
 Colocar o link dos artefatos (devem estar nas pastas videos e src do repositório do projeto).
 
+O melhor modelo, e escolhido como Modelo Final, foi o BERT com aplicação de rede neural estrutural. Ele se destaca como um dos melhores modelos para análise de sentimento devido a algumas características importantes: Possui Contexto Bidirecional: Ao contrário de modelos anteriores que processavam a linguagem de forma sequencial, o BERT é bidirecional. Isso significa que ele considera o contexto tanto à esquerda quanto à direita de cada palavra durante o treinamento. Essa capacidade permite que o modelo entenda melhor a relação entre as palavras em uma frase e capture nuances sutis de sentimentos. Pode realizar o pré-treinamento em grande escala: O BERT é pré-treinado em uma quantidade massiva de dados, como textos da internet. Esse pré-treinamento visa aprender representações de palavras e frases que capturam o conhecimento geral da linguagem. Isso permite que o modelo tenha uma compreensão ampla e profunda, o que é vantajoso para a análise de sentimento, pois muitos dos sentimentos expressos dependem de um contexto mais amplo, e também é o que motiva a muitas empresas implementarem o modelo no âmbito profissional. Outro fator, é a possibilidade de utilizar o fine-tuning para tarefas específicas, tendo em vista que o BERT pode ser ajustado (fine-tuned) para tarefas específicas. Isso envolve treinar o modelo em um conjunto de dados rotulados para aprender a realizar a tarefa desejada. O fine-tuning do BERT permite que ele se adapte a uma variedade de tarefas de análise de sentimento com um desempenho impressionante, pois o modelo já tem uma compreensão avançada da linguagem. Há também, uma representação contextual das palavras. O BERT atribui um vetor de representação a cada palavra em um texto, levando em consideração o contexto em que ela aparece. Isso significa que o significado de uma palavra pode variar dependendo do contexto em que é usada. Essa capacidade do BERT de capturar o contexto de forma mais precisa é muito útil para análise dos comentários em nosso projeto, uma vez que as palavras podem ter diferentes conotações em diferentes contextos.
+
+Por fim, podemos citar O BERT como um dos modelos mais amplamente utilizados e estudados no campo de processamento de linguagem natural. Sua popularidade resultou em uma vasta quantidade de recursos, implementações e bibliotecas disponíveis. Isso facilita sua implementação em projetos de análise de sentimento, pois há muitos exemplos e referências disponíveis para orientar os desenvolvedores.
+
 ## (Sprint 5) Documentação da Solução
+O Streamlit é uma ferramenta de código que permite a criação rápida e eficiente de aplicações web para análise e visualização de dados. Integrando diversas bibliotecas de visualização de dados, essa ferramenta oferece recursos interativos e flexibilidade de implantação para análise de dados.
 
-O Streamlit é uma ferramenta de código que permite a criação de aplicações web mais eficientes e de forma mais rápida para a análise e visualização de dados. A partir da integração de diversas bibliotecas de visualização de dados, a ferramenta disponbiliza recursos interativos e de implantação flexível para análise de dados. 
+No caso específico do Chat-BTG, trata-se de um sistema desenvolvido com o objetivo de identificar os sentimentos presentes nos comentários das campanhas do banco BTG, utilizando Processamento de Linguagem Natural e aprendizado de máquina. Após a etapa de limpeza, carregamento e pré-processamento dos dados, o Streamlit é utilizado para facilitar a criação de uma interface interativa que permite a análise do conjunto de dados.
 
-O Chat-BTG consiste de um sistema criado com o intuito de identificar os sentimentos dos comentários de campanhas do banco BTG através do Processamento de Linguagem Natural e aprendizado de máquina. Após o processo de limpeza, carregamento e pré-processamento dos dados, o Streamlit é utilizado com o intuito de facilitar o processo de criação de uma interface interativa para a análise do conjunto de dados.
+A aplicação web resultante apresenta uma página atualizada em tempo real, na qual os usuários podem importar um arquivo CSV para a plataforma integrada. Isso possibilita uma visualização e análise mais conveniente dos dados em formatos interativos. Além disso, o sistema oferece a opção de selecionar quais comentários serão analisados. Em seguida, o Streamlit disponibiliza uma variedade de gráficos e histogramas que permitem uma visualização mais detalhada dos dados.
 
-A aplicação web resultante possui uma página atualizada em tempo real, na qual os usuários podem podem importar um arquivo CSV para a plataforma integrada. Isso permite visualizar e analisar os dados de forma mais convenientes em formatos interativos.  O sistema oferece a possibilidade de selecionar quais comentários serão analisados. Em seguida, o Streamlit disponibiliza uma variedade de gráficos e histogramas, permitindo uma visualização mais detalhada dos dados.
+Essa integração entre o sistema e o Streamlit proporciona uma experiência mais intuitiva e eficiente na análise dos sentimentos das campanhas do BTG. Através dessa interface interativa, a experiência do usuário torna-se mais satisfatória e é possível obter insights valiosos de diversas maneiras.
 
-Essa integração entre meu sistema e o Streamlit proporciona uma experiência mais intuitiva e eficiente na análise e visualização dos dados de sentimentos das campanhas do BTG. Através dessa interface interativa, os usuários podem explorar os comentários e obter insights valiosos de maneira fácil e rápida.
+Na plataforma, foi criado um espaço onde o usuário pode navegar entre diferentes seções por meio de uma barra de tarefas. A primeira seção disponível é a de upload de dataset, onde o usuário pode importar um arquivo CSV. O próprio sistema realiza a leitura do arquivo e apresenta todos os comentários para a construção da análise dos dados. A plataforma responsiva fornece feedbacks sobre os comandos, informando sobre o sucesso das ações ou qualquer tipo de erro.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/upload.jpg) 
+
+
+
+A seção seguinte é o Dashboard, onde o usuário pode selecionar as informações desejadas, como a porcentagem de sentimento, pesquisa de palavras relacionadas às campanhas, aparição de emojis, entre outros. Além disso, a plataforma gera diferentes formatos de gráficos, como barras, pizza, dispersão e histogramas, para fornecer representações visuais que facilitem o entendimento e a visualização dos dados.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dashboard.jpg)  
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash1.jpg) 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash3.jpg) 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash4.jpg) 
+
+Outra seção importante é o Chat BTG, que foi criado para testar o modelo BERT de predição de sentimentos. Nessa seção, o usuário pode adicionar um texto (comentário), por exemplo, e ao clicar no botão de análise, o sistema retorna o sentimento do texto e disponibiliza os tokens pré-processados.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/chatbtg.jpg) 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/chatbtg1.jpg) 
+
+Foi implementado na seção Chat btg, para melhoria da visualização e recolhimento dos dados, o modelo de LLM da Open AI com a extensão da biblioteca pandasai. O pandasai, possibilita uma análise de dados do dataframe por texto, assim possibilitando retirar informações sem usar código.
+
+Por fim, há a seção de predição, na qual o usuário pode importar seu arquivo CSV e realizar a predição de sentimentos da base de dados disponibilizada.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/predicao.jpg) 
+
+Em resumo, a plataforma Chat-BTG é um espaço interativo e dinâmico onde o usuário pode explorar e realizar análises aprofundadas dos sentimentos nos comentários das campanhas realizadas pelo Banco BTG Pactual. Essa solução foi desenvolvida com o objetivo de facilitar o entendimento do cliente e melhorar a experiência do usuário, auxiliando-os na criação de novas estratégias e tomada de decisões. 
+
+## Diagrama de implantação UML da solução
+<br>
+
+<img src="https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/Classe%20UML%20(Final).jpeg" width="3000">
+<br>
+O diagrama UML acima representa o modelo desenvolvido como um todo, detalhando o seu funcionamento. O arquivo de entrada é um dado não estruturado que é recebido em formato csv, após sua entrada é possível essa base de dados passar diretamente pelo Streamlit ou por um algoritmo. Nesse algoritmo, a base passará primeiramente por uma seção de PLN (incluindo os processos de lematização, retirada de stopwords, reg. exp e tokenização), depois, pelo BERT como função de vetorização e, por fim, pela rede neural como função de classificação. Passado pelo algoritmo, duas possibilidades são possíveis: o Streamlite (no formato de dashboard) ou a passagem pela API (um micro serviço). No Streamlit, será feita uma análise gráfica com o arquivo csv resultando em um dashboard interativo com gráficos descritivos, uma predição em tempo real (recebendo formato de string) gerando a análise de sentimento por frase (positivo, negativo e neutro) e os tokens, também será possibilitado uma adição de nova feature criando novas colunas com predição automática do texto no csv (que será o input) e a exploratória em tempo real (input de string com requisição da API da Open IA) formando dados descritivos da base de dados e inferências sobre os dados contidos nela. Por fim, após o processo do StreamLit, uma interface será gerada permitindo a visualização de Insights e métricas dos posts da rede social. Já pelo micro serviço da API, será recebido um corpus em formato de string, gerando uma probabilidade de predição (formatos de string ou csv para float) e uma análise de sentimentos (de string para string). Então, após o micro serviço da API, uma interface será gerada, permitindo a pesquisa de sentimento por post.
+
