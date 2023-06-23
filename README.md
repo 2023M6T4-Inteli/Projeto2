@@ -61,9 +61,11 @@ Há também 4 pastas que seguem da seguinte forma:
 
 Todos os notebooks e códigos-fonte do projeto tem os resultados de execução visíveis no próprio repositório Github. Portanto, é possível fazer o download dos códigos e utilizá-los na plataforma que preferir, sendo as sugestões principais: Visual Studio Code, Google Colaboratory ou o Jupyter Notebook, utilizando o Python3.
 
+O modelo pré treinado utilizado pelo grupo pode ser encontrado neste link: https://huggingface.co/neuralmind/bert-base-portuguese-cased
+
 ## 💻 Configuração para Desenvolvimento
 
-Insira aqui as instruções para desenvolvimento (modificação) do projeto.
+Instruções para desenvolvimento (modificação) do projeto: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/document/outros/Manual%20de%20instala%C3%A7%C3%A3o_%20Chat-BTG%20(1).pdf
 
 ## 🗃 Histórico de lançamentos
 
