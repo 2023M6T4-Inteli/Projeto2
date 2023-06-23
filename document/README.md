@@ -1228,21 +1228,13 @@ Maior valor(xg-boost):
 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/assets/99209230/f4a55487-b5b3-4d7a-94bd-ef23f8c63b03)
 
-
-
-## (Sprint 5) Apresentação Final
-
-Colocar o link do artefato (deve estar na pasta apresentacoes do repositório do projeto).
-
-## (Sprint 5) Deploy do melhor modelo
-
-Colocar o link dos artefatos (devem estar nas pastas videos e src do repositório do projeto).
+## (Sprint 5) Modelo implementado
 
 O melhor modelo, e escolhido como Modelo Final, foi o BERT com aplicação de rede neural estrutural. Ele se destaca como um dos melhores modelos para análise de sentimento devido a algumas características importantes: Possui Contexto Bidirecional: Ao contrário de modelos anteriores que processavam a linguagem de forma sequencial, o BERT é bidirecional. Isso significa que ele considera o contexto tanto à esquerda quanto à direita de cada palavra durante o treinamento. Essa capacidade permite que o modelo entenda melhor a relação entre as palavras em uma frase e capture nuances sutis de sentimentos. Pode realizar o pré-treinamento em grande escala: O BERT é pré-treinado em uma quantidade massiva de dados, como textos da internet. Esse pré-treinamento visa aprender representações de palavras e frases que capturam o conhecimento geral da linguagem. Isso permite que o modelo tenha uma compreensão ampla e profunda, o que é vantajoso para a análise de sentimento, pois muitos dos sentimentos expressos dependem de um contexto mais amplo, e também é o que motiva a muitas empresas implementarem o modelo no âmbito profissional. Outro fator, é a possibilidade de utilizar o fine-tuning para tarefas específicas, tendo em vista que o BERT pode ser ajustado (fine-tuned) para tarefas específicas. Isso envolve treinar o modelo em um conjunto de dados rotulados para aprender a realizar a tarefa desejada. O fine-tuning do BERT permite que ele se adapte a uma variedade de tarefas de análise de sentimento com um desempenho impressionante, pois o modelo já tem uma compreensão avançada da linguagem. Há também, uma representação contextual das palavras. O BERT atribui um vetor de representação a cada palavra em um texto, levando em consideração o contexto em que ela aparece. Isso significa que o significado de uma palavra pode variar dependendo do contexto em que é usada. Essa capacidade do BERT de capturar o contexto de forma mais precisa é muito útil para análise dos comentários em nosso projeto, uma vez que as palavras podem ter diferentes conotações em diferentes contextos.
 
 Por fim, podemos citar O BERT como um dos modelos mais amplamente utilizados e estudados no campo de processamento de linguagem natural. Sua popularidade resultou em uma vasta quantidade de recursos, implementações e bibliotecas disponíveis. Isso facilita sua implementação em projetos de análise de sentimento, pois há muitos exemplos e referências disponíveis para orientar os desenvolvedores.
 
-## (Sprint 5) Documentação da Solução
+## (Sprint 5) Documentação da Solução e Deploy do modelo
 O Streamlit é uma ferramenta de código que permite a criação rápida e eficiente de aplicações web para análise e visualização de dados. Integrando diversas bibliotecas de visualização de dados, essa ferramenta oferece recursos interativos e flexibilidade de implantação para análise de dados.
 
 No caso específico do Chat-BTG, trata-se de um sistema desenvolvido com o objetivo de identificar os sentimentos presentes nos comentários das campanhas do banco BTG, utilizando Processamento de Linguagem Natural e aprendizado de máquina. Após a etapa de limpeza, carregamento e pré-processamento dos dados, o Streamlit é utilizado para facilitar a criação de uma interface interativa que permite a análise do conjunto de dados.
