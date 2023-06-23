@@ -848,7 +848,7 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 - Ao avaliar o desempenho de um modelo, é essencial considerar várias métricas e analisar seus resultados de forma holística, levando em conta as necessidades e os objetivos específicos do problema em questão.
 
 ## Bibliotecas:
-### - Sklearn
+### Sklearn
 - O Sklearn, é uma biblioteca amplamente utilizada em Python para aprendizado de máquina. Ela oferece uma variedade de algoritmos e ferramentas para tarefas como classificação, regressão, agrupamento e pré-processamento de dados. O sklearn possui uma interface consistente e intuitiva, o que facilita a construção e avaliação de modelos de aprendizado de máquina. Além disso, ele fornece funções para dividir conjuntos de dados em treinamento e teste, realizar validação cruzada, aplicar métricas de avaliação e muito mais.
 
 ### SpaCy
@@ -901,10 +901,10 @@ Para o modelo acima, foram utilizadas as seguintes bibliotecas e técnicas para 
 
 - Elmo: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/ELMo.ipynb 
 
-- BERT: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/3_2_BERT(OVER).ipynb
+- BERT: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/BERT.ipynb
 
-- DOC2Vec: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/DOC2Vec_2.ipynb
-
+- DOC2Vec: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/DOC2Vec_2%20(1).ipynb
+  
 - GloVe: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/GloVe.ipynb 
 
 - FastText: https://github.com/2023M6T4-Inteli/Projeto2/blob/main/src/Notebook/Fast_Text.ipynb 
@@ -991,6 +991,8 @@ Devido a isso, tratamos o modelo BERT como um "nice to have", mas não como prin
 
 É importante citar que o modelo BERT tem sido amplamente utilizado em uma variedade de tarefas de processamento de linguagem natural e estabeleceu um novo parâmetro em muitas delas. Isso foi um dos fatores determinantes para a escolha e utilização deste modelo em nosso grupo. Ele se destaca pela sua capacidade de capturar informações contextuais em textos e fornecer representações de alta qualidade que podem ser usadas em várias aplicações de NLP.
 
+<sub> ***Nota: Foi escolhido como modelo final, para implementação do projeto, após novas amostragens, fine-tuning realizado e aumento nos resultados das métricas. Com um recall de 87%*** </sub>
+
 ## 3. Doc2Vec
 
 O modelo Doc2Vec é uma técnica de aprendizado de máquina utilizada para representar documentos em formato vetorial. Ele é uma extensão do modelo Word2Vec, que é usado para representar palavras em vetores. O Doc2Vec permite que documentos inteiros sejam representados como vetores contínuos de valores numéricos, capturando o contexto semântico dos documentos.
@@ -1017,6 +1019,8 @@ Por fim, implementamos a Rede Neural, apenas para satisfazer os termos acadêmic
 No caso específico, o modelo Doc2Vec foi escolhido como modelo final devido às suas vantagens e desempenho em relação aos outros métodos de representação de documentos. Além disso, levamos em conta a sua aplicabilidade, tendo em vista que o Doc2Vec é capaz de capturar relações semânticas complexas entre palavras e documentos, gerando vetores que preservam a semelhança semântica entre textos.
 
 Também foi evidenciado, nos testes que realizamos, que o modelo Doc2Vec possui uma implementação mais simples, eficiente e bem estabelecida na biblioteca Gensim, o que facilita sua utilização e treinamento. E em termos de assertividade, com a métrica de prioridade (Recall), em relação aos outros modelos, o modelo Doc2vec foi muito bem.
+
+<sub> ***Nota: após testagens e aprofundamento nas implementações de Rede Neural, fizemos a mudança de implementação do modelo final para o BERT. O modelo também foi superior nos resultados de amostragem*** </sub>
 
 ## 4. GloVe
 
@@ -1233,6 +1237,10 @@ Colocar o link do artefato (deve estar na pasta apresentacoes do repositório do
 ## (Sprint 5) Deploy do melhor modelo
 
 Colocar o link dos artefatos (devem estar nas pastas videos e src do repositório do projeto).
+
+O melhor modelo, e escolhido como Modelo Final, foi o BERT com aplicação de rede neural estrutural. Ele se destaca como um dos melhores modelos para análise de sentimento devido a algumas características importantes: Possui Contexto Bidirecional: Ao contrário de modelos anteriores que processavam a linguagem de forma sequencial, o BERT é bidirecional. Isso significa que ele considera o contexto tanto à esquerda quanto à direita de cada palavra durante o treinamento. Essa capacidade permite que o modelo entenda melhor a relação entre as palavras em uma frase e capture nuances sutis de sentimentos. Pode realizar o pré-treinamento em grande escala: O BERT é pré-treinado em uma quantidade massiva de dados, como textos da internet. Esse pré-treinamento visa aprender representações de palavras e frases que capturam o conhecimento geral da linguagem. Isso permite que o modelo tenha uma compreensão ampla e profunda, o que é vantajoso para a análise de sentimento, pois muitos dos sentimentos expressos dependem de um contexto mais amplo, e também é o que motiva a muitas empresas implementarem o modelo no âmbito profissional. Outro fator, é a possibilidade de utilizar o fine-tuning para tarefas específicas, tendo em vista que o BERT pode ser ajustado (fine-tuned) para tarefas específicas. Isso envolve treinar o modelo em um conjunto de dados rotulados para aprender a realizar a tarefa desejada. O fine-tuning do BERT permite que ele se adapte a uma variedade de tarefas de análise de sentimento com um desempenho impressionante, pois o modelo já tem uma compreensão avançada da linguagem. Há também, uma representação contextual das palavras. O BERT atribui um vetor de representação a cada palavra em um texto, levando em consideração o contexto em que ela aparece. Isso significa que o significado de uma palavra pode variar dependendo do contexto em que é usada. Essa capacidade do BERT de capturar o contexto de forma mais precisa é muito útil para análise dos comentários em nosso projeto, uma vez que as palavras podem ter diferentes conotações em diferentes contextos.
+
+Por fim, podemos citar O BERT como um dos modelos mais amplamente utilizados e estudados no campo de processamento de linguagem natural. Sua popularidade resultou em uma vasta quantidade de recursos, implementações e bibliotecas disponíveis. Isso facilita sua implementação em projetos de análise de sentimento, pois há muitos exemplos e referências disponíveis para orientar os desenvolvedores.
 
 ## (Sprint 5) Documentação da Solução
 O Streamlit é uma ferramenta de código que permite a criação rápida e eficiente de aplicações web para análise e visualização de dados. Integrando diversas bibliotecas de visualização de dados, essa ferramenta oferece recursos interativos e flexibilidade de implantação para análise de dados.
