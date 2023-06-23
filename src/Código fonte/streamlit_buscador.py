@@ -339,7 +339,7 @@ elif page == "Chat-Btg":
     
     with st.form(key='nlpForm'):
         raw_text = st.text_area("Coloque seu texto aqui")
-        submit_button = st.form_submit_button(label='Analyze')
+        submit_button = st.form_submit_button(label='Fazer análise')
 
     #Quando executar o botão, realiza o pre-processamento
     if submit_button:
