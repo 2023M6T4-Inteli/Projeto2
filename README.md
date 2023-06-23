@@ -69,16 +69,16 @@ Insira aqui as instruções para desenvolvimento (modificação) do projeto.
 
 A cada atualização os detalhes devem ser lançados aqui (segue exemplo abaixo).
 
-* 0.5.0 - XX/XX/2023
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.4.0 - XX/XX/2023
-    
+* 0.5.0 - 22/06/2023
+    * Quinta entrega: Escolha do modelo final e aplicação do microserviço.
+* 0.4.0 - 11/06/2023
+    * Quarta entrega: Teste de modelos para vetorização e implementação de nova feature.
 * 0.3.0 - 28/05/2023
-    * Terceira entrega: Inserção da lematização e Modelo Word2Vec
+    * Terceira entrega: Inserção da lematização e Modelo Word2Vec.
 * 0.2.0 - 12/05/2023
-    * Segunda entrega: Pipeline do Pré-processamento de dados e Modleo Bag Of Words
+    * Segunda entrega: Pipeline do Pré-processamento de dados e Modleo Bag Of Words.
 * 0.1.0 - 30/04/2023
-    * Primeira entrega - Análise de negócios, entendimento da experiência do usuário e estruturação de documentos
+    * Primeira entrega: Análise de negócios, entendimento da experiência do usuário e estruturação de documentos.
 
 ## 📋 Licença/License
 
