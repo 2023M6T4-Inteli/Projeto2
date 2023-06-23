@@ -1235,21 +1235,40 @@ Colocar o link do artefato (deve estar na pasta apresentacoes do repositório do
 Colocar o link dos artefatos (devem estar nas pastas videos e src do repositório do projeto).
 
 ## (Sprint 5) Documentação da Solução
-O Streamlit é uma ferramenta de código que permite a criação de aplicações web mais eficientes e de forma mais rápida para a análise e visualização de dados. A partir da integração de diversas bibliotecas de visualização de dados, a ferramenta disponbiliza recursos interativos e de implantação flexível para análise de dados. 
+O Streamlit é uma ferramenta de código que permite a criação rápida e eficiente de aplicações web para análise e visualização de dados. Integrando diversas bibliotecas de visualização de dados, essa ferramenta oferece recursos interativos e flexibilidade de implantação para análise de dados.
 
-O Chat-BTG consiste de um sistema criado com o intuito de identificar os sentimentos dos comentários de campanhas do banco BTG através do Processamento de Linguagem Natural e aprendizado de máquina. Após o processo de limpeza, carregamento e pré-processamento dos dados, o Streamlit é utilizado com o intuito de facilitar o processo de criação de uma interface interativa para a análise do conjunto de dados.
+No caso específico do Chat-BTG, trata-se de um sistema desenvolvido com o objetivo de identificar os sentimentos presentes nos comentários das campanhas do banco BTG, utilizando Processamento de Linguagem Natural e aprendizado de máquina. Após a etapa de limpeza, carregamento e pré-processamento dos dados, o Streamlit é utilizado para facilitar a criação de uma interface interativa que permite a análise do conjunto de dados.
 
-A aplicação web resultante possui uma página atualizada em tempo real, na qual os usuários podem podem importar um arquivo CSV para a plataforma integrada. Isso permite visualizar e analisar os dados de forma mais convenientes em formatos interativos.  O sistema oferece a possibilidade de selecionar quais comentários serão analisados. Em seguida, o Streamlit disponibiliza uma variedade de gráficos e histogramas, permitindo uma visualização mais detalhada dos dados.
-Essa integração entre o sistema e o Streamlit proporciona uma experiência mais intuitiva e eficiente na análise de sentimentos das campanhas do BTG. Através dessa interface interativa, a experiência do usuário se torna mais satisfatória e é possível obter insights valiosos de maneiras diversas. 
+A aplicação web resultante apresenta uma página atualizada em tempo real, na qual os usuários podem importar um arquivo CSV para a plataforma integrada. Isso possibilita uma visualização e análise mais conveniente dos dados em formatos interativos. Além disso, o sistema oferece a opção de selecionar quais comentários serão analisados. Em seguida, o Streamlit disponibiliza uma variedade de gráficos e histogramas que permitem uma visualização mais detalhada dos dados.
 
-Imagem 1: ![image]() Importação do arquivo csv 
-Na nossa plataforma, criamos um espaço onde o usuário tem a possibilidade de importar um arquivo csv. Dessa forma, o próprio sistema fará uma leitura do arquivo e apresentará então todos os comentários presentes construindo uma análise dos dados. 
+Essa integração entre o sistema e o Streamlit proporciona uma experiência mais intuitiva e eficiente na análise dos sentimentos das campanhas do BTG. Através dessa interface interativa, a experiência do usuário torna-se mais satisfatória e é possível obter insights valiosos de diversas maneiras.
 
-Imagem 2:![image]()  Selecionar o que será visto 
-No momento que o arquivo for lido, o usuário poderá selecionar quais infromações ele quer ter acesso (sejá análisar a porcentagem de algum sentimento, display dos emojis que mais aparecem entre outras features. 
+Na plataforma, foi criado um espaço onde o usuário pode navegar entre diferentes seções por meio de uma barra de tarefas. A primeira seção disponível é a de upload de dataset, onde o usuário pode importar um arquivo CSV. O próprio sistema realiza a leitura do arquivo e apresenta todos os comentários para a construção da análise dos dados. A plataforma responsiva fornece feedbacks sobre os comandos, informando sobre o sucesso das ações ou qualquer tipo de erro.
 
-Imagem 3: ![image]()  Construção dos gráficos ou histogramas 
-A partir da integração do Streamlit com o sistema, a plataforma construirá gráficos, histogramas e outras formas visuais para apresentar os dados. 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/upload.jpg) 
+
+
+
+A seção seguinte é o Dashboard, onde o usuário pode selecionar as informações desejadas, como a porcentagem de sentimento, pesquisa de palavras relacionadas às campanhas, aparição de emojis, entre outros. Além disso, a plataforma gera diferentes formatos de gráficos, como barras, pizza, dispersão e histogramas, para fornecer representações visuais que facilitem o entendimento e a visualização dos dados.
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dashboard.jpg)  
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash1.jpg) 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash3.jpg) 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash4.jpg) 
+
+
+
+
+
+Outra seção importante é o Chat BTG, que foi criado para testar o modelo BERT de predição de sentimentos. Nessa seção, o usuário pode adicionar um texto (comentário), por exemplo, e ao clicar no botão de análise, o sistema retorna o sentimento do texto e disponibiliza os tokens pré-processados.
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/chatbtg.jpg) 
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/chatbtg1.jpg) 
+
+
+Por fim, há a seção de predição, na qual o usuário pode importar seu arquivo CSV e realizar a predição de sentimentos da base de dados disponibilizada.
+
+![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/predicao.jpg) 
+
+Em resumo, a plataforma Chat-BTG é um espaço interativo e dinâmico onde o usuário pode explorar e realizar análises aprofundadas dos sentimentos nos comentários das campanhas realizadas pelo Banco BTG Pactual. Essa solução foi desenvolvida com o objetivo de facilitar o entendimento do cliente e melhorar a experiência do usuário, auxiliando-os na criação de novas estratégias e tomada de decisões. 
 
 ## Diagrama de implantação UML da solução
 <br>
