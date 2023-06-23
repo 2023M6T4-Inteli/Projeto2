@@ -1258,19 +1258,18 @@ Na plataforma, foi criado um espaço onde o usuário pode navegar entre diferent
 
 
 A seção seguinte é o Dashboard, onde o usuário pode selecionar as informações desejadas, como a porcentagem de sentimento, pesquisa de palavras relacionadas às campanhas, aparição de emojis, entre outros. Além disso, a plataforma gera diferentes formatos de gráficos, como barras, pizza, dispersão e histogramas, para fornecer representações visuais que facilitem o entendimento e a visualização dos dados.
+
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dashboard.jpg)  
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash1.jpg) 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash3.jpg) 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/dash4.jpg) 
 
-
-
-
-
 Outra seção importante é o Chat BTG, que foi criado para testar o modelo BERT de predição de sentimentos. Nessa seção, o usuário pode adicionar um texto (comentário), por exemplo, e ao clicar no botão de análise, o sistema retorna o sentimento do texto e disponibiliza os tokens pré-processados.
+
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/chatbtg.jpg) 
 ![image](https://github.com/2023M6T4-Inteli/Projeto2/blob/main/assets/Imagens/chatbtg1.jpg) 
 
+Foi implementado na seção Chat btg, para melhoria da visualização e recolhimento dos dados, o modelo de LLM da Open AI com a extensão da biblioteca pandasai. O pandasai, possibilita uma análise de dados do dataframe por texto, assim possibilitando retirar informações sem usar código.
 
 Por fim, há a seção de predição, na qual o usuário pode importar seu arquivo CSV e realizar a predição de sentimentos da base de dados disponibilizada.
 
