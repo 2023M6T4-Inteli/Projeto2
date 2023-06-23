@@ -15,7 +15,6 @@ from transformers import BertTokenizer, BertForSequenceClassification
 from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 
-
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
 
@@ -366,10 +365,10 @@ elif page == "Chat-Btg":
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         st.write(df.head(3))
-        prompt = st.text_area("Coloque a análise desejada:")
+        prompt = st.text_area("Digite a análise que deseja")
 
         # Generate output
-        if st.button("Generate"):
+        if st.button("Gerar análise"):
             if prompt:
                 # call pandas_ai.run(), passing dataframe and prompt
                 with st.spinner("Gerando a resposta..."):
